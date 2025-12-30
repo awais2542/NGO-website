@@ -17,8 +17,8 @@ import {
 export function DropdownMenuDemo() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger >
-        <Button variant="outline">About GMA</Button>
+      <DropdownMenuTrigger asChild >
+        <Button variant="outline" className="bg-black text-white hover:bg-primary">About GMA</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="start">
         <DropdownMenuLabel></DropdownMenuLabel>

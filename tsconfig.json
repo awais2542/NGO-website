@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/Navbar.jsx"  ],
+, "app/Navbar.jsx", "components/ui/demos/CarouselDemo.jsx"  ],
   "exclude": ["node_modules"]
 }

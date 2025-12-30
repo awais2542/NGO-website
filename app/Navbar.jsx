@@ -14,28 +14,28 @@ export default function Navbar(){
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  
                 <div className="flex items-center justify-between h-16">   
                     <div className="flex items-center">
-                        <div className="flex-shrink-0">
+                        <div className="flex shrink-0">
                             <a className="text-white" href=""><img src="./logo.png" alt="logo"></img></a>
                         </div>
                     </div>
-                    <div className="hidden md:block">
-                        <div className="ml-4 flex items-center md:ml-6">
-                            <a  href="/" className="nav-link text-white hover:bg-white hover:text-black rounded-lg p-2" >
+                    <div className="hidden md:block ">
+                        <div className="ml-4 flex items-center gap-5 md:ml-6">
+                            <a  href="/" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
                                 Home
                             </a>
                             
                                <DropdownMenuDemo />
                            
-                            <a  href="" className=" nav-link text-white hover:bg-white hover:text-black rounded-lg p-2" >
+                            <a  href="" className=" nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
                                 Services
                             </a>
-                            <a  href="" className="nav-link text-white hover:bg-white hover:text-black rounded-lg p-2" >
+                            <a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
                                 Our Partners
                             </a> 
-                            <a  href="" className="nav-link text-white hover:bg-white hover:text-black rounded-lg p-2" >
+                            <a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
                                 Our Work
                             </a><
-                                a  href="" className="nav-link text-white hover:bg-white hover:text-black rounded-lg p-2" >
+                                a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
                                 Contact
                             </a>
                             <a  href="" className="text-white rounded-lg p-2" >
@@ -63,19 +63,19 @@ export default function Navbar(){
             </div>
             {isClick && (
                     <div className="md:hidden px-4 pb-4 space-y-2 bg-accent-foreground">
-                        <a href="#" className="block text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
                         Home
                         </a>
-                        <a href="#" className="block text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
                         About
                         </a>
-                        <a href="#" className="block text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
                         Services
                         </a>
-                        <a href="#" className="block text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
                         Our Partners
                         </a>
-                        <a href="#" className="block text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
                         Contact
                         </a>
 
