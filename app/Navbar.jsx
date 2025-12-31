@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { DropdownMenuDemo } from "../components/ui/demos/dropdownMenuDemo";
+import { Button } from "@/components/button";
+import { DropdownMenuDemo } from "@/components/demos/dropdownMenuDemo";
 
 export default function Navbar(){
     const[isClick, setisClick] =  useState(false);
@@ -15,7 +15,7 @@ export default function Navbar(){
                 <div className="flex items-center justify-between h-16">   
                     <div className="flex items-center">
                         <div className="flex shrink-0">
-                            <a className="text-white" href=""><img src="./logo.png" alt="logo"></img></a>
+                            <a className="text-white" href="">logo</a>
                         </div>
                     </div>
                     <div className="hidden md:block ">
@@ -34,8 +34,8 @@ export default function Navbar(){
                             </a> 
                             <a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
                                 Our Work
-                            </a><
-                                a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
+                            </a>
+                            <a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
                                 Contact
                             </a>
                             <a  href="" className="text-white rounded-lg p-2" >
@@ -66,9 +66,7 @@ export default function Navbar(){
                         <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
                         Home
                         </a>
-                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
-                        About
-                        </a>
+                        <DropdownMenuDemo />
                         <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
                         Services
                         </a>
