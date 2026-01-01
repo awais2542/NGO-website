@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Button } from "@/components/button";
 import { DropdownMenuDemo } from "@/components/demos/dropdownMenuDemo";
+import Logo from "@/components/Logo";
+import Link from "next/link";
 
 export default function Navbar(){
     const[isClick, setisClick] =  useState(false);
@@ -10,42 +12,41 @@ export default function Navbar(){
         setisClick(!isClick);
     }
     return (
-        <nav className="bg-accent-foreground">
+        <nav className="relative bg-card text-black ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  
-                <div className="flex items-center justify-between h-16">   
+                <div className="flex items-center justify-between h-25">   
                     <div className="flex items-center">
-                        <div className="flex shrink-0">
-                            <a className="text-white" href="">logo</a>
+                        <div className="logo flex shrink-0 p-" >
+                            <Logo src={"Images/logo.png"} height={40} width={100} alt="logo" />
                         </div>
                     </div>
                     <div className="hidden md:block ">
                         <div className="ml-4 flex items-center gap-5 md:ml-6">
-                            <a  href="/" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
+                            <Link  href="/" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
                                 Home
-                            </a>
+                            </Link>
                             
                                <DropdownMenuDemo />
                            
-                            <a  href="" className=" nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
+                            <Link  href="" className=" nav-link text-black hover:bg-muted rounded-lg p-2" >
                                 Services
-                            </a>
-                            <a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
+                            </Link>
+                            <Link  href="" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
                                 Our Partners
-                            </a> 
-                            <a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
+                            </Link> 
+                            <Link  href="" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
                                 Our Work
-                            </a>
-                            <a  href="" className="nav-link text-white hover:bg-primary hover:text-black rounded-lg p-2" >
+                            </Link>
+                            <Link  href="" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
                                 Contact
-                            </a>
-                            <a  href="" className="text-white rounded-lg p-2" >
-                                <Button>Donate</Button>
-                            </a>
+                            </Link>
+                            <Link href="/donate" className="text-black rounded-lg p-2" >
+                                <Button className=" bg-secondary size-lg hover:bg-muted ">Donate</Button>
+                            </Link>
                         </div>
                     </div>
                     <div className="md:hidden flex items-center">
-                        <button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white
-                         hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        <button className="inline-flex items-center justify-center p-2 rounded-xbg-muted                          hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                          onClick={toggleNavbar}
                         >
                             {isClick ? (
@@ -63,19 +64,22 @@ export default function Navbar(){
             </div>
             {isClick && (
                     <div className="md:hidden px-4 pb-4 space-y-2 bg-accent-foreground">
-                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
+                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
                         Home
-                        </a>
+                        </Link>
                         <DropdownMenuDemo />
-                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
+                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
                         Services
-                        </a>
-                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
+                        </Link>
+                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
                         Our Partners
-                        </a>
-                        <a href="#" className="block text-white hover:bg-primary hover:text-black rounded-lg p-2">
+                        </Link>
+                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
+                        Our Work
+                        </Link>
+                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
                         Contact
-                        </a>
+                        </Link>
 
                         <Button className="w-full mt-2">Donate</Button>
                     </div>

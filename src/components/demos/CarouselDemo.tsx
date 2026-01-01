@@ -2,6 +2,11 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
+const images = [
+  "/carousel/image1.jpg",
+  "/carousel/image2.jpg",
+  "/carousel/image3.jpg",
+]
 
 import { Card, CardContent } from "../card"
 import {
@@ -24,16 +29,16 @@ export function CarouselDemo() {
         }),
       ]
     } className="w-full">
-      <CarouselContent className="-ml-0">
-        {Array.from({ length: 5 }).map((_, index) => (
+      <CarouselContent className="">
+        {images.map((image, index) => (
           <CarouselItem key={index} className="pl-0">
-            <Card className="w-full h-[500px] overflow-hidden">
+            <Card className="w-full h-130 overflow-hidden">
               <CardContent className="p-0 h-full relative">
                 <Image 
-                  src="https://images.pexels.com/photos/34608529/pexels-photo-34608529.jpeg" 
+                  src={image}
                   alt="chat" 
                   fill 
-                  className="object-fill"
+                  className="object-cover"
                 />
               </CardContent>
             </Card>
