@@ -16,12 +16,12 @@ export default function Navbar(){
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  
                 <div className="flex items-center justify-between h-25">   
                     <div className="flex items-center">
-                        <div className="logo flex shrink-0 p-" >
+                        <div className="logo flex mt-5 shrink-0 " >
                             <Logo src={"Images/logo.png"} height={40} width={100} alt="logo" />
                         </div>
-                    </div>
-                    <div className="hidden md:block ">
-                        <div className="ml-4 flex items-center gap-5 md:ml-6">
+                        </div>
+                        <div className="hidden md:block items-center ">
+                        <div className="ml-4 flex items-center-safe gap-6 md:ml-6">
                             <Link  href="/" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
                                 Home
                             </Link>
@@ -40,11 +40,15 @@ export default function Navbar(){
                             <Link  href="" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
                                 Contact
                             </Link>
-                            <Link href="/donate" className="text-black rounded-lg p-2" >
-                                <Button className=" bg-secondary size-lg hover:bg-muted ">Donate</Button>
+                           
+                        </div>
+                        
+                        </div>
+                        <div className="flex fixed-right">
+                             <Link href="/donate" >
+                                <Button className=" bg-secondary size-lg hover:bg-primary ">Donate</Button>
                             </Link>
                         </div>
-                    </div>
                     <div className="md:hidden flex items-center">
                         <button className="inline-flex items-center justify-center p-2 rounded-xbg-muted                          hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                          onClick={toggleNavbar}
