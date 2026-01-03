@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 
-
 type LogoProps = {
   children?: React.ReactNode;
   src?: string;
@@ -12,18 +11,12 @@ type LogoProps = {
   alt?: string;
 };
 
-export default function Logo({
-  children,
-  src,
-  width,
-  height,
-  alt,
-}: LogoProps) {
+export default function Logo({ children, src, width, height, alt }: LogoProps) {
   return (
     <>
       {src && (
         <Image
-          src={"/images/logo.png"}
+          src={src ?? "/Images/logo.png"}
           width={width ?? 40}
           height={height ?? 40}
           alt={alt ?? "Logo"}
