@@ -43,8 +43,8 @@ function DropdownMenuContent({
         data-slot="dropdown-menu-content"
         sideOffset={sideOffset}
         className={cn(
-          className= newLocal,
-         
+          newLocal,
+          className
         )}
         {...props}
       />

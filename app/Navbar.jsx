@@ -4,18 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-  DropdownMenuPortal,
-} from "@/components/dropdown-menu";
+import { DropdownMenuDemo } from "@/components/demos/dropdownMenuDemo";
 
 export default function Navbar(){
     const[isClick, setisClick] =  useState(false);
@@ -29,27 +18,33 @@ export default function Navbar(){
                 <div className="flex items-center justify-between h-25">   
                     <div className="flex items-center">
                         <div className="logo flex mt-5 shrink-0 " >
-                            <Logo src={"Images/logo.png"} height={40} width={100} alt="logo" />
+                            <Logo src={"/Images/logo.png"} height={40} width={100} alt="logo" />
                         </div>
                         </div>
                         <div className="hidden md:block items-center ">
                         <div className="ml-4 flex items-center-safe gap-6 md:ml-6">
-                            <Link  href="/" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
+                            <Link  href="/" variant="outline"
+                                    className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
+                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" >
                                 Home
                             </Link>
                             
                                <DropdownMenuDemo />
                            
-                            <Link  href="" className=" nav-link text-black hover:bg-muted rounded-lg p-2" >
+                            <Link  href="" variant="outline" className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
+                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" > 
                                 Services
                             </Link>
-                            <Link  href="" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
+                            <Link href="" variant="outline" className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
+                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" > 
                                 Our Partners
                             </Link> 
-                            <Link  href="" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
+                            <Link href="" variant="outline" className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
+                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" > 
                                 Our Work
                             </Link>
-                            <Link  href="" className="nav-link text-black hover:bg-muted rounded-lg p-2" >
+                            <Link href="" variant="outline" className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
+                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" > 
                                 Contact
                             </Link>
                            
@@ -62,7 +57,7 @@ export default function Navbar(){
                             </Link>
                         </div>
                     <div className="md:hidden flex items-center">
-                        <button className="inline-flex items-center justify-center p-2 rounded-xbg-muted                          hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        <button className="inline-flex items-center justify-center p-2 rounded-md bg-muted hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                          onClick={toggleNavbar}
                         >
                             {isClick ? (
@@ -79,25 +74,25 @@ export default function Navbar(){
                 </div>
             </div>
             {isClick && (
-                    <div className="md:hidden px-4 pb-4 space-y-2 bg-accent-foreground">
-                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
+                    <div className="md:hidden px-4 pb-4 space-y-2 bg-secondary">
+                        <Link href="#" className="block text-white hover:bg-muted rounded-lg p-2">
                         Home
                         </Link>
                         <DropdownMenuDemo />
-                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
+                        <Link href="#" className="block text-white hover:bg-muted rounded-lg p-2">
                         Services
                         </Link>
-                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
+                        <Link href="#" className="block text-white hover:bg-muted rounded-lg p-2">
                         Our Partners
                         </Link>
-                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
+                        <Link href="#" className="block text-white hover:bg-muted rounded-lg p-2">
                         Our Work
                         </Link>
-                        <Link href="#" className="block text-black hover:bg-muted rounded-lg p-2">
+                        <Link href="#" className="block text-white hover:bg-muted rounded-lg p-2">
                         Contact
                         </Link>
 
-                        <Button className="w-full mt-2">Donate</Button>
+                        
                     </div>
                 )}
         </nav>

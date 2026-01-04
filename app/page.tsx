@@ -1,5 +1,7 @@
 import  {CarouselDemo}  from "@/components/demos/CarouselDemo";
+import ImageDivider from "@/components/ImageDivider";
 import Presidentmsg from "@/components/Presidentmsg";
+import WhatWeAreDoing from "@/components/what_we_r";
 
 export default function Home() {
   return (
@@ -9,6 +11,13 @@ export default function Home() {
    </section>
    <section>
       <Presidentmsg/>
+   </section>
+   <section>
+      <ImageDivider />
+   </section>
+  
+   <section>
+       <WhatWeAreDoing />
    </section>
   
    </>

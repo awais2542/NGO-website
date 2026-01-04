@@ -13,8 +13,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "../carousel"
 
 export function CarouselDemo() {
@@ -32,7 +30,7 @@ export function CarouselDemo() {
       <CarouselContent className="">
         {images.map((image, index) => (
           <CarouselItem key={index} className="pl-0">
-            <Card className="w-full h-130 overflow-hidden">
+            <Card className="w-full h-[630px] overflow-hidden">
               <CardContent className="p-0 h-full relative">
                 <Image 
                   src={image}
