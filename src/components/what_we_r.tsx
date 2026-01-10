@@ -52,7 +52,7 @@ const activities = [
 
 export default function WhatWeAreDoing() {
   return (
-    <section className="w-full py-16 bg-background">
+    <section className="w-full py-16 ">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Heading */}

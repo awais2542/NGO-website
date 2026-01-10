@@ -6,7 +6,7 @@ import Image from "next/image"
 export default function Presidentmsg() {
   return (
     <div className="w-full flex justify-center px-4 py-8">
-      <Card className="w-full max-w-6xl bg-secondary rounded-2xl shadow-lg overflow-hidden">
+      <Card className="w-full max-w-6xl rounded-2xl shadow-lg overflow-hidden">
         
         {/* Header */}
         <CardHeader className="text-center pb-4">
