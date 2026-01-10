@@ -7,7 +7,7 @@ export default function ImageDivider() {
   const [position, setPosition] = useState({ x: 50, y: 50 })
   const [isHovering, setIsHovering] = useState(false)
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isHovering) return
 
     const rect = e.currentTarget.getBoundingClientRect()
