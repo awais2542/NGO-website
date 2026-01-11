@@ -4,30 +4,31 @@ import { useState } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function GalleryModal({ images, startIndex, onClose }) {
+interface GalleryModalProps {
+  images: string[];
+  startIndex: number;
+  onClose: () => void;
+}
+
+export default function GalleryModal({
+  images,
+  startIndex,
+  onClose,
+}: GalleryModalProps) {
   const [index, setIndex] = useState(startIndex);
 
-  const prev = () =>
-    setIndex((index - 1 + images.length) % images.length);
-  const next = () =>
-    setIndex((index + 1) % images.length);
+  const prev = () => setIndex((index - 1 + images.length) % images.length);
+  const next = () => setIndex((index + 1) % images.length);
 
   return (
     <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
-      
       {/* Close */}
-      <button
-        onClick={onClose}
-        className="absolute top-6 right-6 text-white"
-      >
+      <button onClick={onClose} className="absolute top-6 right-6 text-white">
         <X size={32} />
       </button>
 
       {/* Prev */}
-      <button
-        onClick={prev}
-        className="absolute left-6 text-white"
-      >
+      <button onClick={prev} className="absolute left-6 text-white">
         <ChevronLeft size={40} />
       </button>
 
@@ -43,10 +44,7 @@ export default function GalleryModal({ images, startIndex, onClose }) {
       </div>
 
       {/* Next */}
-      <button
-        onClick={next}
-        className="absolute right-6 text-white"
-      >
+      <button onClick={next} className="absolute right-6 text-white">
         <ChevronRight size={40} />
       </button>
     </div>
