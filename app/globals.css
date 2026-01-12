@@ -130,15 +130,10 @@
   }
 }
 
-.animate-marquee-rtl {
-  animation: marquee-rtl 25s linear infinite;
+.marquee {
+  animation: marquee-rtl 30s linear infinite;
 }
-.mask-fade {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
+
+.marquee:hover {
+  animation-play-state: paused;
 }

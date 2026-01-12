@@ -9,6 +9,7 @@ import {
   Stethoscope,
   Home,
   Users,
+  School,
 } from "lucide-react";
 
 const activities = [
@@ -48,6 +49,54 @@ const activities = [
     icon: Users,
     href: "/community-welfare",
   },
+  {
+    title: "Community Welfare",
+    desc: "Social welfare activities for overall community growth.",
+    icon: School,
+    href: "/community-welfare",
+  },
+  {
+    title: "Community Welfare",
+    desc: "Social welfare activities for overall community growth.",
+    icon: Users,
+    href: "/community-welfare",
+  },
+  {
+    title: "Community Welfare",
+    desc: "Social welfare activities for overall community growth.",
+    icon: Users,
+    href: "/community-welfare",
+  },
+  {
+    title: "Community Welfare",
+    desc: "Social welfare activities for overall community growth.",
+    icon: Users,
+    href: "/community-welfare",
+  },
+  {
+    title: "Community Welfare",
+    desc: "Social welfare activities for overall community growth.",
+    icon: Users,
+    href: "/community-welfare",
+  },
+  {
+    title: "Community Welfare",
+    desc: "Social welfare activities for overall community growth.",
+    icon: Users,
+    href: "/community-welfare",
+  },
+  {
+    title: "Community Welfare",
+    desc: "Social welfare activities for overall community growth.",
+    icon: Users,
+    href: "/community-welfare",
+  },
+  {
+    title: "Community Welfare",
+    desc: "Social welfare activities for overall community growth.",
+    icon: Users,
+    href: "/community-welfare",
+  },
 ];
 
 export default function WhatWeAreDoing() {
@@ -67,7 +116,7 @@ export default function WhatWeAreDoing() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
           {activities.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -79,12 +128,12 @@ export default function WhatWeAreDoing() {
                 <Card className="h-full cursor-pointer transition-all duration-300 hover:bg-accent hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="p-6 text-center">
                     <div className="flex justify-center mb-4">
-                      <Icon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:scale-110" />
+                      <Icon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-primary">
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground group-hover:text-white">
                       {item.desc}
                     </p>
                   </CardContent>

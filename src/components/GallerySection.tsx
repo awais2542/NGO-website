@@ -2,22 +2,46 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import GalleryModal from "../GalleryModal";
+import GalleryModal from "./demos/GalleryModal";
 
 const images = [
-  "/gallery/1.jfif",
-  "/gallery/2.jpg",
-  "/gallery/3.jpg",
-  "/gallery/4.jpg",
-  "/gallery/5.jfif",
-  "/gallery/6.jpg",
+  {
+    src: "/gallery/1.jfif",
+    title: "Food Distribution",
+    desc: "Helping families with meals",
+  },
+  {
+    src: "/gallery/2.jpg",
+    title: "Medical Camp",
+    desc: "Free health checkups",
+  },
+  {
+    src: "/gallery/3.jpg",
+    title: "Education Support",
+    desc: "Books for children",
+  },
+  {
+    src: "/gallery/4.jpg",
+    title: "Winter Drive",
+    desc: "Warm clothes distribution",
+  },
+  {
+    src: "/gallery/5.jfif",
+    title: "Clean Water",
+    desc: "Safe water facilities",
+  },
+  {
+    src: "/gallery/6.jpg",
+    title: "Community Care",
+    desc: "Serving humanity",
+  },
 ];
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section className="py-16 bg-secondary overflow-hidden">
+    <section className="py-16 bg-input overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Heading */}
@@ -30,21 +54,32 @@ export default function GallerySection() {
 
         {/* Marquee */}
         <div className="relative overflow-hidden">
-          <div className="flex w-max animate-marquee-rtl hover:[animation-play-state:paused]">
-            {[...images, ...images].map((src, index) => (
+          <div className="marquee flex w-max">
+            {[...images, ...images].map((item, index) => (
               <div
                 key={index}
-                className="w-[280px] md:w-[360px] mx-3 cursor-pointer"
+                className="relative w-[280px] md:w-[360px] mx-3 cursor-pointer group"
                 onClick={() => setSelectedImage(index % images.length)}
               >
+                {/* Image */}
                 <div className="overflow-hidden rounded-xl">
                   <Image
-                    src={src}
-                    alt="Gallery"
+                    src={item.src}
+                    alt={item.title}
                     width={400}
                     height={300}
-                    className="h-60 w-full object-cover transition-transform duration-500 hover:scale-110"
+                    className="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                </div>
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col justify-end p-4">
+                  <h3 className="text-white text-lg font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/80 text-sm">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -54,7 +89,7 @@ export default function GallerySection() {
         {/* Modal */}
         {selectedImage !== null && (
           <GalleryModal
-            images={images}
+            images={images.map(i => i.src)}
             startIndex={selectedImage}
             onClose={() => setSelectedImage(null)}
           />
