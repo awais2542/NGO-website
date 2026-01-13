@@ -16,7 +16,7 @@ export default function Logo({ children, src, width, height, alt }: LogoProps) {
     <>
       {src && (
         <Image
-          src={src ?? "/images/logo.png"}
+          src={src ?? ""}
           width={width ?? 40}
           height={height ?? 40}
           alt={alt ?? "Logo"}

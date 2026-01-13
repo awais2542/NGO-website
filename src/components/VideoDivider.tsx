@@ -7,14 +7,14 @@ interface VideoDividerProps {
 
 export default function VideoDivider({ videoSrc, className }: VideoDividerProps) {
   return (
-    <div className={`w-full mt-20 overflow-hidden ${className}`}>
+    <div className={`w-full overflow-hidden ${className}`}>
       <video
         src={videoSrc}
         autoPlay
         loop
         muted
         playsInline
-        className="w-full h-80 object-cover"
+        className="w-full h-120 object-cover"
       />
     </div>
   );

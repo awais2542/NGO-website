@@ -18,7 +18,7 @@ export default function Presidentmsg() {
         <CardContent className="space-y-12 px-4 sm:px-6 pb-8">
 
           {/* ROW 1: Left TEXT | Right IMAGE */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
             {/* TEXT */}
             <div className="text-left space-y-4 text-sm sm:text-base leading-relaxed order-1 md:order-1">
               <p>
@@ -35,7 +35,7 @@ export default function Presidentmsg() {
 
             {/* IMAGE */}
             <div className="flex justify-center order-2 md:order-2">
-              <div className="relative w-full max-w-[360px] aspect-square rounded-xl overflow-hidden shadow-md">
+              <div className="relative w-full max-w-90 aspect-square rounded-xl overflow-hidden shadow-md">
                 <Image
                   src="/images/president.png"
                   alt="President Gondal Memon"

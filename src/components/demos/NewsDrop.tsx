@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/button";
+import { ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,15 +15,17 @@ import {
   DropdownMenuPortal,
 } from "@/components/dropdown-menu";
 
-export function DropdownMenuDemo() {
+export function NewsDropDown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className="bg-card text-black hover:bg-muted border-0 relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+           className="bg-card text-black border-0 text-foreground/80 hover:text-primary
+           relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
         >
-          About GMA
+          News & Stories
+          <ChevronDown size={16} />
         </Button>
       </DropdownMenuTrigger>
 
@@ -30,43 +33,34 @@ export function DropdownMenuDemo() {
         {/* Top level links */}
         <DropdownMenuGroup className="flex flex-col space-y-1">
           <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            Our History
+            Stories
           </DropdownMenuItem>
           <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            History Of Memons
+            Documentaries
           </DropdownMenuItem>
           <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            The Essence
+            In The News
           </DropdownMenuItem>
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator className="my-1" />
 
-        {/* Submenu */}
+        {/* Submenu example */}
         <DropdownMenuGroup className="flex flex-col space-y-1">
           <DropdownMenuSub>
             <DropdownMenuSubTrigger className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-              Who We Are
+              More Categories
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent className="w-56 bg-card border border-gray-200 shadow-lg p-2">
                 <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Office Bearers
+                  Press Releases
                 </DropdownMenuItem>
                 <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Managing
+                  Blog
                 </DropdownMenuItem>
                 <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Committee
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Youth
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Wing
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Ladies Wing
+                  Media Coverage
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>

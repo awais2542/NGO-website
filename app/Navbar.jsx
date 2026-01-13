@@ -1,160 +1,115 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/button";
-import { DropdownMenuDemo } from "@/components/demos/dropdownMenuDemo";
+import { DropdownMenuDemo } from "@/components/demos/AboutMemonDrop";
+import { Menu, X } from "lucide-react";
+import clsx from "clsx";
+import {NewsDropDown} from "@/components/demos/NewsDrop";
+
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Our Partners", href: "/partners" },
+  { name: "Our Work", href: "/work" },
+  { name: "Contact", href: "/contact" },
+];
 
 export default function Navbar() {
-  const [isClick, setisClick] = useState(false);
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
-  const toggleNavbar = () => {
-    setisClick(!isClick);
-  };
   return (
-    <nav className="relative bg-card text-black ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-25">
-          <div className="flex items-center">
-            <div className="logo flex mt-5 shrink-0 ">
-              <Logo
-                src={"/images/logo.png"}
-                height={40}
-                width={100}
-                alt="logo"
-              />
-            </div>
+    <nav className="bg-background">
+      <div className="max-w-7xl mx-auto px-4">
+        
+        {/* ===== TOP BAR ===== */}
+        <div className="relative h-20 flex items-center md:grid md:grid-cols-[auto_1fr_auto]">
+          
+          {/* LEFT: LOGO */}
+          <div className="flex-shrink-0 md:w-[140px]">
+            <Logo
+              src="/images/logo.png"
+              height={50}
+              width={90}
+              alt="logo"
+            />
           </div>
-          <div className="hidden md:block items-center ">
-            <div className="ml-4 flex items-center-safe gap-6 md:ml-6">
-              <Link
-                href="/"
-                variant="outline"
-                className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
-                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-              >
-                Home
-              </Link>
 
-              <DropdownMenuDemo />
+          {/* CENTER: MENU (DESKTOP ONLY) */}
+          <div className="hidden md:flex justify-center items-center gap-8">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
 
-              <Link
-                href=""
-                variant="outline"
-                className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
-                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-              >
-                Services
-              </Link>
-              <Link
-                href=""
-                variant="outline"
-                className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
-                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-              >
-                Our Partners
-              </Link>
-              <Link
-                href=""
-                variant="outline"
-                className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
-                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-              >
-                Our Work
-              </Link>
-              <Link
-                href=""
-                variant="outline"
-                className="bg-card text-black hover:bg-muted border-0 rounded relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 
-                                    after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-          <div className="flex fixed-right">
-            <Link href="/donate">
-              <Button className=" bg-secondary size-lg hover:bg-primary ">
-                Donate
-              </Button>
-            </Link>
-          </div>
-          <div className="md:hidden flex items-center">
-            <button
-              className="inline-flex items-center justify-center p-2 rounded-md bg-muted hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              onClick={toggleNavbar}
-            >
-              {isClick ? (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={clsx(
+                    "relative text-sm font-medium transition",
+                    "bg-card text-black border-0 relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+                    isActive
+                      ? "text-primary after:w-full"
+                      : "text-foreground/80 hover:text-primary",
+                    "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-primary after:transition-all after:w-0"
+                  )}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
+                  {item.name}
+                </Link>
+              );
+            })}
+            <NewsDropDown />
+            <DropdownMenuDemo />
           </div>
+
+          {/* RIGHT: DESKTOP BUTTON */}
+          <div className="hidden md:flex justify-end md:w-[140px]">
+            <Button className="px-5  bg-secondary text-primary-foreground hover:bg-secondary/90">
+              Donate
+            </Button>
+          </div>
+
+          {/* MOBILE TOGGLE (FORCED RIGHT) */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden absolute right-0 p-2 rounded-lg border border-border text-foreground"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
       </div>
-      {isClick && (
-        <div className="md:hidden px-4 pb-4 space-y-2 bg-secondary">
-          <Link
-            href="#"
-            className="block text-white hover:bg-muted rounded-lg p-2"
-          >
-            Home
-          </Link>
+
+      {/* ===== MOBILE MENU ===== */}
+      {open && (
+        <div className="md:hidden bg-background px-4 py-6 space-y-4">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={clsx(
+                  "block text-base font-medium",
+                  isActive
+                    ? "text-primary"
+                    : "text-foreground/80 hover:text-primary"
+                )}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+          <NewsDropDown />
           <DropdownMenuDemo />
-          <Link
-            href="#"
-            className="block text-white hover:bg-muted rounded-lg p-2"
-          >
-            Services
-          </Link>
-          <Link
-            href="#"
-            className="block text-white hover:bg-muted rounded-lg p-2"
-          >
-            Our Partners
-          </Link>
-          <Link
-            href="#"
-            className="block text-white hover:bg-muted rounded-lg p-2"
-          >
-            Our Work
-          </Link>
-          <Link
-            href="#"
-            className="block text-white hover:bg-muted rounded-lg p-2"
-          >
-            Contact
-          </Link>
+
+          <Button className="w-full mt-4 rounded-full bg-primary text-primary-foreground">
+            Donate
+          </Button>
         </div>
       )}
     </nav>

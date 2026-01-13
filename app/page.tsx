@@ -11,7 +11,7 @@ import VideoDivider from "@/components/VideoDivider";
 export default function Home() {
   return (
    <> 
-   <section className="">
+   <section>
       <CarouselDemo /> 
    </section>
    <section>
