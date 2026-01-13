@@ -37,10 +37,10 @@ export default function Presidentmsg() {
               {/* <div className="relative w-full max-w-90 aspect-square rounded-xl overflow-hidden shadow-md"> */}
               <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-md">
                 <Image
-                  src="/images/president.png"
+                  src="/ismages/president.png"
                   alt="President Gondal Memon"
                   fill
-                  className="object-fit"
+                  className="object-cover"
                   priority
                 />
               </div>
