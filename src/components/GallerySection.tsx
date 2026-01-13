@@ -41,11 +41,11 @@ export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section className="py-16 bg-input overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
-
+    // <section className="py-16 bg-input overflow-hidden">
+    <section className="bg-input overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 pb-44 pt-24">
         {/* Heading */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">Our Gallery</h2>
           <p className="text-muted-foreground mt-2">
             A glimpse of our ongoing welfare activities
@@ -77,9 +77,7 @@ export default function GallerySection() {
                   <h3 className="text-white text-lg font-semibold">
                     {item.title}
                   </h3>
-                  <p className="text-white/80 text-sm">
-                    {item.desc}
-                  </p>
+                  <p className="text-white/80 text-sm">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -89,7 +87,7 @@ export default function GallerySection() {
         {/* Modal */}
         {selectedImage !== null && (
           <GalleryModal
-            images={images.map(i => i.src)}
+            images={images.map((i) => i.src)}
             startIndex={selectedImage}
             onClose={() => setSelectedImage(null)}
           />

@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import Logo from "@/components/Logo"; // Make sure path correct ho
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from "@/components/Icons";
 
-
 interface FooterLink {
   text: string;
   href: string;
@@ -60,16 +59,14 @@ export default function FooterSection({
         { text: "Volunteer", href: "#" },
         { text: "Carrier", href: "#" },
         { text: "Donate", href: "#" },
-        
       ],
     },
-     {
+    {
       title: "Contact Us",
       links: [
         { text: "Gmail", href: "#" },
         { text: "Contact", href: "#" },
         { text: "Address", href: "#" },
-        
       ],
     },
     {
@@ -77,24 +74,42 @@ export default function FooterSection({
       links: [], // Social links will go here
     },
   ],
-   socialLinks = [
-  { label: "WhatsApp", href: "https://wa.me/1234567890", icon: <WhatsAppIcon /> },
-  { label: "Instagram", href: "https://instagram.com/yourprofile", icon: <InstagramIcon /> },
-  { label: "Facebook", href: "https://facebook.com/yourpage", icon: <FacebookIcon /> },
-],
+  socialLinks = [
+    {
+      label: "WhatsApp",
+      href: "https://wa.me/1234567890",
+      icon: <WhatsAppIcon />,
+    },
+    {
+      label: "Instagram",
+      href: "https://instagram.com/yourprofile",
+      icon: <InstagramIcon />,
+    },
+    {
+      label: "Facebook",
+      href: "https://facebook.com/yourpage",
+      icon: <FacebookIcon />,
+    },
+  ],
   className,
 }: FooterProps) {
   return (
-    <footer className={cn("border-t bg-muted mt-3 w-full px-4", className)}>
+    <footer
+      className={cn("border-t border-gray-500 bg-muted w-full px-4", className)}
+    >
       <div className="max-w-7xl mx-auto py-12">
-        
         <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-6">
           {groups.map((group, index) => (
             <div key={index}>
               {index === 0 ? (
                 // FIRST GROUP: LOGO
                 <div className="mb-3 flex items-center">
-                  <Logo src="/images/logo.png" height={50} width={150} alt={companyName} />
+                  <Logo
+                    src="/images/logo.png"
+                    height={50}
+                    width={150}
+                    alt={companyName}
+                  />
                 </div>
               ) : group.title === "Connect" ? (
                 // SOCIAL LINKS GROUP
@@ -141,7 +156,8 @@ export default function FooterSection({
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 flex flex-col gap-6 border-t pt-6 sm:flex-row sm:items-center sm:justify-between">
+        {/* <div className="mt-12 flex flex-col gap-6 border-t pt-6 sm:flex-row sm:items-center sm:justify-between"> */}
+        <div className="mt-12  border-t w-full text-center py-4">
           <span className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} {companyName}. All rights reserved.
           </span>

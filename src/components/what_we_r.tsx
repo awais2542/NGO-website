@@ -103,7 +103,6 @@ export default function WhatWeAreDoing() {
   return (
     <section className="w-full py-16 ">
       <div className="max-w-7xl mx-auto px-4">
-        
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
@@ -116,7 +115,7 @@ export default function WhatWeAreDoing() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {activities.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -126,7 +125,7 @@ export default function WhatWeAreDoing() {
                 className="group focus:outline-none"
               >
                 <Card className="h-full cursor-pointer transition-all duration-300 hover:bg-accent hover:shadow-lg hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-3 text-center">
                     <div className="flex justify-center mb-4">
                       <Icon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
                     </div>
@@ -142,7 +141,6 @@ export default function WhatWeAreDoing() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

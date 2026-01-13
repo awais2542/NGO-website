@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
+import { useState } from "react";
+import Image from "next/image";
 
 export default function ImageDivider() {
-  const [position, setPosition] = useState({ x: 50, y: 50 })
-  const [isHovering, setIsHovering] = useState(false)
+  const [position, setPosition] = useState({ x: 50, y: 50 });
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isHovering) return
+    if (!isHovering) return;
 
-    const rect = e.currentTarget.getBoundingClientRect()
-    const x = ((e.clientX - rect.left) / rect.width) * 100
-    const y = ((e.clientY - rect.top) / rect.height) * 100
-    setPosition({ x, y })
-  }
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setPosition({ x, y });
+  };
 
   return (
     <div
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onMouseMove={handleMouseMove}
-      className="relative w-full h-[230px] sm:h-[300px] md:h-[400px]
+      className="relative w-full h-[230px] sm:h-[300px] md:h-[450px] lg:h-[550px]
                  overflow-hidden object-cover cursor-pointer"
     >
       {/* FRONT / BASE IMAGE (ALWAYS VISIBLE) */}
@@ -68,5 +68,5 @@ export default function ImageDivider() {
         </p>
       </div> */}
     </div>
-  )
+  );
 }
