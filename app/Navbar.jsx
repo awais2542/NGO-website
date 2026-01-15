@@ -5,17 +5,19 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/button";
-import { DropdownMenuDemo } from "@/components/demos/AboutMemonDrop";
+import { AboutMemonDropDown } from "@/components/demos/AboutMemonDrop";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
 import {NewsDropDown} from "@/components/demos/NewsDrop";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
+  { name: <AboutMemonDropDown />, href: "/about" },
+  { name: <NewsDropDown />, href: "/stories" },
   { name: "Our Partners", href: "/partners" },
   { name: "Our Work", href: "/work" },
-  { name: "Contact", href: "/contact" },
+  { name: "Gallery", href: "/Gallery" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -33,36 +35,39 @@ export default function Navbar() {
           <div className="flex-shrink-0 md:w-[140px]">
             <Logo
               src="/images/logo.png"
-              height={50}
+              height={60}
               width={90}
               alt="logo"
             />
           </div>
 
           {/* CENTER: MENU (DESKTOP ONLY) */}
-          <div className="hidden md:flex justify-center items-center gap-8">
-            {navItems.map((item) => {
+          <div className="hidden md:flex justify-center items-center gap-5">
+            {navItems.map((item , index) => {
               const isActive = pathname === item.href;
 
               return (
                 <Link
-                  key={item.name}
+                  key= {item.href || index}
                   href={item.href}
                   className={clsx(
                     "relative text-sm font-medium transition",
-                    "bg-card text-black border-0 relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+                    "bg-card text-black border-0 relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-destructive after:transition-all after:duration-300 hover:after:w-full",
                     isActive
                       ? "text-primary after:w-full"
                       : "text-foreground/80 hover:text-primary",
-                    "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-primary after:transition-all after:w-0"
+                    "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-destructive after:transition-all after:w-0"
                   )}
+                  
                 >
                   {item.name}
+                  
                 </Link>
+                
               );
             })}
-            <NewsDropDown />
-            <DropdownMenuDemo />
+            
+            
           </div>
 
           {/* RIGHT: DESKTOP BUTTON */}

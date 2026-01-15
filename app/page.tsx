@@ -6,6 +6,7 @@ import GallerySection from "@/components/GallerySection";
 import  Footer  from "@/components/Footer";
 import FooterSection from "@/components/Footer";
 import VideoDivider from "@/components/VideoDivider";
+import WorkTree from "@/components/ourwork";
 
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
   <section>
       <FooterSection />
   </section>
+  
    </>
   )
 }

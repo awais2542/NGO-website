@@ -9,101 +9,106 @@ import {
   Stethoscope,
   Home,
   Users,
-  School,
+  Laptop,
+  Utensils,
+  AlertTriangle,
+  Calendar,
+  Wrench,
+  Briefcase,
+  Leaf,
 } from "lucide-react";
 
 const activities = [
   {
-    title: "Health Support",
-    desc: "Medical assistance and health support for deserving families.",
-    icon: Stethoscope,
-    href: "/health-support",
-  },
-  {
-    title: "Education Aid",
-    desc: "Helping students with fees, books and education support.",
-    icon: GraduationCap,
-    href: "/education-aid",
-  },
-  {
-    title: "Monthly Cash Support",
-    desc: "Financial help for needy families on monthly basis.",
+    title: "Financial & Monthly Aid",
+    desc: "Providing monthly financial assistance to deserving families.",
     icon: HandCoins,
-    href: "/cash-support",
+    href: "/financial-aid",
   },
   {
-    title: "Marriage Assistance",
-    desc: "Support for marriages of deserving community members.",
-    icon: HeartHandshake,
-    href: "/marriage-assistance",
+    title: "Legal & Community Support",
+    desc: "Offering legal guidance and community support services.",
+    icon: Briefcase,
+    href: "/legal-support",
   },
   {
-    title: "Rehabilitation",
-    desc: "Helping families rebuild and stabilize their lives.",
+    title: "Housing & Assistance",
+    desc: "Helping families with housing and shelter support.",
     icon: Home,
-    href: "/rehabilitation",
+    href: "/housing-assistance",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
+    title: "Youth & Sports Program",
+    desc: "Engaging youth in sports and leadership activities.",
     icon: Users,
-    href: "/community-welfare",
+    href: "/youth-sports",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
-    icon: School,
-    href: "/community-welfare",
+    title: "IT Training & Support",
+    desc: "Providing IT education and technical support.",
+    icon: Laptop,
+    href: "/it-training",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
-    icon: Users,
-    href: "/community-welfare",
+    title: "Healthcare Services",
+    desc: "Medical aid and healthcare facilities for the needy.",
+    icon: Stethoscope,
+    href: "/healthcare",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
-    icon: Users,
-    href: "/community-welfare",
+    title: "Education Scholarships",
+    desc: "Scholarships and educational support for students.",
+    icon: GraduationCap,
+    href: "/education-scholarships",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
-    icon: Users,
-    href: "/community-welfare",
+    title: "Women Empowerment",
+    desc: "Programs to empower women socially and economically.",
+    icon: HeartHandshake,
+    href: "/women-empowerment",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
-    icon: Users,
-    href: "/community-welfare",
+    title: "Food Distribution",
+    desc: "Distributing food to families in need.",
+    icon: Utensils,
+    href: "/food-distribution",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
-    icon: Users,
-    href: "/community-welfare",
+    title: "Disaster Relief",
+    desc: "Emergency relief during natural disasters.",
+    icon: AlertTriangle,
+    href: "/disaster-relief",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
-    icon: Users,
-    href: "/community-welfare",
+    title: "Community Events",
+    desc: "Organizing events for community bonding and growth.",
+    icon: Calendar,
+    href: "/community-events",
   },
   {
-    title: "Community Welfare",
-    desc: "Social welfare activities for overall community growth.",
-    icon: Users,
-    href: "/community-welfare",
+    title: "Skill Development",
+    desc: "Training programs to develop professional skills.",
+    icon: Wrench,
+    href: "/skill-development",
+  },
+  {
+    title: "Entrepreneurship Support",
+    desc: "Helping entrepreneurs with resources and guidance.",
+    icon: Briefcase,
+    href: "/entrepreneurship-support",
+  },
+  {
+    title: "Environmental Projects",
+    desc: "Initiatives to protect and sustain the environment.",
+    icon: Leaf,
+    href: "/environmental-projects",
   },
 ];
 
 export default function WhatWeAreDoing() {
   return (
-    <section className="w-full py-16 ">
+    <section className="w-full py-16">
       <div className="max-w-7xl mx-auto px-4">
-        
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
@@ -116,17 +121,17 @@ export default function WhatWeAreDoing() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {activities.map((item, index) => {
             const Icon = item.icon;
             return (
               <Link
-                key={index}
+                key={item.href}
                 href={item.href}
                 className="group focus:outline-none"
               >
                 <Card className="h-full cursor-pointer transition-all duration-300 hover:bg-accent hover:shadow-lg hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-3 text-center">
                     <div className="flex justify-center mb-4">
                       <Icon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
                     </div>
@@ -142,7 +147,6 @@ export default function WhatWeAreDoing() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

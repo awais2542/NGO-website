@@ -15,14 +15,14 @@ import {
   DropdownMenuPortal,
 } from "@/components/dropdown-menu";
 
-export function DropdownMenuDemo() {
+export function AboutMemonDropDown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
           className="bg-card text-foreground/80 hover:text-primary
-           text-black border-0 relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+           text-black border-0 relative px-3 py-1 "
         >
           About Memon
            <ChevronDown size={16} />

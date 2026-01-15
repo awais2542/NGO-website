@@ -22,7 +22,7 @@ export function NewsDropDown() {
         <Button
           variant="outline"
            className="bg-card text-black border-0 text-foreground/80 hover:text-primary
-           relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+           relative px-3 py-1 "
         >
           News & Stories
           <ChevronDown size={16} />
