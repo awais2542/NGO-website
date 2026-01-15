@@ -12,8 +12,8 @@ import {NewsDropDown} from "@/components/demos/NewsDrop";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: <AboutMemonDropDown />, href: "/about" },
-  { name: <NewsDropDown />, href: "/stories" },
+  { name: <AboutMemonDropDown />, },
+  { name: <NewsDropDown />,  },
   { name: "Our Partners", href: "/partners" },
   { name: "Our Work", href: "/work" },
   { name: "Gallery", href: "/Gallery" },
@@ -46,9 +46,18 @@ export default function Navbar() {
             {navItems.map((item , index) => {
               const isActive = pathname === item.href;
 
+              // If item has no href, render it directly (for dropdown components)
+              if (!item.href) {
+                return (
+                  <div key={index}>
+                    {item.name}
+                  </div>
+                );
+              }
+
               return (
                 <Link
-                  key= {item.href || index}
+                  key={item.href || index}
                   href={item.href}
                   className={clsx(
                     "relative text-sm font-medium transition",
@@ -90,12 +99,21 @@ export default function Navbar() {
       {/* ===== MOBILE MENU ===== */}
       {open && (
         <div className="md:hidden bg-background px-4 py-6 space-y-4">
-          {navItems.map((item) => {
+          {navItems.map((item, index) => {
             const isActive = pathname === item.href;
+
+            // If item has no href, render it directly (for dropdown components)
+            if (!item.href) {
+              return (
+                <div key={index} onClick={() => setOpen(false)}>
+                  {item.name}
+                </div>
+              );
+            }
 
             return (
               <Link
-                key={item.name}
+                key={item.href || index}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className={clsx(
@@ -109,8 +127,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <NewsDropDown />
-          <DropdownMenuDemo />
 
           <Button className="w-full mt-4 rounded-full bg-primary text-primary-foreground">
             Donate

@@ -122,7 +122,7 @@ export default function WhatWeAreDoing() {
 
         {/* Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-          {activities.map((item, index) => {
+          {activities.map((item) => {
             const Icon = item.icon;
             return (
               <Link

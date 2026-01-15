@@ -13,7 +13,6 @@ const nextConfig: NextConfig = {
   output: "standalone",
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  skipProxyUrlNormalize: true,
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },

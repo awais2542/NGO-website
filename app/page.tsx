@@ -3,10 +3,8 @@ import ImageDivider from "@/components/ImageDivider";
 import Presidentmsg from "@/components/Presidentmsg";
 import WhatWeAreDoing from "@/components/what_we_r";
 import GallerySection from "@/components/GallerySection";
-import  Footer  from "@/components/Footer";
 import FooterSection from "@/components/Footer";
 import VideoDivider from "@/components/VideoDivider";
-import WorkTree from "@/components/ourwork";
 
 
 export default function Home() {
@@ -29,7 +27,7 @@ export default function Home() {
       <GallerySection />
    </section>
    <section>
-      <VideoDivider videoSrc="/videos/dev.mp4" />
+      <VideoDivider videoSrc="/Videos/dev.mp4" />
    </section>
   <section>
       <FooterSection />
