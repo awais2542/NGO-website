@@ -30,6 +30,44 @@ export default function Presidentmsg() {
                 when individuals, families, and community members are supported
                 holistically—emotionally, socially, and economically.
               </p>
+<<<<<<< HEAD
+=======
+            </div>
+
+            {/* IMAGE */}
+            <div className="flex justify-center order-2 md:order-2">
+              {/* <div className="relative w-full max-w-90 aspect-square rounded-xl overflow-hidden shadow-md"> */}
+              <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-md">
+                <Image
+                  src="/president.jpg"
+                  alt="President Gondal Memon"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* ROW 2: Left IMAGE | Right SHORT TEXT */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            {/* IMAGE */}
+            <div className="flex justify-center order-1 md:order-1">
+              {/* <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] aspect-square rounded-xl overflow-hidden shadow-md"> */}
+              <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-md">
+                <Image
+                  src="/carousel/image3.jpg"
+                  alt="President Gondal Memon"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* SHORT TEXT */}
+            <div className="text-left space-y-3 text-sm sm:text-base leading-relaxed order-2 md:order-2">
+>>>>>>> 50697053e8c9385517063362c7cff3660afb4d5c
               <p>
                 As the President, I am honored to lead an organization that
                 upholds the values of <strong>Akhlaq</strong>,{" "}
