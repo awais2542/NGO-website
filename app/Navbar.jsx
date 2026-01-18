@@ -11,13 +11,13 @@ import clsx from "clsx";
 import {NewsDropDown} from "@/components/demos/NewsDrop";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: <AboutMemonDropDown />, },
-  { name: <NewsDropDown />,  },
+  { name: "Home", href: "/" }, 
   { name: "Our Partners", href: "/partners" },
   { name: "Our Work", href: "/work" },
   { name: "Gallery", href: "/Gallery" },
   { name: "Contact Us", href: "/contact" },
+  { name: <AboutMemonDropDown />, },
+  { name: <NewsDropDown />,  },
 ];
 
 export default function Navbar() {
@@ -81,9 +81,11 @@ export default function Navbar() {
 
           {/* RIGHT: DESKTOP BUTTON */}
           <div className="hidden md:flex justify-end md:w-[140px]">
+           <Link href="/app/Donation.tsx">
             <Button className="px-5  bg-secondary text-primary-foreground hover:bg-secondary/90">
               Donate
             </Button>
+           </Link>
           </div>
 
           {/* MOBILE TOGGLE (FORCED RIGHT) */}
@@ -128,7 +130,7 @@ export default function Navbar() {
             );
           })}
 
-          <Button className="w-full mt-4 rounded-full bg-primary text-primary-foreground">
+          <Button className="w-full mt-4 rounded-full bg-accent text-primary-foreground">
             Donate
           </Button>
         </div>

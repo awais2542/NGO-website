@@ -30,41 +30,6 @@ export default function Presidentmsg() {
                 when individuals, families, and community members are supported
                 holistically—emotionally, socially, and economically.
               </p>
-            </div>
-
-            {/* IMAGE */}
-            <div className="flex justify-center order-2 md:order-2">
-              {/* <div className="relative w-full max-w-90 aspect-square rounded-xl overflow-hidden shadow-md"> */}
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-md">
-                <Image
-                  src="/images/president.jpg"
-                  alt="President Gondal Memon"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* ROW 2: Left IMAGE | Right SHORT TEXT */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            {/* IMAGE */}
-            <div className="flex justify-center order-1 md:order-1">
-              {/* <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] aspect-square rounded-xl overflow-hidden shadow-md"> */}
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-md">
-                <Image
-                  src="/carousel/image3.jpg"
-                  alt="President Gondal Memon"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-
-            {/* SHORT TEXT */}
-            <div className="text-left space-y-3 text-sm sm:text-base leading-relaxed order-2 md:order-2">
               <p>
                 As the President, I am honored to lead an organization that
                 upholds the values of <strong>Akhlaq</strong>,{" "}
@@ -78,15 +43,108 @@ export default function Presidentmsg() {
                 assessed and distributed to ensure it reaches the most
                 deserving.
               </p>
-
-              <div className="pt-4">
+               <div className="pt-4">
                 <p className="font-semibold">Shabbir Abdul Razzak Teli</p>
                 <p className="text-xs uppercase tracking-wide text-muted-foreground">
                   President, Gondal Memon Association
                 </p>
               </div>
+              
             </div>
+
+            {/* IMAGE with quotes */}
+       <div className="flex justify-center order-2 md:order-2 w-full">
+              <div className="w-full max-w-md bg-accent rounded-xl shadow-md p-6 text-center">
+
+                {/* English Quote */}
+                <p className="text-black font-bold text-lg mt-2">
+                  “My aim is to restore society’s <br />
+                  belief in love”
+                </p>
+
+                {/* Urdu Quote */}
+                <p className="text-black font-bold text-lg mt-4">
+                  “Mein Mohabbat Peh Imaan <br />
+                  Bahaal Karna Chahta Hoon.”
+                </p>
+
+                {/* Image + Text Row */}
+                <div className="flex items-center justify-center gap-4 mt-8">
+
+                  {/* Image */}
+                  <Image
+                    src="/images/president.jpg"
+                    alt="Founder"
+                    className="rounded-full object-cover shadow-lg"
+                    width={90}
+                    height={90}
+                    priority
+                  />
+
+                  {/* Text beside image */}
+                  <div className="text-left">
+                    <p className="text-black font-semibold text-base">
+                      Gondal Memon
+                    </p>
+                    <p className="text-gray-600 text-sm leading-tight">
+                      Founder & President <br />
+                      Gondal Memon Association
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+      </div>
+
           </div>
+        {/* ROW 2: Left IMAGE | Right SHORT TEXT */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+
+                {/* IMAGE ONLY CARD */}
+                <div className="flex justify-center order-1 md:order-1 w-full">
+                  <div className="relative w-full max-w-md h-[320px] rounded-xl overflow-hidden shadow-md">
+                    <Image
+                      src="/carousel/image1.jpg"
+                      alt="President"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                {/* SHORT TEXT (unchanged) */}
+                <div className="text-left space-y-3 text-sm sm:text-base leading-relaxed order-2 md:order-2">
+                  {/* Islamic Quote 1 */}
+                        <p className="text-black font-semibold text-lg leading-snug">
+                          “The example of those who spend their wealth <br />
+                          in the way of Allah is like a seed which grows <br />
+                          seven ears; in every ear a hundred grains.”
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          — Surah Al-Baqarah (2:261)
+                        </p>
+                  {/* Islamic Quote 2 */}
+                    <p className="text-black font-semibold text-lg leading-snug">
+                      “Charity does not decrease wealth.”
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      — Prophet Muhammad ﷺ (Muslim)
+                    </p>
+                    {/* Islamic Quote 3 */}
+                    <p className="text-black font-semibold text-lg leading-snug">
+                      “Whoever relieves a believer’s hardship, <br />
+                      Allah will relieve his hardship on the Day of Judgment.”
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      — Prophet Muhammad ﷺ (Muslim)
+                    </p>    
+
+                </div>
+
+              </div>
+
         </CardContent>
       </Card>
     </div>
