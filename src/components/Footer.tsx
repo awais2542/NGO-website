@@ -111,7 +111,7 @@ export default function FooterSection({
                 // FIRST GROUP: LOGO
                 <div className="mb-3 flex items-center">
                   <Logo
-                    src="/images/logo.png"
+                    src="/logo.png"
                     height={50}
                     width={150}
                     alt={companyName}
