@@ -81,9 +81,10 @@ export default function Navbar() {
 
           {/* RIGHT: DESKTOP BUTTON */}
           <div className="hidden md:flex justify-end md:w-[140px]">
-           <Link href="/app/Donation.tsx">
-            <Button className="px-5  bg-secondary text-primary-foreground hover:bg-secondary/90">
-              Donate
+
+            <Link href="/donation">
+            <Button size={"lg"} className="px-5  bg-secondary text-primary-foreground hover:bg-secondary/90">
+              Donate Now
             </Button>
            </Link>
           </div>
@@ -130,9 +131,11 @@ export default function Navbar() {
             );
           })}
 
+        <Link href="/donation">
           <Button className="w-full mt-4 rounded-full bg-accent text-primary-foreground">
-            Donate
+            Donate Now
           </Button>
+         </Link>
         </div>
       )}
     </nav>
