@@ -59,7 +59,7 @@ Branch Code: ${bank.branch}`;
       {/* 🔹 Banner Image */}
       <div className="relative w-full h-[320px] md:h-[420px]">
         <Image
-          src="/gallery/donation.jpg"
+          src="/donation/donation.jpg"
           alt="Donate Banner"
           fill
           className="object-cover brightness-75 contrast-90"
