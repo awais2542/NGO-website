@@ -2,10 +2,17 @@
 
 import Image from "next/image";
 import { Copy } from "lucide-react";
-import ImageDivider from "@/components/ImageDivider";
 import FooterSection from "@/components/Footer";
 
-const banks = [
+interface BankDetails {
+  name: string;
+  title: string;
+  account: string;
+  iban: string;
+  branch: string;
+}
+
+const banks: BankDetails[] = [
   {
     name: "Meezan Bank",
     title: "GONDAL MEMON ASSOCIATION",
@@ -37,7 +44,7 @@ const banks = [
 ];
 
 export default function DonationPage() {
-  const copyDetails = (bank: any) => {
+  const copyDetails = (bank: BankDetails) => {
     const text = `Bank Name: ${bank.name}
 Account Title: ${bank.title}
 Account Number: ${bank.account}
