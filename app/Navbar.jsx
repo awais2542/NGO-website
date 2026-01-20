@@ -12,10 +12,10 @@ import {NewsDropDown} from "@/components/demos/NewsDrop";
 
 const navItems = [
   { name: "Home", href: "/" }, 
-  { name: "Our Partners", href: "/partners" },
-  { name: "Our Work", href: "/work" },
+  { name: "Our Partners", href: "/OurPartner" },
+  { name: "Our Work", href: "/OurWork" },
   { name: "Gallery", href: "/Gallery" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Contact Us", href: "/Contact" },
   { name: <AboutMemonDropDown />, },
   { name: <NewsDropDown />,  },
 ];
@@ -132,9 +132,9 @@ export default function Navbar() {
           })}
 
         <Link href="/donation">
-          <Button className="w-full mt-4 rounded-full bg-accent text-primary-foreground">
-            Donate Now
-          </Button>
+          <Button size={"lg"} className="px-5 w-full bg-secondary text-primary-foreground hover:bg-secondary/90">
+              Donate Now
+            </Button>
          </Link>
         </div>
       )}

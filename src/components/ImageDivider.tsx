@@ -43,7 +43,7 @@ export default function ImageDivider() {
           }}
         >
           <Image
-            src="/carousel/image2.jpg"
+            src="/donation/donation.jpg"
             alt="Hover Image"
             fill
             className="object-cover"

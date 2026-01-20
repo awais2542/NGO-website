@@ -107,7 +107,7 @@ export default function Presidentmsg() {
                 <div className="flex justify-center order-1 md:order-1 w-full">
                   <div className="relative w-full max-w-md h-[320px] rounded-xl overflow-hidden shadow-md">
                     <Image
-                      src="/carousel/image1.jpg"
+                      src="/donation/3.jpg"
                       alt="President"
                       fill
                       className="object-cover"

@@ -2,49 +2,100 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
-const images = [
-  "/carousel/image1.jpg",
-  "/carousel/image2.jpg",
-  "/carousel/image3.jpg",
-]
 
 import { Card, CardContent } from "../card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselApi,
 } from "../carousel"
 
+const slides = [
+  {
+    image: "/carousel/1.jpg",
+    title: "Together We Can Make a Difference",
+    subtitle: "Your donation brings hope to those in need",
+  },
+  {
+    image: "/carousel/2.jpg",
+    title: "Support Humanity",
+    subtitle: "Every contribution counts",
+  },
+  {
+    image: "/carousel/3.jpg",
+    title: "Donate for a Better Tomorrow",
+    subtitle: "Be the reason someone smiles today",
+  },
+]
+
 export function CarouselDemo() {
+  const [api, setApi] = React.useState<CarouselApi | null>(null)
+  const [activeIndex, setActiveIndex] = React.useState(0)
+
+  // 🔹 Listen to slide change
+  React.useEffect(() => {
+    if (!api) return
+
+    setActiveIndex(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setActiveIndex(api.selectedScrollSnap())
+    })
+  }, [api])
+
   return (
-    <Carousel opts={{
-      align:"start",
-      loop:true,
-    }}
-     plugins={[
+    <Carousel
+      setApi={setApi}
+      opts={{ align: "start", loop: true }}
+      plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 3500,
         }),
-      ]
-    } className="w-full">
-      <CarouselContent className="">
-        {images.map((image, index) => (
+      ]}
+      className="w-full"
+    >
+      <CarouselContent>
+        {slides.map((slide, index) => (
           <CarouselItem key={index} className="pl-0">
             <Card className="w-full h-[630px] overflow-hidden">
               <CardContent className="p-0 h-full relative">
-                <Image 
-                  src={image}
-                  alt="chat" 
-                  fill 
-                  className="object-cover"
+
+                {/* Image */}
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  className="object-cover brightness-75"
+                  priority={index === 0}
                 />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/40" />
+
+                {/* Text Overlay */}
+                <div className="absolute inset-0 flex items-end justify-center text-center px-6 pb-24 md:pb-32">
+
+                  {activeIndex === index && (
+                    <div
+                      key={activeIndex} // 🔥 animation re-trigger
+                      className="animate-slideUp"
+                    >
+                      <h1 className="text-white text-3xl md:text-5xl font-bold">
+                        {slide.title}
+                      </h1>
+                      <p className="text-white/90 mt-4 text-base md:text-lg max-w-2xl mx-auto">
+                        {slide.subtitle}
+                      </p>
+                    </div>
+                  )}
+                </div>
+
               </CardContent>
             </Card>
           </CarouselItem>
-
         ))}
       </CarouselContent>
-     
     </Carousel>
   )
 }
