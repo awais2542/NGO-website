@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Button } from "@/components/button";
 import { ChevronDown } from "lucide-react";
 import {
@@ -12,59 +13,60 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-  DropdownMenuPortal,
 } from "@/components/dropdown-menu";
 
 export function NewsDropDown() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-           className="bg-card text-black border-0 text-foreground/80 hover:text-primary
-           relative px-3 py-1 "
+          className="bg-card text-black border-0 px-3 py-1 flex items-center gap-1"
         >
           News & Stories
           <ChevronDown size={16} />
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="w-60 bg-card border border-gray-200 shadow-lg p-2" align="start">
-        {/* Top level links */}
-        <DropdownMenuGroup className="flex flex-col space-y-1">
-          <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            Stories
-          </DropdownMenuItem>
-          <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            Documentaries
-          </DropdownMenuItem>
-          <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            In The News
-          </DropdownMenuItem>
+      <DropdownMenuContent className="w-60 p-2" align="start">
+        {/* Top level */}
+        <DropdownMenuGroup className="space-y-1">
+          <DropdownMenuItem>Stories</DropdownMenuItem>
+          <DropdownMenuItem>Documentaries</DropdownMenuItem>
+          <DropdownMenuItem>In The News</DropdownMenuItem>
         </DropdownMenuGroup>
 
-        <DropdownMenuSeparator className="my-1" />
+        <DropdownMenuSeparator />
 
-        {/* Submenu example */}
-        <DropdownMenuGroup className="flex flex-col space-y-1">
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-              More Categories
-            </DropdownMenuSubTrigger>
-            <DropdownMenuPortal>
-              <DropdownMenuSubContent className="w-56 bg-card border border-gray-200 shadow-lg p-2">
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Press Releases
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Blog
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Media Coverage
-                </DropdownMenuItem>
+        {/* More Categories */}
+        <DropdownMenuGroup className="space-y-1">
+          {isMobile ? (
+            <>
+              <DropdownMenuItem>Press Releases</DropdownMenuItem>
+              <DropdownMenuItem>Blog</DropdownMenuItem>
+              <DropdownMenuItem>Media Coverage</DropdownMenuItem>
+            </>
+          ) : (
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>
+                More Categories
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent className="w-56 p-2">
+                <DropdownMenuItem>Press Releases</DropdownMenuItem>
+                <DropdownMenuItem>Blog</DropdownMenuItem>
+                <DropdownMenuItem>Media Coverage</DropdownMenuItem>
               </DropdownMenuSubContent>
-            </DropdownMenuPortal>
-          </DropdownMenuSub>
+            </DropdownMenuSub>
+          )}
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>

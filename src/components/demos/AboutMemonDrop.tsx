@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Button } from "@/components/button";
 import { ChevronDown } from "lucide-react";
 import {
@@ -12,68 +13,60 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-  DropdownMenuPortal,
 } from "@/components/dropdown-menu";
 
 export function AboutMemonDropDown() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className="bg-card text-foreground/80 hover:text-primary
-           text-black border-0 relative px-3 py-1 "
+          className="bg-card text-black border-0 px-3 py-1 flex items-center gap-1"
         >
           About Memon
-           <ChevronDown size={16} />
+          <ChevronDown size={16} />
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="w-60 bg-card border border-gray-200 shadow-lg p-2" align="start">
-        {/* Top level links */}
-        <DropdownMenuGroup className="flex flex-col space-y-1">
-          <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            Our History
-          </DropdownMenuItem>
-          <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            History Of Memons
-          </DropdownMenuItem>
-          <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-            The Essence
-          </DropdownMenuItem>
+      <DropdownMenuContent className="w-60 p-2" align="start">
+        <DropdownMenuGroup className="space-y-1">
+          <DropdownMenuItem>Our History</DropdownMenuItem>
+          <DropdownMenuItem>History Of Memons</DropdownMenuItem>
+          <DropdownMenuItem>The Essence</DropdownMenuItem>
         </DropdownMenuGroup>
 
-        <DropdownMenuSeparator className="my-1" />
+        <DropdownMenuSeparator />
 
-        {/* Submenu */}
-        <DropdownMenuGroup className="flex flex-col space-y-1">
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-              Who We Are
-            </DropdownMenuSubTrigger>
-            <DropdownMenuPortal>
-              <DropdownMenuSubContent className="w-56 bg-card border border-gray-200 shadow-lg p-2">
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Office Bearers
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Managing
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Committee
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Youth
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Wing
-                </DropdownMenuItem>
-                <DropdownMenuItem className="px-2 py-1 hover:bg-primary hover:text-white rounded">
-                  Ladies Wing
-                </DropdownMenuItem>
+        <DropdownMenuGroup className="space-y-1">
+          {isMobile ? (
+            <>
+              <DropdownMenuItem>Office Bearers</DropdownMenuItem>
+              <DropdownMenuItem>Managing Committee</DropdownMenuItem>
+              <DropdownMenuItem>Youth Wing</DropdownMenuItem>
+              <DropdownMenuItem>Ladies Wing</DropdownMenuItem>
+            </>
+          ) : (
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>
+                Who We Are
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent className="w-56 p-2">
+                <DropdownMenuItem>Office Bearers</DropdownMenuItem>
+                <DropdownMenuItem>Managing Committee</DropdownMenuItem>
+                <DropdownMenuItem>Youth Wing</DropdownMenuItem>
+                <DropdownMenuItem>Ladies Wing</DropdownMenuItem>
               </DropdownMenuSubContent>
-            </DropdownMenuPortal>
-          </DropdownMenuSub>
+            </DropdownMenuSub>
+          )}
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>

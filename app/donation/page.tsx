@@ -57,7 +57,7 @@ Branch Code: ${bank.branch}`;
     <div className="min-h-screen bg-gray-50">
 
       {/* 🔹 Banner Image */}
-      <div className="relative w-full h-[320px] md:h-[420px]">
+      <div className="relative w-full h-100 md:h-125 mt-5">
         <Image
           src="/donation/donation.jpg"
           alt="Donate Banner"
@@ -76,7 +76,7 @@ Branch Code: ${bank.branch}`;
       </div>
 
       {/* 🔹 Bank Cards */}
-      <div className="max-w-6xl mx-auto px-4 py-14 grid grid-cols-2 md:grid-cols-2 gap-6">
+<div className="max-w-6xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-2 gap-6">
         {banks.map((bank, index) => (
           <div
             key={index}
@@ -150,7 +150,8 @@ Branch Code: ${bank.branch}`;
                 <div className="absolute inset-0 bg-black/20" />
               </div>
 
-              <div className="relative col-span-2 group hidden md:block">
+              <div className="relative col-span-2 group block">
+
                 <Image
                   src="/donation/3.jpg"
                   alt=""

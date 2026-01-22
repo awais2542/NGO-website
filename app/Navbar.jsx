@@ -9,6 +9,7 @@ import { AboutMemonDropDown } from "@/components/demos/AboutMemonDrop";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
 import {NewsDropDown} from "@/components/demos/NewsDrop";
+import DonationButton from "@/components/DonationButton";
 
 const navItems = [
   { name: "Home", href: "/" }, 
@@ -18,6 +19,22 @@ const navItems = [
   { name: "Contact Us", href: "/Contact" },
   { name: <AboutMemonDropDown />, },
   { name: <NewsDropDown />,  },
+   {
+    name: (
+      <>
+        {/* Desktop view */}
+        <div className="hidden md:flex items-center gap-4 ml-auto">
+          <span className="h-6 w-px bg-border" />
+          <DonationButton />
+        </div>
+
+        {/* Mobile view */}
+        <div className="md:hidden w-full">
+          <DonationButton />
+        </div>
+      </>
+    )
+  }
 ];
 
 export default function Navbar() {
@@ -78,16 +95,7 @@ export default function Navbar() {
             
             
           </div>
-
-          {/* RIGHT: DESKTOP BUTTON */}
-          <div className="hidden md:flex justify-end md:w-[140px]">
-
-            <Link href="/donation">
-            <Button size={"lg"} className="px-5  bg-secondary text-primary-foreground hover:bg-secondary/90">
-              Donate Now
-            </Button>
-           </Link>
-          </div>
+          
 
           {/* MOBILE TOGGLE (FORCED RIGHT) */}
           <button
@@ -130,12 +138,8 @@ export default function Navbar() {
               </Link>
             );
           })}
+          {/* <DonationButton /> */}
 
-        <Link href="/donation">
-          <Button size={"lg"} className="px-5 w-full bg-secondary text-primary-foreground hover:bg-secondary/90">
-              Donate Now
-            </Button>
-         </Link>
         </div>
       )}
     </nav>
