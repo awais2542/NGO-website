@@ -150,6 +150,8 @@
 
 .animate-slideUp {
   animation: slideUp 0.9s ease-out;
+  transform:translateY(40px)
 }
-transform: translateY(40px);
+
+
 
