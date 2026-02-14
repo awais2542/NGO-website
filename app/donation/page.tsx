@@ -57,7 +57,8 @@ Branch Code: ${bank.branch}`;
     <div className="min-h-screen bg-gray-50">
 
       {/* 🔹 Banner Image */}
-      <div className="relative w-full h-100 md:h-125 mt-5">
+ <div className="relative w-full h-[180px] sm:h-[260px] md:h-[380px] mt-5">
+
         <Image
           src="/donation/donation.jpg"
           alt="Donate Banner"
@@ -68,7 +69,8 @@ Branch Code: ${bank.branch}`;
       </div>
 
       {/* 🔹 Donation Banner */}
-      <div className="w-full bg-accent py-12 text-center">
+      <div className="w-full bg-accent py-6 sm:py- text-center">
+
         <h1 className="text-4xl font-bold text-gray-900">Donate Now</h1>
         <p className="text-gray-700 mt-3">
           Aap ki madad kisi ki zindagi badal sakti hai.
@@ -76,11 +78,11 @@ Branch Code: ${bank.branch}`;
       </div>
 
       {/* 🔹 Bank Cards */}
-<div className="max-w-6xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div className="max-w-6xl mx-auto px-4 py-8 sm:py-14 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {banks.map((bank, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-4
+            className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex flex-col gap-3 sm:gap-4
              hover:transform hover:scale-105 transition duration-300 ease-in-out"
           >
             {/* Header */}
@@ -116,7 +118,7 @@ Branch Code: ${bank.branch}`;
           <div className="relative w-full overflow-hidden">
 
             {/* Grid */}
-            <div className="grid grid-cols-4 grid-rows-2 gap-2 h-[280px] md:h-[420px] brightness-75 contrast-90">
+<div className="grid grid-cols-4 grid-rows-2 gap-2 h-[220px] sm:h-[300px] md:h-[420px]">
 
               {/* Big Image */}
               <div className="relative col-span-2 row-span-2 group">
@@ -165,8 +167,8 @@ Branch Code: ${bank.branch}`;
             {/* Center Content */}
             <div className="absolute inset-0 flex items-center justify-center text-center px-6 pointer-events-none">
               <div>
-                <h2 className="text-white text-2xl md:text-4xl font-bold tracking-wide">
-                  Together We Can Make a Difference
+                <h2 className="text-white text-xl sm:text-2xl md:text-4xl font-bold">
+                    Together We Can Make a Difference
                 </h2>
                 <p className="text-white/90 mt-2 max-w-xl mx-auto text-sm md:text-base">
                   Your support brings hope, dignity, and a better tomorrow.

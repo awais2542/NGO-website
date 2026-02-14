@@ -45,9 +45,9 @@ export default function GallerySection() {
   return (
     // <section className="py-16 bg-input overflow-hidden">
     <section className="bg-input overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 pb-44 pt-24">
+     <div className="max-w-7xl mx-auto px-4 pb-16 sm:pb-24 pt-12 sm:pt-20">
         {/* Heading */}
-        <div className="text-center mb-12">
+      <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">Our Gallery</h2>
           <p className="text-muted-foreground mt-2">
             A glimpse of our ongoing welfare activities
@@ -60,7 +60,7 @@ export default function GallerySection() {
             {[...images, ...images].map((item, index) => (
               <div
                 key={index}
-                className="relative w-[280px] md:w-[360px] mx-3 cursor-pointer group"
+                className="relative w-[220px] sm:w-[260px] md:w-[360px] mx-2 sm:mx-3 cursor-pointer group"
                 onClick={() => setSelectedImage(index % images.length)}
               >
                 {/* Image */}
@@ -70,7 +70,8 @@ export default function GallerySection() {
                     alt={item.title}
                     width={400}
                     height={300}
-                    className="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="h-40 sm:h-52 md:h-60 w-full object-cover
+                    transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
 
@@ -95,7 +96,7 @@ export default function GallerySection() {
           />
         )}
         {/* Button */}
-    <div className="w-full flex mt-16 justify-start md:justify-center lg:justify-start">
+    <div className="w-full flex mt-10 sm:mt-16 justify-start md:justify-center lg:justify-start">
   <GalleryButton />
 </div>
 

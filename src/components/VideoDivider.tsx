@@ -32,7 +32,7 @@ export default function VideoDivider({
   }, []);
 
   return (
-    <div className={`w-full overflow-hidden ${className}`}>
+    <div className={`w-full rounded-xl overflow-hidden ${className}`}>
       <video
         ref={videoRef}
         src={videoSrc}
@@ -43,7 +43,8 @@ export default function VideoDivider({
         preload="auto"
         disablePictureInPicture
         controls={false}
-        className="w-full h-[60vh] md:h-[80vh] object-cover"
+        className="w-full h-[200px] sm:h-[300px] md:h-[500px] lg:h-[70vh] object-cover"
+
       />
     </div>
   );

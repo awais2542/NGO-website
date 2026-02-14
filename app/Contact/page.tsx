@@ -25,10 +25,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black">
+    <div className="flex flex-col min-h-screen">
       
       {/* FORM + TEXT SECTION */}
-      <div className="flex-1 px-4 py-10">
+      <div className="flex-1 px-4 py-10 bg-amber-200 mt-5">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
           {/* LEFT: FORM */}
@@ -115,70 +115,6 @@ export default function ContactForm() {
 
         </div>
       </div>
-
-      {/* IMAGE COLLAGE */}
-      <div className="relative w-full overflow-hidden">
-      
-                  {/* Grid */}
-                  <div className="grid grid-cols-4 grid-rows-2 gap-2 h-[280px] md:h-[420px] brightness-75 contrast-90">
-      
-                    {/* Big Image */}
-                    <div className="relative col-span-2 row-span-2 group">
-                      <Image
-                        src="/donation/1.jpg"
-                        alt="Donation img"
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-tr from-black/60 to-black/10" />
-                    </div>
-      
-                    {/* Small Images */}
-                    <div className="relative group">
-                      <Image
-                        src="/donation/donation.jpg"
-                        alt=""
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/20" />
-                    </div>
-      
-                    <div className="relative group">
-                      <Image
-                        src="/donation/2.jpg"
-                        alt=""
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/20" />
-                    </div>
-      
-                    <div className="relative col-span-2 group block">
-      
-                      <Image
-                        src="/donation/3.jpg"
-                        alt=""
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-l from-black/50 to-black/10" />
-                    </div>
-                  </div>
-      
-                  {/* Center Content */}
-                  <div className="absolute inset-0 flex items-center justify-center text-center px-6 pointer-events-none">
-                    <div>
-                      <h2 className="text-white text-2xl md:text-4xl font-bold tracking-wide">
-                        Together We Can Make a Difference
-                      </h2>
-                      <p className="text-white/90 mt-2 max-w-xl mx-auto text-sm md:text-base">
-                        Your support brings hope, dignity, and a better tomorrow.
-                      </p>
-                    </div>
-                  </div>
-      
-                </div>
 
       {/* FOOTER */}
       <FooterSection />

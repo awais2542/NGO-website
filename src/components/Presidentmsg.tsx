@@ -14,7 +14,8 @@ export default function Presidentmsg() {
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="space-y-12 px-4 sm:px-6 pb-8">
+        <CardContent className="space-y-8 sm:space-y-12 px-3 sm:px-6 pb-6">
+
           {/* ROW 1: Left TEXT | Right IMAGE */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
             {/* TEXT */}
@@ -56,7 +57,8 @@ export default function Presidentmsg() {
 
             {/* IMAGE with quotes */}
        <div className="flex justify-center order-2 md:order-2 w-full">
-              <div className="w-full max-w-md bg-accent rounded-xl shadow-md p-6 text-center">
+              <div className="w-full max-w-md bg-accent rounded-xl shadow-md p-4 sm:p-6 text-center">
+
 
                 {/* English Quote */}
                 <p className="text-black font-bold text-lg mt-2">
@@ -77,9 +79,9 @@ export default function Presidentmsg() {
                   <Image
                     src="/images/president.jpg"
                     alt="Founder"
-                    className="rounded-full object-cover shadow-lg"
-                    width={90}
-                    height={90}
+                    width={70}
+                    height={70}
+                    className="rounded-full object-fill shadow-lg sm:w-[90px] sm:h-[90px]"
                     priority
                   />
 
@@ -105,7 +107,8 @@ export default function Presidentmsg() {
 
                 {/* IMAGE ONLY CARD */}
                 <div className="flex justify-center order-1 md:order-1 w-full">
-                  <div className="relative w-full max-w-md h-[320px] rounded-xl overflow-hidden shadow-md">
+                  <div className="relative w-full max-w-md h-[200px] sm:h-[260px] md:h-[320px] rounded-xl overflow-hidden shadow-md">
+
                     <Image
                       src="/donation/3.jpg"
                       alt="President"
@@ -119,7 +122,8 @@ export default function Presidentmsg() {
                 {/* SHORT TEXT (unchanged) */}
                 <div className="text-left space-y-3 text-sm sm:text-base leading-relaxed order-2 md:order-2">
                   {/* Islamic Quote 1 */}
-                        <p className="text-black font-semibold text-lg leading-snug">
+                        <p className="text-black font-semibold text-base sm:text-lg leading-snug">
+
                           “The example of those who spend their wealth <br />
                           in the way of Allah is like a seed which grows <br />
                           seven ears; in every ear a hundred grains.”
@@ -128,14 +132,16 @@ export default function Presidentmsg() {
                           — Surah Al-Baqarah (2:261)
                         </p>
                   {/* Islamic Quote 2 */}
-                    <p className="text-black font-semibold text-lg leading-snug">
+                    <p className="text-black font-semibold text-base sm:text-lg leading-snug">
+
                       “Charity does not decrease wealth.”
                     </p>
                     <p className="text-sm text-gray-600">
                       — Prophet Muhammad ﷺ (Muslim)
                     </p>
                     {/* Islamic Quote 3 */}
-                    <p className="text-black font-semibold text-lg leading-snug">
+                    <p className="text-black font-semibold text-base sm:text-lg leading-snug">
+
                       “Whoever relieves a believer’s hardship, <br />
                       Allah will relieve his hardship on the Day of Judgment.”
                     </p>

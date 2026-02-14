@@ -107,10 +107,11 @@ const activities = [
 
 export default function WhatWeAreDoing() {
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-10 sm:py-14 md:py-16">
+
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             What We Are Doing
           </h2>
@@ -121,7 +122,8 @@ export default function WhatWeAreDoing() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-6">
+
           {activities.map((item) => {
             const Icon = item.icon;
             return (
@@ -131,14 +133,14 @@ export default function WhatWeAreDoing() {
                 className="group focus:outline-none"
               >
                 <Card className="h-full cursor-pointer transition-all duration-300 hover:bg-accent hover:shadow-lg hover:-translate-y-1">
-                  <CardContent className="p-3 text-center">
+                 <CardContent className="p-2 sm:p-3 text-center">
                     <div className="flex justify-center mb-4">
-                      <Icon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
+                <Icon className="h-7 w-7 sm:h-9 sm:w-9 md:h-10 md:w-10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
+                   <h3 className="text-sm sm:text-base md:text-lg font-semibold"> 
                       {item.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground group-hover:text-white">
+                 <p className="text-xs sm:text-sm text-muted-foreground">
                       {item.desc}
                     </p>
                   </CardContent>
