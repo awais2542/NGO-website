@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import GalleryModal from "./demos/GalleryModal";
+import GalleryButton from "./GalleryButton";
+import Link from "next/link";
 
 const images = [
   {
@@ -92,6 +94,12 @@ export default function GallerySection() {
             onClose={() => setSelectedImage(null)}
           />
         )}
+        {/* Button */}
+    <div className="w-full flex mt-16 justify-start md:justify-center lg:justify-start">
+  <GalleryButton />
+</div>
+
+
       </div>
     </section>
   );

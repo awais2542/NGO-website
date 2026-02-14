@@ -9,7 +9,7 @@ export default function DonationButton() {
         <Button
           size="lg"
           className="
-            w-full md:w-auto px-5
+            w-full lg:w-auto px-5
             bg-secondary text-primary-foreground
             transition-all duration-300 ease-in-out transform-gpu
             hover:bg-secondary/90

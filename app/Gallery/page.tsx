@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FooterSection from "@/components/Footer";
+import GalleryButton from "@/components/GalleryButton";
 
 const events = [
   {
@@ -101,9 +102,9 @@ export default function EventsPage() {
                   </p>
                 </div>
               </div>
+                
             </div>
           ))}
-
         </div>
       </div>
 

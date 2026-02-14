@@ -104,12 +104,14 @@ export default function FooterSection({
       className={cn("border-t border-gray-500 bg-muted w-full px-4", className)}
     >
       <div className="max-w-7xl mx-auto py-12">
-        <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-6">
+        <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+
           {groups.map((group, index) => (
             <div key={index}>
               {index === 0 ? (
                 // FIRST GROUP: LOGO
-                <div className="mb-3 flex items-center">
+                <div className="mb-3 flex justify-center md:justify-start items-center">
+
                   <Logo
                     src="/logo.png"
                     height={50}
@@ -123,7 +125,8 @@ export default function FooterSection({
                   <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                     {group.title}
                   </h4>
-                  <div className="flex gap-4">
+                 <div className="flex gap-4 justify-start md:justify-start">
+
                     {socialLinks.map((social, idx) => (
                       <Link
                         key={idx}

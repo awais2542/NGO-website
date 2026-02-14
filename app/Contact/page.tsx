@@ -34,9 +34,17 @@ export default function ContactForm() {
           {/* LEFT: FORM */}
           <form
             onSubmit={handleSubmit}
-            className="w-full bg-white p-6 sm:p-8 shadow-lg"
+            className="
+                  w-full
+                  bg-white/20
+                  backdrop-blur-lg
+                  border border-white/30
+                  rounded-xl
+                  p-6 sm:p-8
+                  shadow-xl   
+                "
           >
-            <h2 className="text-2xl font-bold mb-6 text-center md:text-left">
+            <h2 className="text-2xl text-white font-bold mb-6 text-center md:text-left">
               Contact Us
             </h2>
 
@@ -47,7 +55,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full mb-4 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
             />
 
             <input
@@ -57,7 +65,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full mb-4 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
             />
 
             <input
@@ -67,7 +75,7 @@ export default function ContactForm() {
               value={formData.contact}
               onChange={handleChange}
               required
-              className="w-full mb-4 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
             />
 
             <textarea
@@ -77,12 +85,12 @@ export default function ContactForm() {
               onChange={handleChange}
               rows={4}
               required
-              className="w-full mb-4 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
             />
 
             <button
               type="submit"
-              className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition"
+            className="w-full bg-black/90 text-white py-3 rounded-lg hover:bg-black transition"
             >
               Submit
             </button>

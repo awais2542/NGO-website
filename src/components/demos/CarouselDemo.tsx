@@ -58,7 +58,8 @@ export function CarouselDemo() {
       <CarouselContent>
         {slides.map((slide, index) => (
           <CarouselItem key={index} className="pl-0">
-            <Card className="w-full h-[630px] overflow-hidden">
+           <Card className="w-full h-[380px] md:h-[630px] overflow-hidden">
+
               <CardContent className="p-0 h-full relative">
 
                 {/* Image */}
@@ -66,7 +67,7 @@ export function CarouselDemo() {
                   src={slide.image}
                   alt={slide.title}
                   fill
-                  className="object-cover brightness-75"
+                  className="object-cover"
                   priority={index === 0}
                 />
 
@@ -76,11 +77,13 @@ export function CarouselDemo() {
                 {/* Text Overlay */}
                 <div className="absolute inset-0 flex items-end justify-center text-center px-6 pb-24 md:pb-32">
 
-                  {activeIndex === index && (
-                    <div
-                      key={activeIndex} // 🔥 animation re-trigger
-                      className="animate-slideUp"
-                    >
+                 <div
+                className={`transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] transform ${
+                  activeIndex === index
+                    ? "opacity-100 translate-y-0 scale-100"
+                    : "opacity-0 translate-y-16 scale-95"
+                }`}
+  >
                       <h1 className="text-white text-3xl md:text-5xl font-bold">
                         {slide.title}
                       </h1>
@@ -88,7 +91,7 @@ export function CarouselDemo() {
                         {slide.subtitle}
                       </p>
                     </div>
-                  )}
+                  
                 </div>
 
               </CardContent>

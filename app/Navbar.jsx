@@ -24,7 +24,8 @@ const navItems = [
       <>
         {/* Desktop view */}
         <div className="hidden md:flex items-center gap-4 ml-auto">
-          <span className="h-6 w-px bg-border" />
+          <span className="hidden lg:block h-6 w-px bg-border" />
+
           <DonationButton />
         </div>
 
@@ -59,7 +60,8 @@ export default function Navbar() {
           </div>
 
           {/* CENTER: MENU (DESKTOP ONLY) */}
-          <div className="hidden md:flex justify-center items-center gap-5">
+          <div className="hidden lg:flex justify-center items-center gap-3">
+
             {navItems.map((item , index) => {
               const isActive = pathname === item.href;
 
@@ -100,7 +102,8 @@ export default function Navbar() {
           {/* MOBILE TOGGLE (FORCED RIGHT) */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden absolute right-0 p-2 rounded-lg border border-border text-foreground"
+           className="lg:hidden absolute right-0 p-2 rounded-lg border border-border text-foreground"
+
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -109,7 +112,8 @@ export default function Navbar() {
 
       {/* ===== MOBILE MENU ===== */}
       {open && (
-        <div className="md:hidden bg-background px-4 py-6 space-y-4">
+  <div className="lg:hidden bg-background px-4 py-6 space-y-4">
+
           {navItems.map((item, index) => {
             const isActive = pathname === item.href;
 
@@ -138,7 +142,7 @@ export default function Navbar() {
               </Link>
             );
           })}
-          {/* <DonationButton /> */}
+          
 
         </div>
       )}
