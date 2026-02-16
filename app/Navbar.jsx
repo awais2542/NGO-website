@@ -52,7 +52,7 @@ export default function Navbar() {
           {/* LEFT: LOGO */}
           <div className="flex-shrink-0 md:w-[140px]">
             <Logo
-              src="/logo.png"
+              src="/images/logo.png"
               height={60}
               width={90}
               alt="logo"

@@ -56,61 +56,83 @@ Branch Code: ${bank.branch}`;
   return (
     <div className="min-h-screen bg-gray-50">
 
-      {/* 🔹 Banner Image */}
- <div className="relative w-full h-[180px] sm:h-[260px] md:h-[380px] mt-5">
+     {/* 🔹 Banner Image */}
+<div className="relative w-full h-[55vh] sm:h-[65vh] md:h-[80vh]">
+  <Image
+    src="/donation/4.jpg"
+    alt="Donate Banner"
+    fill
+    className="object-cover brightness-75 contrast-90"
+    priority
+  />
 
-        <Image
-          src="/donation/donation.jpg"
-          alt="Donate Banner"
-          fill
-          className="object-cover brightness-75 contrast-90"
-          priority
-        />
-      </div>
+  {/* Overlay Text */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl drop-shadow-lg">
+      Donate Now
+    </h1>
+    <p className="text-white/90 mt-2 sm:mt-4 text-sm sm:text-base md:text-lg drop-shadow-md max-w-2xl">
+      Aap ki madad kisi ki zindagi badal sakti hai.
+    </p>
+  </div>
+</div>
 
-      {/* 🔹 Donation Banner */}
-      <div className="w-full bg-accent py-6 sm:py- text-center">
 
-        <h1 className="text-4xl font-bold text-gray-900">Donate Now</h1>
-        <p className="text-gray-700 mt-3">
+            {/* 🔹 Donation Banner */}
+      <div className="w-full bg-accent py-3 sm:py-6 text-center">
+
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-gray-900">
+          Donate Now
+        </h1>
+        <p className="text-sm sm:text-base md:text-lg mt-1 sm:mt-2 text-gray-700">
           Aap ki madad kisi ki zindagi badal sakti hai.
         </p>
       </div>
 
+
       {/* 🔹 Bank Cards */}
 <div className="max-w-6xl mx-auto px-4 py-8 sm:py-14 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-        {banks.map((bank, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex flex-col gap-3 sm:gap-4
-             hover:transform hover:scale-105 transition duration-300 ease-in-out"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between">
-              <h2 className="text-xl font-bold text-gray-800">
-                {bank.name}
-              </h2>
+  {banks.map((bank, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex flex-col gap-3 sm:gap-4
+       hover:transform hover:scale-105 transition duration-300 ease-in-out"
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">
+          {bank.name}
+        </h2>
 
-              {/* Copy Icon */}
-              <button
-                onClick={() => copyDetails(bank)}
-                className="p-2 rounded-lg hover:bg-gray-100 transition"
-                title="Copy bank details"
-              >
-                <Copy size={18} className="text-gray-600" />
-              </button>
-            </div>
-
-            {/* Details */}
-            <div className="space-y-1 text-gray-700 text-sm">
-              <p><strong>Account Title:</strong> {bank.title}</p>
-              <p><strong>Account Number:</strong> {bank.account}</p>
-              <p><strong>IBAN:</strong> {bank.iban}</p>
-              <p><strong>Branch Code:</strong> {bank.branch}</p>
-            </div>
-          </div>
-        ))}
+        {/* Copy Icon */}
+        <button
+          onClick={() => copyDetails(bank)}
+          className="p-2 rounded-lg hover:bg-gray-100 transition"
+          title="Copy bank details"
+        >
+          <Copy size={18} className="text-gray-600" />
+        </button>
       </div>
+
+      {/* Details */}
+      <div className="space-y-1 text-gray-700 text-xs sm:text-sm md:text-base">
+        <p>
+          <strong>Account Title:</strong> {bank.title}
+        </p>
+        <p>
+          <strong>Account Number:</strong> {bank.account}
+        </p>
+        <p>
+          <strong>IBAN:</strong> {bank.iban}
+        </p>
+        <p>
+          <strong>Branch Code:</strong> {bank.branch}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
           
 
 

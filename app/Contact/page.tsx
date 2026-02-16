@@ -28,7 +28,7 @@ export default function ContactForm() {
     <div className="flex flex-col min-h-screen">
       
       {/* FORM + TEXT SECTION */}
-      <div className="flex-1 px-4 py-10 bg-amber-200 mt-5">
+      <div className="flex-1 px-4 py-10 bg-amber-200">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
           {/* LEFT: FORM */}

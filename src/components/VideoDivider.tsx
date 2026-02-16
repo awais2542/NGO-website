@@ -32,7 +32,7 @@ export default function VideoDivider({
   }, []);
 
   return (
-    <div className={`w-full rounded-xl overflow-hidden ${className}`}>
+    <div className={`w-full overflow-hidden ${className}`}>
       <video
         ref={videoRef}
         src={videoSrc}

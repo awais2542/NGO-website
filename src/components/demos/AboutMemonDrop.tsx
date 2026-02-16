@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/button";
 import { ChevronDown } from "lucide-react";
 import {
@@ -38,32 +39,65 @@ export function AboutMemonDropDown() {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent className="w-60 p-2" align="start">
+        {/* First Group */}
         <DropdownMenuGroup className="space-y-1">
-          <DropdownMenuItem>Our History</DropdownMenuItem>
-          <DropdownMenuItem>History Of Memons</DropdownMenuItem>
-          <DropdownMenuItem>The Essence</DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href="/HistoryGMA">History Of GMA</Link>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem asChild>
+            <Link href="/history-of-memons">History Of Memons</Link>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem asChild>
+            <Link href="/the-essence">The Essence</Link>
+          </DropdownMenuItem>
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator />
 
+        {/* Second Group */}
         <DropdownMenuGroup className="space-y-1">
           {isMobile ? (
             <>
-              <DropdownMenuItem>Office Bearers</DropdownMenuItem>
-              <DropdownMenuItem>Managing Committee</DropdownMenuItem>
-              <DropdownMenuItem>Youth Wing</DropdownMenuItem>
-              <DropdownMenuItem>Ladies Wing</DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/office-bearers">Office Bearers</Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link href="/managing-committee">Managing Committee</Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link href="/youth-wing">Youth Wing</Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link href="/ladies-wing">Ladies Wing</Link>
+              </DropdownMenuItem>
             </>
           ) : (
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
                 Who We Are
               </DropdownMenuSubTrigger>
+
               <DropdownMenuSubContent className="w-56 p-2">
-                <DropdownMenuItem>Office Bearers</DropdownMenuItem>
-                <DropdownMenuItem>Managing Committee</DropdownMenuItem>
-                <DropdownMenuItem>Youth Wing</DropdownMenuItem>
-                <DropdownMenuItem>Ladies Wing</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/office-bearers">Office Bearers</Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
+                  <Link href="/managing-committee">Managing Committee</Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
+                  <Link href="/youth-wing">Youth Wing</Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
+                  <Link href="/ladies-wing">Ladies Wing</Link>
+                </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuSub>
           )}

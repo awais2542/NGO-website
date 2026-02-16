@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div className='min-h-screen bg-gray-50'>
       {/* Banner Imag */}
-      <div className='relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[560px] mt-5'>
+      <div className='relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[560px]'>
   <Image
     src="/partners/3.jpg"
     alt="partner Banner"
