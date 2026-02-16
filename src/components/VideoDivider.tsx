@@ -20,7 +20,7 @@ export default function VideoDivider({
 
     const handleVisibility = () => {
       if (document.visibilityState === "visible") {
-        video.play().catch(() => {});
+        video.play().catch(() => { });
       }
     };
 
@@ -43,7 +43,7 @@ export default function VideoDivider({
         preload="auto"
         disablePictureInPicture
         controls={false}
-        className="w-full h-[200px] sm:h-[300px] md:h-[500px] lg:h-[70vh] object-cover"
+        className="w-full h-[180px] sm:h-[300px] md:h-[500px] lg:h-[70vh] object-cover"
 
       />
     </div>
