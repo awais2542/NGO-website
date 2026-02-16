@@ -9,7 +9,9 @@ type LogoProps = {
   width?: number;
   height?: number;
   alt?: string;
+  className?: string;   // 👈 add this
 };
+
 
 export default function Logo({ children, src, width, height, alt }: LogoProps) {
   return (

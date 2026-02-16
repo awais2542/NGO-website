@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Logo from "@/components/Logo"; // Make sure path correct ho
-import { WhatsAppIcon, InstagramIcon, FacebookIcon ,YouTubeIcon } from "@/components/Icons";
+import { WhatsAppIcon, InstagramIcon, FacebookIcon, YouTubeIcon } from "@/components/Icons";
 import { Facebook, Instagram, Youtube, MessageCircle } from "lucide-react";
 
 
@@ -86,7 +86,7 @@ export default function FooterSection({
     {
       label: "Instagram",
       href: "https://instagram.com/yourprofile",
-      icon: <Instagram size={20} className="text-pink-500"  strokeWidth={1.8} />,
+      icon: <Instagram size={20} className="text-pink-500" strokeWidth={1.8} />,
     },
     {
       label: "Facebook",
@@ -105,8 +105,8 @@ export default function FooterSection({
     <footer
       className={cn("border-t text-gray-500 hover:text-primary w-full px-4", className)}
     >
-    <div className="max-w-7xl mx-auto py-8 sm:py-12">
-<div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+      <div className="max-w-7xl mx-auto py-8 sm:py-12">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
 
           {groups.map((group, index) => (
             <div key={index}>
@@ -115,11 +115,11 @@ export default function FooterSection({
                 <div className="mb-3 flex justify-center md:justify-start items-center">
 
                   <Logo
-                      src="/images/logo.png"
-                      height={40}
-                      width={120}
-                      alt={companyName}
-                      className="sm:h-[50px] sm:w-[150px]"
+                    src="/images/logo.png"
+                    height={40}
+                    width={120}
+                    alt={companyName}
+                    className="sm:h-[50px] sm:w-[150px]"
                   />
 
 
@@ -130,7 +130,7 @@ export default function FooterSection({
                   <h4 className="mb-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                     {group.title}
                   </h4>
-                 <div className="flex gap-3 sm:gap-4justify-start md:justify-start">
+                  <div className="flex gap-3 sm:gap-4justify-start md:justify-start">
 
                     {socialLinks.map((social, idx) => (
                       <Link
@@ -171,7 +171,7 @@ export default function FooterSection({
 
         {/* Bottom */}
         {/* <div className="mt-12 flex flex-col gap-6 border-t pt-6 sm:flex-row sm:items-center sm:justify-between"> */}
-    <div className="mt-8 border-t w-full text-center py-3">
+        <div className="mt-8 border-t w-full text-center py-3">
           <span className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} {companyName}. All rights reserved.
           </span>
