@@ -46,13 +46,13 @@ export function CarouselDemo() {
       <Carousel
         setApi={setApi}
         opts={{ align: "start", loop: true }}
-        plugins={[Autoplay({ delay: 3500 })]}
+        plugins={[Autoplay({ delay: 5000 })]}
         className="w-full"
       >
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={index} className="pl-0">
-              <Card className="w-full h-[55vh] sm:h-[55vh] md:h-[80vh] overflow-hidden">
+              <Card className="w-full h-[200px] sm:h-[260px] md:h-[380px] lg:h-[480px] xl:h-[520px] overflow-hidden">
                 <CardContent className="p-0 h-full relative">
                   {/* Image */}
                   <Image
@@ -65,20 +65,23 @@ export function CarouselDemo() {
                   />
 
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40" />
+                  <div className="absolute inset-0 bg-black/50 md:bg-black/40
+" />
                       {/* Text Overlay */}
-                      <div className="absolute inset-0 flex items-end justify-center text-center px-6 pb-24 md:pb-32">
+                      <div className="absolute inset-0 flex items-end justify-center text-center px-6 pb-10 sm:pb-16 md:pb-24">
                         <div
-                          className={`transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] transform ${
+                          className={`transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] transform ${
                             activeIndex === index
                               ? "opacity-100 translate-y-0 scale-100"
-                              : "opacity-0 translate-y-16 scale-95"
+                              : "opacity-0 translate-y-10 scale-95"
                           }`}
                         >
-                          <h1 className="text-2xl sm:text-3xl md:text-5xl  text-white drop-shadow-lg">
+                          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl
+                        text-white drop-shadow-lg">
                             {slide.title}
                           </h1>
-                          <p className="text-sm sm:text-base md:text-lg text-white/90 mt-4 max-w-2xl mx-auto drop-shadow-md">
+                          <p className="text-sm sm:text-base md:text-lg text-white/90 mt-4 max-w-md sm:max-w-xl md:max-w-2xl
+                         mx-auto drop-shadow-md">
                             {slide.subtitle}
                           </p>
                         </div>

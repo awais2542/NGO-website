@@ -78,27 +78,51 @@ export default function FooterSection({
     },
   ],
   socialLinks = [
-    {
-      label: "WhatsApp",
-      href: "https://wa.me/1234567890",
-      icon: <MessageCircle size={20} className="text-green-500" strokeWidth={1.8} />,
-    },
-    {
-      label: "Instagram",
-      href: "https://instagram.com/yourprofile",
-      icon: <Instagram size={20} className="text-pink-500" strokeWidth={1.8} />,
-    },
-    {
-      label: "Facebook",
-      href: "https://facebook.com/yourpage",
-      icon: <Facebook size={20} className="text-blue-600" strokeWidth={1.8} />,
-    },
-    {
-      label: "Youtube",
-      href: "https://youtube.com/yourprofile",
-      icon: <Youtube size={20} className="text-red-600" strokeWidth={1.8} />,
-    },
-  ],
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/1234567890",
+    icon: (
+      <MessageCircle
+        size={20}
+        className="text-[#25D366]"
+        strokeWidth={1.8}
+      />
+    ),
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/yourprofile",
+    icon: (
+      <Instagram
+        size={20}
+        className="text-[#E4405F]"
+        strokeWidth={1.8}
+      />
+    ),
+  },
+  {
+    label: "Facebook",
+    href: "https://facebook.com/yourpage",
+    icon: (
+      <Facebook
+        size={20}
+        className="text-[#1877F2]"
+        strokeWidth={1.8}
+      />
+    ),
+  },
+  {
+    label: "Youtube",
+    href: "https://youtube.com/yourprofile",
+    icon: (
+      <Youtube
+        size={20}
+        className="text-[#FF0000]"
+        strokeWidth={1.8}
+      />
+    ),
+  },
+],
   className,
 }: FooterProps) {
   return (
@@ -106,7 +130,8 @@ export default function FooterSection({
       className={cn("border-t text-gray-500 hover:text-primary w-full px-4", className)}
     >
       <div className="max-w-7xl mx-auto py-8 sm:py-12">
- <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6
+    gap-5">
 
           {groups.map((group, index) => (
             <div key={index}>
@@ -119,7 +144,8 @@ export default function FooterSection({
                     height={40}
                     width={120}
                     alt={companyName}
-                    className="sm:h-[50px] sm:w-[150px]"
+                   className="h-[35px] w-[110px] sm:h-[50px] sm:w-[150px]"
+
                   />
 
 
@@ -130,7 +156,8 @@ export default function FooterSection({
                   <h4 className="mb-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                     {group.title}
                   </h4>
-                  <div className="flex gap-3 sm:gap-4justify-start md:justify-start">
+                  <div className="flex gap-3 sm:gap-4 justify-center md:justify-start
+">
 
                     {socialLinks.map((social, idx) => (
                       <Link
@@ -171,7 +198,8 @@ export default function FooterSection({
 
         {/* Bottom */}
         {/* <div className="mt-12 flex flex-col gap-6 border-t pt-6 sm:flex-row sm:items-center sm:justify-between"> */}
-        <div className="mt-8 border-t w-full text-center py-3">
+        <div className="mt-8 border-t w-full text-center py-4 sm:py-5
+          ">
           <span className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} {companyName}. All rights reserved.
           </span>

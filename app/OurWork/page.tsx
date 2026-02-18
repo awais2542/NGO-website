@@ -1,10 +1,161 @@
 import React from 'react'
+import Link from 'next/link';
 import FooterSection from '@/components/Footer'
+import { Card, CardContent } from "@/components/card";
+import Image from 'next/image';
+import {
+  HeartHandshake,
+  GraduationCap,
+  HandCoins,
+  Stethoscope,
+  Home,
+  Users,
+  Laptop,
+  Utensils,
+  AlertTriangle,
+  Calendar,
+  Wrench,
+  Briefcase,
+  Leaf,
+} from "lucide-react";
+
+const activities = [
+  {
+    title: "Financial & Monthly Aid",
+    desc: "Providing monthly financial assistance to deserving families.",
+    image: "/gallery/2.jpg",
+    href: "/financial-aid",
+  },
+  {
+    title: "Legal & Community Support",
+    desc: "Offering legal guidance and community support services.",
+   image: "/gallery/3.jpg",
+    href: "/legal-support",
+  },
+  {
+    title: "Housing & Assistance",
+    desc: "Helping families with housing and shelter support.",
+    image: "/gallery/4.jpg",
+    href: "/housing-assistance",
+  },
+  {
+    title: "Youth & Sports Program",
+    desc: "Engaging youth in sports and leadership activities.",
+   image: "/gallery/6.jpg",
+    href: "/youth-sports",
+  },
+  {
+    title: "IT Training & Support",
+    desc: "Providing IT education and technical support.",
+    image: "/gallery/2.jpg",
+    href: "/it-training",
+  },
+  {
+    title: "Healthcare Services",
+    desc: "Medical aid and healthcare facilities for the needy.",
+    image: "/gallery/3.jpg",
+    href: "/healthcare",
+  },
+  {
+    title: "Education Scholarships",
+    desc: "Scholarships and educational support for students.",
+    image: "/gallery/4.jpg",
+    href: "/education-scholarships",
+  },
+  {
+    title: "Women Empowerment",
+    desc: "Programs to empower women socially and economically.",
+    image: "/gallery/6.jpg",
+    href: "/women-empowerment",
+  },
+  {
+    title: "Food Distribution",
+    desc: "Distributing food to families in need.",
+    image: "/gallery/2.jpg",
+    href: "/food-distribution",
+  },
+  {
+    title: "Disaster Relief",
+    desc: "Emergency relief during natural disasters.",
+    image: "/gallery/3.jpg",
+    href: "/disaster-relief",
+  },
+  {
+    title: "Community Events",
+    desc: "Organizing events for community bonding and growth.",
+    image: "/gallery/4.jpg",
+    href: "/community-events",
+  },
+  {
+    title: "Skill Development",
+    desc: "Training programs to develop professional skills.",
+    image: "/gallery/2.jpg",
+    href: "/skill-development",
+  },
+  {
+    title: "Entrepreneurship Support",
+    desc: "Helping entrepreneurs with resources and guidance.",
+    image: "/gallery/6.jpg",
+    href: "/entrepreneurship-support",
+  },
+  {
+    title: "Environmental Projects",
+    desc: "Initiatives to protect and sustain the environment.",
+    image: "/gallery/2.jpg",
+    href: "/environmental-projects",
+  },
+];
 
 export default function page() {
+  
   return (
     <div className='min-h-screen bg-gray-50 mt-2'>
-      hlo am our work
+      {/* Cards */}
+      <div className="grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
+        gap-3 sm:gap-5 md:gap-6">
+
+      {activities.map((item, index) => {
+
+            const image = item.image;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`group focus:outline-none ${
+                 index >= 14 ? "hidden sm:block" : ""
+              }`}
+
+              >
+           <Card className="h-full w-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <CardContent className="p-0 text-center">
+
+                {/* IMAGE */}
+                <div className="relative w-full h-32 sm:h-40 md:h-44 lg:h-48">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover absolute inset-0 bg-black/10 transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* TEXT AREA */}
+                <div className="p-3 sm:p-4">
+                  <h3 className="text-xs sm:text-sm md:text-base font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground mt-1">
+                    {item.desc}
+                  </p>
+                </div>
+
+              </CardContent>
+            </Card>
+
+              </Link>
+            );
+          })}
+        </div>
       <FooterSection />
     </div>
   )

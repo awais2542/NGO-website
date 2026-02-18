@@ -30,7 +30,7 @@ const navItems = [
         </div>
 
         {/* Mobile view */}
-        <div className="md:hidden w-full">
+        <div className="md:hidden w-full scale-90">
           <DonationButton />
         </div>
       </>
@@ -47,20 +47,21 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4">
         
         {/* ===== TOP BAR ===== */}
-        <div className="relative h-20 flex items-center md:grid md:grid-cols-[auto_1fr_auto]">
+        <div className="relative h-16 sm:h-18 md:h-20
+           flex items-center md:grid md:grid-cols-[auto_1fr_auto]">
           
           {/* LEFT: LOGO */}
           <div className="flex-shrink-0 md:w-[140px]">
             <Logo
               src="/images/logo.png"
-              height={60}
-              width={90}
-              alt="logo"
+              height={40}
+              width={65}
+              className="sm:h-[50px] sm:w-[80px] md:h-[60px] md:w-[90px]"
             />
           </div>
 
           {/* CENTER: MENU (DESKTOP ONLY) */}
-          <div className="hidden lg:flex justify-center items-center gap-3">
+          <div className="hidden lg:flex justify-center items-center gap-2 sm:gap-3 md:gap-5">
 
             {navItems.map((item , index) => {
               const isActive = pathname === item.href;
@@ -79,7 +80,7 @@ export default function Navbar() {
                   key={item.href || index}
                   href={item.href}
                   className={clsx(
-                    "relative text-sm font-medium transition",
+                    "relative  text-xs sm:text-sm md:text-base font-medium transition",
                     "bg-card text-black border-0 relative px-3 py-1 transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-destructive after:transition-all after:duration-300 hover:after:w-full",
                     isActive
                       ? "text-primary after:w-full"
@@ -102,10 +103,11 @@ export default function Navbar() {
           {/* MOBILE TOGGLE (FORCED RIGHT) */}
           <button
             onClick={() => setOpen(!open)}
-           className="lg:hidden absolute right-0 p-2 rounded-lg border border-border text-foreground"
+           className="lg:hidden absolute right-0 p-1.5 sm:p-2
+ rounded-lg border border-border text-foreground"
 
           >
-            {open ? <X size={22} /> : <Menu size={22} />}
+           {open ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </div>
