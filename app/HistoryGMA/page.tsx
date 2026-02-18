@@ -4,17 +4,17 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className='min-h-screen bg-gray-50'>
+    <div className='min-h-screen bg-gray-50 mt-2'>
 
       {/* Heading + First Image Wrapper */}
       <div className="bg-primary">
 
         {/* Heading */}
-        <div className="text-center px-4 ">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+        <div className="text-center bg-primary text-white px-4 ">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl">
             History Of GMA
           </h1>
-          <p className="mt-2 text-gray-600 text-sm sm:text-base">
+          <p className="mt-2 text-sm sm:text-base">
             Discover the journey and legacy
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function page() {
       </div>
 
       {/* History Img 2 */}
-      <div className="relative w-full h-[70vh] sm:h-[90vh] md:h-[110vh] bg-white flex items-center justify-center mt-6">
+      <div className="relative w-full h-[70vh] sm:h-[90vh] md:h-[110vh] bg-white flex items-center justify-center ">
         <Image
           src="/HistoryGMA/2.png"
           alt="history Img 2"

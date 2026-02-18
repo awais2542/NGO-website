@@ -46,11 +46,11 @@ export function AboutMemonDropDown() {
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/history-of-memons">History Of Memons</Link>
+            <Link href="/HistoryMemons">History Of Memons</Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/the-essence">The Essence</Link>
+            <Link href="/Essence">The Essence</Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
 

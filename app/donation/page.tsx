@@ -54,10 +54,11 @@ Branch Code: ${bank.branch}`;
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+<div className="min-h-screen bg-gray-50 mt-2 overflow-x-hidden">
 
      {/* 🔹 Banner Image */}
-<div className="relative w-full h-[55vh] sm:h-[65vh] md:h-[80vh]">
+<div className="relative w-full h-[220px] sm:h-[300px] md:h-[60vh] lg:h-[75vh]">
+
   <Image
     src="/donation/4.jpg"
     alt="Donate Banner"
@@ -68,30 +69,32 @@ Branch Code: ${bank.branch}`;
 
   {/* Overlay Text */}
   <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl drop-shadow-lg">
-      Donate Now
-    </h1>
-    <p className="text-white/90 mt-2 sm:mt-4 text-sm sm:text-base md:text-lg drop-shadow-md max-w-2xl">
-      Aap ki madad kisi ki zindagi badal sakti hai.
-    </p>
+    <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg">
+  Donate Now
+</h1>
+
+<p className="text-white/90 mt-2 text-xs sm:text-sm md:text-lg drop-shadow-md max-w-xl">
+  Aap ki madad kisi ki zindagi badal sakti hai.
+</p>
+
   </div>
 </div>
 
 
             {/* 🔹 Donation Banner */}
-      <div className="w-full bg-accent py-3 sm:py-6 text-center">
+<div className="w-full bg-primary text-white py-2 sm:py-4 text-center">
 
-        <h1 className="text-2xl sm:text-3xl md:text-4xl text-gray-900">
+        <h1 className="text-2xl  sm:text-3xl md:text-4xl">
           Donate Now
         </h1>
-        <p className="text-sm sm:text-base md:text-lg mt-1 sm:mt-2 text-gray-700">
+        <p className="text-sm sm:text-base md:text-lg mt-1 sm:mt-2">
           Aap ki madad kisi ki zindagi badal sakti hai.
         </p>
       </div>
 
 
       {/* 🔹 Bank Cards */}
-<div className="max-w-6xl mx-auto px-4 py-8 sm:py-14 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+<div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 sm:py-12 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6">
   {banks.map((bank, index) => (
     <div
       key={index}
@@ -140,10 +143,18 @@ Branch Code: ${bank.branch}`;
           <div className="relative w-full overflow-hidden">
 
             {/* Grid */}
-<div className="grid grid-cols-4 grid-rows-2 gap-2 h-[220px] sm:h-[300px] md:h-[420px]">
+            <div className="
+              grid 
+              grid-cols-2 
+              sm:grid-cols-4 
+              auto-rows-[100px] 
+              sm:auto-rows-[140px] 
+              md:auto-rows-[200px] 
+              gap-2
+            ">
 
               {/* Big Image */}
-              <div className="relative col-span-2 row-span-2 group">
+       <div className="relative col-span-2 sm:col-span-2 row-span-1 sm:row-span-2 group">
                 <Image
                   src="/donation/1.jpg"
                   alt="Donation img"
@@ -188,14 +199,16 @@ Branch Code: ${bank.branch}`;
 
             {/* Center Content */}
             <div className="absolute inset-0 flex items-center justify-center text-center px-6 pointer-events-none">
-              <div>
-                <h2 className="text-white text-xl sm:text-2xl md:text-4xl font-bold">
+              <div className="bg-black/40 backdrop-blur-sm px-4 py-3 rounded-xl">
+                <h2 className=" text-white text-xs sm:text-lg md:text-3xl font-bold">
                     Together We Can Make a Difference
-                </h2>
-                <p className="text-white/90 mt-2 max-w-xl mx-auto text-sm md:text-base">
-                  Your support brings hope, dignity, and a better tomorrow.
-                </p>
-              </div>
+                  </h2>
+
+                  <p className="text-white text-[10px] sm:text-sm md:text-base">
+                    Your support brings hope, dignity, and a better tomorrow.
+                  </p>
+                </div>
+
             </div>
 
           </div>

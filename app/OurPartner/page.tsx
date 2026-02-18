@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function page() {
   return (
-    <div className='min-h-screen bg-gray-50'>
+    <div className='min-h-screen bg-gray-50 mt-2'>
       {/* Banner Imag */}
       <div className='relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[560px]'>
   <Image
@@ -17,8 +17,8 @@ export default function page() {
 </div>
 
       {/* Banner Our Partners */}
-      <div className="w-full bg-accent py-6 sm:py- text-center">
-        <h1 className="text-4xl font-bold text-gray-900">Our Partners</h1>
+      <div className="w-full bg-primary text-white py-6 sm:py- text-center">
+        <h1 className="text-4xl ">Our Partners</h1>
       </div>
       {/* Text */}
    <div className="w-full py-10 sm:py-14 px-4 bg-gradient-to-b from-gray-50 to-white">
@@ -44,8 +44,8 @@ export default function page() {
    </div>
 
     {/* Banner Donors and Collaborators */}
-    <div className="w-full bg-primary py-6 sm:py- text-center">
-        <h1 className="text-4xl font-bold text-gray-900">
+    <div className="w-full bg-primary text-white py-6 sm:py- text-center">
+        <h1 className="text-4xl">
           Donors and Collaborators
         </h1>
       </div>
@@ -60,8 +60,8 @@ export default function page() {
                 />
       </div>
     {/* Banner Schools and colleges */}
-    <div className="w-full bg-secondary py-6 sm:py- text-center">
-        <h1 className="text-4xl font-bold text-gray-900">
+    <div className="w-full bg-primary text-white py-6 sm:py- text-center">
+        <h1 className="text-4xl ">
          Partner Schools & Colleges
         </h1>
       </div>
@@ -76,7 +76,7 @@ export default function page() {
                 />
       </div>
       {/* Text Thankyou! */}
-            <div className="w-full py-10 sm:py-14 px-4 bg-secondary">
+            <div className="w-full py-10 sm:py-14 px-4 bg-primary/50">
           <div className="max-w-4xl mx-auto text-center">
 
             {/* Heading */}
