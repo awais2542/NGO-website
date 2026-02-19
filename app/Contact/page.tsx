@@ -25,7 +25,21 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen mt-2">
+      {/* Banner Img */}
+          <div className='relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[400px]'>
+            <Image
+              src="/partners/2.jpg"
+              alt="partner Banner"
+              fill
+              className="object-cover brightness-75 contrast-90"
+              priority
+            />
+          </div>
+
+      {/* HERO
+      <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-center bg-cover bg-no-repeat" 
+      style={{ backgroundImage: "url('/partners/2.jpg')" }}></div>  */}
       
       {/* FORM + TEXT SECTION */}
       <div className="flex-1 px-4 py-10 bg-amber-200 mt-2">

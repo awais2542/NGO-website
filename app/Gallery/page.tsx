@@ -1,16 +1,76 @@
+"use client";
 import Image from "next/image";
 import FooterSection from "@/components/Footer";
+import { useState } from "react";
 
-const events = [
-  { id: 1, title: "Event 1", description: "Details about Event 1...", img: "/gallery/1.jfif" },
-  { id: 2, title: "Event 2", description: "Details about Event 2...", img: "/gallery/2.jpg" },
-  { id: 3, title: "Event 3", description: "Details about Event 3...", img: "/gallery/3.jpg" },
-  { id: 4, title: "Event 4", description: "Details about Event 4...", img: "/gallery/4.jpg" },
-  { id: 5, title: "Event 5", description: "Details about Event 5...", img: "/gallery/5.jfif" },
-  { id: 6, title: "Event 6", description: "Details about Event 6...", img: "/gallery/6.jpg" },
+  const events = [
+  {
+    id: 1,
+    title: "Event 1",
+    description: "Details about Event 1...",
+    images: [
+      "/gallery/1.jfif",
+      "/gallery/2.jpg",
+      "/gallery/3.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "Event 2",
+    description: "Details about Event 2...",
+    images: [
+      "/gallery/4.jpg",
+      "/gallery/5.jfif",
+      "/gallery/6.jpg",
+    ],
+  },
+    {
+    id: 3,
+    title: "Event 3",
+    description: "Details about Event 2...",
+    images: [
+      "/gallery/4.jpg",
+      "/gallery/5.jfif",
+      "/gallery/6.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Event 4",
+    description: "Details about Event 2...",
+    images: [
+      "/gallery/4.jpg",
+      "/gallery/5.jfif",
+      "/gallery/6.jpg",
+    ],
+  },
+  {
+    id: 5,
+    title: "Event 5",
+    description: "Details about Event 2...",
+    images: [
+      "/gallery/4.jpg",
+      "/gallery/5.jfif",
+      "/gallery/6.jpg",
+    ],
+  },
+  {
+    id: 6,
+    title: "Event 6",
+    description: "Details about Event 2...",
+    images: [
+      "/gallery/4.jpg",
+      "/gallery/5.jfif",
+      "/gallery/6.jpg",
+    ],
+  },
 ];
 
+
 export default function EventsPage() {
+  const [selectedEvent, setSelectedEvent] = useState(null);
+const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="min-h-screen mt-2 bg-gray-100 flex flex-col overflow-hidden">
 
@@ -31,16 +91,19 @@ export default function EventsPage() {
           {events.map((event) => (
             <div
               key={event.id}
-              className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-lg bg-black"
+              onClick={() => setSelectedEvent(event)}
+              className="relative cursor-pointer group overflow-hidden rounded-2xl shadow-lg bg-black"
             >
               {/* Image */}
-              <Image
-                src={event.img}
-                alt={event.title}
-                width={600}
-                height={400}
-                className="w-full h-[180px] sm:h-[220px] md:h-[240px] object-cover transition-transform duration-700 group-hover:scale-110 brightness-75 contrast-90"
-              />
+             <Image
+                  src={event.images && event.images.length > 0 
+                        ? event.images[0] 
+                        : "/placeholder.jpg"}
+                  alt={event.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-56 object-cover"
+                />
 
               {/* Gradient Overlay */}
               <div
@@ -76,6 +139,62 @@ export default function EventsPage() {
           ))}
         </div>
       </div>
+
+        {/* event modle */}
+      {selectedEvent && (
+  <div className="fixed inset-0 z-50 bg-black/80 overflow-y-auto p-6">
+    
+    {/* Close Event */}
+    <button
+      onClick={() => setSelectedEvent(null)}
+      className="absolute top-5 right-5 text-white text-2xl"
+    >
+      ✕
+    </button>
+
+    <h2 className="text-white text-2xl font-bold mb-6">
+      {selectedEvent.title}
+    </h2>
+
+    {/* Event Images Grid */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      {selectedEvent.images.map((img, index) => (
+        <div key={index} className="cursor-pointer">
+          <Image
+            src={img}
+            alt="event image"
+            width={400}
+            height={300}
+            className="w-full h-60 object-cover rounded-lg"
+            onClick={() => setSelectedImage(img)}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+  {/* Full img Modle */}
+{selectedImage && (
+  <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4">
+    
+    {/* Close Image */}
+    <button
+      onClick={() => setSelectedImage(null)}
+      className="absolute top-5 right-5 text-white text-3xl"
+    >
+      ✕
+    </button>
+
+    <Image
+      src={selectedImage}
+      alt="Full Image"
+      width={1000}
+      height={700}
+      className="max-h-[90vh] w-auto object-contain rounded-xl"
+    />
+  </div>
+)}
+
 
       {/* 🔹 Footer */}
       <FooterSection />

@@ -1,5 +1,7 @@
+"use client"
 import React from 'react'
 import Link from 'next/link';
+import { useState } from "react";
 import FooterSection from '@/components/Footer'
 import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
@@ -107,9 +109,24 @@ const activities = [
 ];
 
 export default function page() {
-  
+  const [selectedItem, setSelectedItem] = useState(null);
+
   return (
     <div className='min-h-screen bg-gray-50 mt-2'>
+    {/* Banner Img */}
+    <div className='relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[400px]'>
+      <Image
+        src="/partners/1.jpg"
+        alt="partner Banner"
+        fill
+        className="object-cover brightness-75 contrast-90"
+        priority
+      />
+    </div>
+     {/* Banner Our Work */}
+      <div className="w-full bg-primary text-white py-6 sm:py- text-center">
+        <h1 className="text-4xl ">Our Work</h1>
+      </div>
       {/* Cards */}
       <div className="grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
         gap-3 sm:gap-5 md:gap-6">
@@ -118,14 +135,12 @@ export default function page() {
 
             const image = item.image;
             return (
-              <Link
+             <div
                 key={item.href}
-                href={item.href}
-                className={`group focus:outline-none ${
-                 index >= 14 ? "hidden sm:block" : ""
-              }`}
-
+                onClick={() => setSelectedItem(item)}
+                className="group cursor-pointer"
               >
+
            <Card className="h-full w-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardContent className="p-0 text-center">
 
@@ -152,11 +167,54 @@ export default function page() {
               </CardContent>
             </Card>
 
-              </Link>
-            );
+              </div>
+              
+            );       
           })}
+          
         </div>
+        {/* Modal for Selected Item */}
+                  {selectedItem && (
+              <div
+                className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4"
+                onClick={() => setSelectedItem(null)}
+              >
+                <div
+                  className="relative bg-white w-full max-w-3xl rounded-xl overflow-hidden"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    onClick={() => setSelectedItem(null)}
+                    className="absolute top-4 right-4 z-50 bg-black/70 hover:bg-black text-white rounded-full w-9 h-9 flex items-center justify-center"
+                  >
+                    ✕
+                  </button>
+
+                  <div className="relative w-full h-60 sm:h-72 md:h-96">
+                    <Image
+                      src={selectedItem.image}
+                      alt={selectedItem.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  <div className="p-4 sm:p-6 text-center">
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
+                      {selectedItem.title}
+                    </h2>
+                    <p className="text-sm sm:text-base text-muted-foreground mt-3">
+                      {selectedItem.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+
+        
       <FooterSection />
+      
     </div>
   )
 }
