@@ -108,8 +108,10 @@ const activities = [
   },
 ];
 
-export default function page() {
-  const [selectedItem, setSelectedItem] = useState(null);
+type ActivityType = (typeof activities)[number];
+
+export default function OurWorkPage() {
+  const [selectedItem, setSelectedItem] = useState<ActivityType | null>(null);
 
   return (
     <div className='min-h-screen bg-gray-50 mt-2'>

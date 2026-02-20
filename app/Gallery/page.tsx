@@ -67,9 +67,11 @@ import { useState } from "react";
 ];
 
 
+type EventType = (typeof events)[number];
+
 export default function EventsPage() {
-  const [selectedEvent, setSelectedEvent] = useState(null);
-const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen mt-2 bg-gray-100 flex flex-col overflow-hidden">
