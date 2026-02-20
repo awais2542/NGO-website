@@ -52,7 +52,7 @@ export function CarouselDemo() {
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={index} className="pl-0">
-              <Card className="w-full h-[200px] sm:h-[260px] md:h-[380px] lg:h-[480px] xl:h-[520px] overflow-hidden">
+              <Card className="w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[400px] xl:h-[520px] overflow-hidden">
                 <CardContent className="p-0 h-full relative">
                   {/* Image */}
                   <Image

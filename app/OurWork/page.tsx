@@ -25,43 +25,43 @@ const activities = [
   {
     title: "Financial & Monthly Aid",
     desc: "Providing monthly financial assistance to deserving families.",
-    image: "/gallery/2.jpg",
+    image: "/ourwork/imdad.jpg",
     href: "/financial-aid",
   },
   {
     title: "Legal & Community Support",
     desc: "Offering legal guidance and community support services.",
-   image: "/gallery/3.jpg",
+   image: "/ourwork/aid.jpg",
     href: "/legal-support",
   },
   {
     title: "Housing & Assistance",
     desc: "Helping families with housing and shelter support.",
-    image: "/gallery/4.jpg",
+    image: "/ourwork/housing.jpg",
     href: "/housing-assistance",
   },
   {
     title: "Youth & Sports Program",
     desc: "Engaging youth in sports and leadership activities.",
-   image: "/gallery/6.jpg",
+   image: "/ourwork/youth.jpg",
     href: "/youth-sports",
   },
   {
     title: "IT Training & Support",
     desc: "Providing IT education and technical support.",
-    image: "/gallery/2.jpg",
+    image: "/ourwork/it.jpg",
     href: "/it-training",
   },
   {
     title: "Healthcare Services",
     desc: "Medical aid and healthcare facilities for the needy.",
-    image: "/gallery/3.jpg",
+    image: "/ourwork/medical.jpg",
     href: "/healthcare",
   },
   {
     title: "Education Scholarships",
     desc: "Scholarships and educational support for students.",
-    image: "/gallery/4.jpg",
+    image: "/ourwork/it.jpg",
     href: "/education-scholarships",
   },
   {
@@ -83,9 +83,9 @@ const activities = [
     href: "/disaster-relief",
   },
   {
-    title: "Community Events",
+    title: "Shadi Events",
     desc: "Organizing events for community bonding and growth.",
-    image: "/gallery/4.jpg",
+    image: "/ourwork/shadi.jpg",
     href: "/community-events",
   },
   {
@@ -97,13 +97,13 @@ const activities = [
   {
     title: "Entrepreneurship Support",
     desc: "Helping entrepreneurs with resources and guidance.",
-    image: "/gallery/6.jpg",
+    image: "/ourwork/membership.jpg",
     href: "/entrepreneurship-support",
   },
   {
-    title: "Environmental Projects",
+    title: "Graveyard Cleanup",
     desc: "Initiatives to protect and sustain the environment.",
-    image: "/gallery/2.jpg",
+    image: "/ourwork/graveyard.jpg",
     href: "/environmental-projects",
   },
 ];

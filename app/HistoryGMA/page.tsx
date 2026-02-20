@@ -22,7 +22,7 @@ export default function page() {
         {/* History Img 1 */}
         <div className="relative w-full h-[70vh] sm:h-[90vh] md:h-[110vh] bg-white flex items-center justify-center">
           <Image
-            src="/HistoryGMA/1.png"
+            src="/historygma/1.png"
             alt="history img 1"
             fill
             className="object-contain"
@@ -36,7 +36,7 @@ export default function page() {
       {/* History Img 2 */}
       <div className="relative w-full h-[70vh] sm:h-[90vh] md:h-[110vh] bg-white flex items-center justify-center ">
         <Image
-          src="/HistoryGMA/2.png"
+          src="/historygma/2.png"
           alt="history Img 2"
           fill
           className="object-contain"
