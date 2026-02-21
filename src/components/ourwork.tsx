@@ -58,9 +58,8 @@ export default function WorkGrid() {
             return (
               <div
                 key={work.href}
-                className={`relative flex flex-col items-center ${
-                  isLastTwo ? "md:col-span-2 md:justify-self-center" : ""
-                }`}
+                className={`relative flex flex-col items-center ${isLastTwo ? "md:col-span-2 md:justify-self-center" : ""
+                  }`}
               >
                 {/* ICON */}
                 <div className="mb-2">{work.icon}</div>

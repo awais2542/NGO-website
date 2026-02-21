@@ -2,49 +2,33 @@
 
 import FooterSection from "@/components/Footer";
 
+const SECTION_HEADINGS = [
+  "ORIGIN",
+  "REGIONS & GROUPS",
+  "CHARITY & MOSQUES",
+  "CONTRIBUTION TO PAKISTAN",
+  "PROMINENT MEMONS (PAST & PRESENT)",
+];
+
 const memonText = `
-History of Memons
-ORIGIN OF MEMONS
+ORIGIN
+The Memon community is a peace-loving, business-oriented people with a rich past and a promising future (inshaAllah). Their exact origin is unclear. One account holds that in the 15th century about 700 Lohana families embraced Islam at Nagar Thatta at the hands of Pir Yusufuddin; they were first called Momins, and in time the name became Memons—as stated by Hussain Kassim Dada at the first All India Memon Conference in Rajkot (1931). Other accounts place conversion at Mansura under Hazrat Umar bin Abdul Aziz (RA), in Kutch (per British historian Richard Burton), or during the era of Muhammad bin Qasim. Some link the name to the Banu Tamim tribe in Memna who settled in Thatta. Halai Memons left Hala (Sindh) for livelihood and spread abroad; Okhai Memons from Okha port travelled by sea for trade—hence the term "sailor businessmen."
 
-History of Memons
-ORIGIN OF MEMONS
+REGIONS & GROUPS
+In the Indo-Pak subcontinent, Memons lived mainly in Sindh, Gujarat, and Kathiawar—hence Sindhi, Gujarati, and Kathiawari Memons. Those in Kenya are Nasarpuria Memons. The community divides into three main groups: Kutchi Memons (Kutch ancestry, Kutchi dialect), Kathiawadi/Halai Memons (Kathiawar ancestry, Memon language), and Sindhi Memons (remained in Sindh, Sindhi language). Kathiawadi Memons further split into sub-groups by ancestral town (e.g. Kutiyana, Bantva, Dhoraji, Rajkot, Bombaywala, Deeplai). Halari Memon—18 Jamaats including Rajkot, Dhoraji, Jetpur—is the largest Jamaat in Pakistan. Worldwide, Kathiawadi Memons (excluding Kutchi and Sindhi) number over one million.
 
-The Memon Community is basically a peace loving, business community. A community which has a history as magnificent as the present and as promising future as can be (inshaAllah). The origin of Memon community is obsecure. There are many interesting stories about the origins of this community. Some say that in the 15th century about 700 families from the Lohana caste converted to Islam at Nagar, Thatha on the hands of Pir Yusufuddin. The converts were first called Momins or Mumins and the term, with the march of time, changed to Memons. This was also stated by Hussain Kassim Dada from his Presidential Chail at the first ever All India Memon Conference in Rajkot in the year 1931. Some say that they converted to Islam at Mansura during the reign of Hazrat Umar bin Abdul Aziz (RA). British historian Richard Burton wrote that they embraced Islam in Kutch. Some say that they did so during the period of Muhamad bin Qasim and that the â€œmeâ€ in the word â€œmemonâ€ stands for business and â€œmonâ€ for diamonds. Some historians claim that the people belonging to the Banu Tamim tribe in Memna later settled in Thatta and were known as Memons. Some hold that the Halai Memons, left Hala district of Sindh for economic reasons and spread out to other parts of the world. Okhai Memons belonging to Okha port spread out to various parts of the world in search of bussiness in their ships and boats.That was perhaps the reasons why some historians used the phrae â€œsailor businessmenâ€ for Memons.
+Notable Jamaats/organizations (by ancestral town): Amreli, Bantva, Bagasra, Bombay, Dhoraji, Deeplai, Gondal, Halari Memon, Jetpur, Jamnagar Memon Jamaat, Kutiyana, Kathiawar, Ladhubhai, M.T.M.A (Morbi-Tankara), Nasserpuria Memon Jamaat (Kenya), Okhai, Porbandar, Rajkot, Sourashtra, Tharti, Upleta, Vanthli, Vasawad, Walakh.
 
-Most members of the Memon community in the Indo-Pak subcontinent lived in Sindh, Gujarat and Kathiawar. They were known as Sindhi Memon, Gujarati Memon and Kathiawari Memon, respectively. Those living in Kenya are known as Nasarpuria Memon.Memon community can be divided in three main groups. Those who traced their ancestors from Kutch region are identified as Kutchi Memon and they speak Kutchi dialects. Those who traced their ancestry to Kathiawar are identified as simply Memon or Kathiawadi Memons or Halai Memons and they speak the Memon language. Those Memon who remained in Sindh (their ancestor never migrated to neighboring regions such as Kutch and Kathiawar) are identified as Sindhi Memon and speak the Sindhi language. Many Memons, especially Kathiawadi Memons, further distinguished themselves into various sub-groups which generally refer to their ancestral villages or towns such as Kutyana Memons, originated from Kutyana in Junahgarh (now India). Bantva Memons, Jutpur Memons, Dhoraji Memons, Rajkot Memons with other 18 Jamaats are now collectively called Halari Memon which is the largest Jamaat of memons in Pakistan, Bombaywala Memon (whose ancestors used to live in the main city of Bombay and its suburbs) and Deeplai Memon. It is estimated that the number of Kathiawadi Memon, other than Kutchi and Sindhi Memon, worldwide are over one million.
+These Jamaats run central bodies for social welfare: marriage licenses, dispute resolution, healthcare, education, housing and financial aid for the needy (members and sometimes non-members).
 
-All of these sub-groups or Jamaats have their central organization which are generally established for the social welfare of its members and development of the society which may include issuance of marriage license, matrimonial dispute resolution, adaptation and enforcement of the rules and guidelines against certain undesirable customs, establish healthcare and education centers, provides various facilities for the community needâ€Ž and also financial support and housingâ€Ž for the poor and needy members and sometime non-members.Some famous organizations, welfare associations or Jamaats of the Memon community which generally refer to their ancestral town are:
+CHARITY & MOSQUES
+Memons are known for generosity and charity. They support their own through allowances and scholarships and fund hospitals, maternity homes, orphanages, schools, and industrial homes—open to all regardless of caste or creed. They are among the top donors to national causes. Where they settle, they build mosques and schools and often form a Jamaat. Memon-built mosques such as Zakaria Masjid (Calcutta), Minara Masjid (Bombay), New Memon Masjid (Karachi), and Baitul Muqarram (Dhaka) are landmarks. The Jama Masjid of Durban, built by Memons, is the largest mosque in the Southern Hemisphere.
 
-Amreli
-Bantva,Bagasra
-Bombay
-Dhoraji
-Deeplai
-Gondal
-Halari Memon
-Jetpur
-Jamnagar Memon Jamaat
-Kutiyana
-Kathiawar
-Ladhubhai
-Morbi-Tankara Memon Association also called M.T.M.A
-Nasserpuria Memon Jamaat - Kenya
-Okhai
-Porbandar
-Rajkot
-Sourashtra
-Tharti
-Upleta
-Vanthli
-Vasawad
-Walakh
+CONTRIBUTION TO PAKISTAN
+Memons are soft-spoken, kind, and patriotic. Beyond trade, their role in industry and society has been exemplary. After Partition they set up major units in East Pakistan (e.g. Bawa Jute Mills, Adamji Jute Mills, Dawood Rayon). After 1971 many rebuilt their lives and helped develop West Pakistan's industry—household names include Adamji, Pakola, Dawood, Fecto, Al-Noor, Dada, Bawany, Tabani, and others. Rough estimates: ~600,000 Memons in Pakistan, ~700,000 in India, ~1.5 million abroad (including ~13,000 in America, ~25,000 in England).
 
-Memons are by nature generous, kind-hearted and charitable people. Not only do they support their less fortunate Jamaat fellows and community members by monthly maintenance allowances, scholarships and other necessities but also help humanity at large by establishing hospitals, mateity homes, orphanages, schools, colleges, industrial homes and other humanitarian activities, whose benefits are traditionally open for all persons without distinction of caste, color or creed. All large nation-wide funds start with the donations of Memons and generally they are among the topmost donors.
-Wherever the Memons have settled they first built a mosque and schools and if in considerable numbers, also established a Jamaat. Many mosques built by Memons have become outstanding architectural landmarks of their particular cities. Such mosques include Zakaria Masjid of Calcutta, Minara Masjid of Bombay. New Memon Masjid of Karachi and Bitul Muqarram Masjid of Dacca. Memons have also built large mosques in the countries spread from Japan to South Africa. The Jama Masjid of Durban built by the Memons, is the largest mosque in the Southe Hemisphere.
-
-Upon getting to know them better, one soon realizes that they are soft-spoken, amicable, kind and very patriotic. It would take a thick volume to describe all their services to the humanity and our country. Suffice it to say that whatever they have done for the economic, social welfare of Pakistanis since its creation is highly praiseworthy and to be proud of. Ordinary people connect the word â€œMemonâ€ only with trade, but their services in other fields have been exemplary. After partition , they set up a number of important industrial units in East Pakistan: Bawa Jute Mills, Adamji Jute Mills, Adamji Tea Gardens, Kaafuli Paper Mills, Kaafuli Jute Mills, Dawood Rayon Mills and Chemical Factories, to name but a few.After the seperation of East Pakistan (Now Bangladesh) many of them lost everything. However, they did not give up and concentrated all their efforts in building up the industrial infrastructure in (West) Pakistan. We are all familiar with names like Adamji, Pakola, Dawood, Fecto, Al-Noor, Dada, Hussain, Dadabhoy, Abdullah, Jaffer, Bawany, Machiara, Tabani, and many more.According to available data, there are about 1-1/2 million Memons outside Pakistan. There are about 600,000 in Pakistan, about 700,000 in India, about 13,000 in America and about 25,000 in England.
-
-It is debatable why a small community produced so many magnificient characters,but the number of highly successful people in this community is unmatched to any other community big or small. Some famous Memons, past and present, are Haji Sir Abdullah Haroon, Haji Abdul Sattar, Seth Adamji, Haji Dawood, Haji Abdul Ghani Beg Mohammad Bawani, Usman Isa Bhai Vakil, Haji Dada Wali Mohammad Modi, Ahmad E H Jafar, Yusuf Haroon, Mahmood Haroon, Ashraf Wali Mohammad Tabani, Zain Noorani, Abdul Sattar Edhi, Alhaj Zakaria Kamdar, Haji Hanif Tayyab, Kassim Parekh, Abdullah J Memon, Ghulam Ali Memon, Ahmad Dawood, Hussain Dawood, Abdul Qadir Lakhani, Aqil Karim Dhedhi, Razzaq Balwani, Aziz Tabba, Abdul Razzaq Thalpawala, Hussain Lawai, Amin Ghaziani, Justice A Hafeez Memon, Justice Rahim Bux Memon, Justice M Bachal Memon, Justice Rahim Bux Munshi, Ghulam Mohammad. Adamji Fecto, Ahmad Ibrahim Wali Mohammad Bawani, Haji Ilyas Memon, Hussain Ibrahim, Latif Ibrahim Jamal, M Ibrahim Tabani, Yaqub Tabani, Usman Salman, Haji Abdul Razzaq, Amin Lakhani and many more.
+PROMINENT MEMONS (PAST & PRESENT)
+Haji Sir Abdullah Haroon, Haji Abdul Sattar, Seth Adamji, Haji Dawood, Abdul Sattar Edhi, Yusuf Haroon, Mahmood Haroon, Zain Noorani, Hussain Dawood, Ahmad Dawood, Abdul Qadir Lakhani, Hussain Lawai, Justices A. Hafeez Memon, Rahim Bux Memon, M. Bachal Memon, and many others.
 `;
 
 export default function HistoryOfMemons() {
@@ -65,32 +49,36 @@ export default function HistoryOfMemons() {
     <div className="min-h-screen mt-3">
       <div className="max-w-5xl mx-auto px-4 py-10 text-gray-800">
 
-      {/* Heading */}
-      <h1 className="text-3xl md:text-4xl bg-primary text-white mb-6 text-center">
-        History of Memons
-      </h1>
+        {/* Heading */}
+        <h1 className="text-3xl md:text-4xl bg-primary text-white  text-center">
+          History of Memons
+        </h1>
 
-      
+        {/* Text Content */}
+        <div className="whitespace-pre-line text-sm md:text-base leading-relaxed p-5 bg-gray-50">
+          {memonText.split("\n").map((line, i, arr) =>
+            SECTION_HEADINGS.includes(line.trim()) ? (
+              <strong key={i} className="font-bold block first:mt-0">{line}</strong>
+            ) : (
+              <span key={i}>{line}{i < arr.length - 1 ? "\n" : ""}</span>
+            )
+          )}
+        </div>
 
-      {/* Text Content */}
-      <div className="whitespace-pre-line text-sm md:text-base leading-relaxed  p-5  bg-gray-50">
-        {memonText}
+        {/* Download Button */}
+        <div className="text-center mt-6">
+          <button
+            onClick={handleDownload}
+            className="bg-primary text-white px-5 py-2 rounded-lg hover:opacity-90 transition"
+          >
+            Download Document
+          </button>
+        </div>
+
       </div>
-      
-      {/* Download Button */}
-      <div className="text-center mt-6">
-        <button
-          onClick={handleDownload}
-          className="bg-primary text-white px-5 py-2 rounded-lg hover:opacity-90 transition"
-        >
-          Download Document
-        </button>
-      </div>
-    
+
+      <FooterSection />
     </div>
 
-    <FooterSection/>
-    </div>
-    
   );
 }
