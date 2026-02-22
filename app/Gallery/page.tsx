@@ -6,12 +6,12 @@ import { useState } from "react";
   const events = [
   {
     id: 1,
-    title: "Event 1",
-    description: "Details about Event 1...",
+    title: "Eid Milan 2007",
+    description: "Nov 18, 2007",
     images: [
-      "/gallery/1.jfif",
-      "/gallery/2.jpg",
-      "/gallery/3.jpg",
+      "/gallery/milad/5.jfif",
+      "/gallery/milad/2.jfif",
+      "/gallery/milad/3.jfif",
     ],
   },
   {

@@ -2,6 +2,16 @@ import React from 'react'
 import FooterSection from '@/components/Footer'
 import Image from 'next/image'
 
+const partners= [
+  { img: "/pride/1.jpg", link: "http://www.gulfminerals.com/" },
+  { img: "/pride/2.jpg", link: "https://designanddepth.com/" },
+  { img: "/pride/3.jpg", link: "http://manalinternational.com/" },
+  { img: "/pride/4.jpg", link: "http://www.elegance3.com/main.html" },
+  { img: "/pride/5.png", link: "https://systologic.com/systologic/" },
+  { img: "/pride/6.png", link: "http://www.nua.com.pk/about.html" },
+  { img: "/pride/7.png", link: "https://ttigroup.com.pk/" },
+];
+
 export default function page() {
   return (
     <div className='min-h-screen bg-gray-50 mt-2'>
@@ -31,7 +41,7 @@ export default function page() {
           </span>
 
           <span className="block">
-            Our journey would’ve been short and unsustainable without the support of our partners and collaborators. They contribute not only financially, but also with their wisdom, experience and expertise in building a stronger and progressive Lyari.
+            Our journey would’ve been short and unsustainable without the support of our pride and collaborators. They contribute not only financially, but also with their wisdom, experience and expertise in building a stronger and progressive Lyari.
           </span>
 
           <span className="block">
@@ -46,21 +56,37 @@ export default function page() {
     {/* Banner Donors and Collaborators */}
     <div className="w-full bg-primary text-white py-6 sm:py- text-center">
         <h1 className="text-4xl">
-          Donors and Collaborators
+          OUR PRIDE
         </h1>
       </div>
       {/* Donors Img */}
-      <div className='relative w-full h-[250px] sm:h-[280px] md:h-[380px] mt-5'>
-        <Image
-                  src="/partners/partners.webp"
-                  alt="Donate Banner"
-                  fill
-                  className="object-fill "
-                  priority
-                />
-      </div>
+      <div className="px-4 mt-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+
+              {partners.map((partner, index) => (
+                <a
+                  key={index}
+                  href={partner.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-[120px] sm:h-[140px] md:h-[160px] 
+                            rounded-xl overflow-hidden shadow-md hover:scale-105 
+                            transition-transform duration-300"
+                >
+                  <Image
+                    src={partner.img}
+                    alt={`Partner ${index + 1}`}
+                    fill
+                    className="object-contain bg-white p-3"
+                  />
+                </a>
+              ))}
+
+            </div>
+        </div>
+
     {/* Banner Schools and colleges */}
-    <div className="w-full bg-primary text-white py-6 sm:py- text-center">
+    <div className="w-full bg-primary text-white py-6 sm:py- text-center mt-3">
         <h1 className="text-4xl ">
          Partner Schools & Colleges
         </h1>
@@ -69,7 +95,7 @@ export default function page() {
       <div className='relative w-full h-[250px] sm:h-[280px] md:h-[380px] mt-5'>
         <Image
                   src="/partners/partners-sch.webp"
-                  alt="Donate Banner"
+                  alt="partner Banner"
                   fill
                   className="object-fill "
                   priority

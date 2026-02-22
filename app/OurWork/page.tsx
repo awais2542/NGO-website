@@ -129,6 +129,31 @@ export default function OurWorkPage() {
       <div className="w-full bg-primary text-white py-6 sm:py- text-center">
         <h1 className="text-4xl ">Our Work</h1>
       </div>
+      {/* text */}
+      <div className="w-full py-10 sm:py-14 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-3xl mx-auto text-center">
+        
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed space-y-5">
+          
+          <span className="block">
+            <strong>Memon Foundation Association</strong> Pakistan is a non profit organisation serving the 
+            needs of its community. It strives to cater to the needs of it members and conducts different
+             activities to keep the members united socially and religiously.
+
+          </span>
+
+          <span className="block">
+            Our journey would’ve been short and unsustainable without the support of our partners and collaborators. They contribute not only financially, but also with their wisdom, experience and expertise in building a stronger and progressive Lyari.
+          </span>
+
+          <span className="block">
+            In the spirit of entrepreneurship, mothers are encouraged to set up home-made food stalls to initiate financial independence.
+          </span>
+
+        </p>
+
+      </div>
+   </div>
       {/* Cards */}
       <div className="max-w-5xl mx-auto px-4 grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4
         gap-3 sm:gap-5 md:gap-6">
