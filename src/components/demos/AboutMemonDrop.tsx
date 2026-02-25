@@ -61,7 +61,7 @@ export function AboutMemonDropDown() {
           {isMobile ? (
             <>
               <DropdownMenuItem asChild>
-                <Link href="/office-bearers">Office Bearers</Link>
+                <Link href="/OfficeBEARERS">Office Bearers</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
@@ -84,7 +84,7 @@ export function AboutMemonDropDown() {
 
               <DropdownMenuSubContent className="w-56 p-2">
                 <DropdownMenuItem asChild>
-                  <Link href="/office-bearers">Office Bearers</Link>
+                  <Link href="/OfficeBEARERS">Office Bearers</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>

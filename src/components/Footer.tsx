@@ -40,20 +40,20 @@ export default function FooterSection({
     {
       title: "About Us",
       links: [
-        { text: "Our History", href: "#" },
-        { text: "History of Memons ", href: "#" },
-        { text: "The Essence", href: "#" },
-        { text: "Who We Are", href: "#" },
+        { text: "Our History", href: "/HistoryGMA" },
+        { text: "History of Memons ", href: "/HistoryMemons" },
+        { text: "The Essence", href: "/Essence" },
+        { text: "Who We Are", href: "" },
       ],
     },
     {
       title: "Our Work",
       links: [
-        { text: "Financial & Monthly Aid", href: "#" },
-        { text: "Legal & Community Support", href: "#" },
-        { text: "Housing & Assistance", href: "#" },
-        { text: "Youth & Sports Program", href: "#" },
-        { text: "Information Technology(IT) Training & Support", href: "#" },
+        { text: "Financial & Monthly Aid", href: "/OurWork#financial-aid" },
+        { text: "Legal & Community Support", href: "OurWork#legal-support" },
+        { text: "Housing & Assistance", href: "OurWork#housing-assistance" },
+        { text: "Youth & Sports Program", href: "OurWork#youth-sports" },
+        { text: "Information Technology(IT) Training & Support", href: "OurWork#it-training" },
       ],
     },
     {
@@ -61,15 +61,15 @@ export default function FooterSection({
       links: [
         { text: "Volunteer", href: "#" },
         { text: "Carrier", href: "#" },
-        { text: "Donate", href: "#" },
+        { text: "Donate", href: "/donation" },
       ],
     },
     {
       title: "Contact Us",
       links: [
-        { text: "Gmail", href: "#" },
-        { text: "Contact", href: "#" },
-        { text: "Address", href: "#" },
+        { text: "Email: info@gma.org.pk", href: "gmail:info@gma.org.pk" },
+        { text: "Contact+92 (21) 34895177, 34855177", href: "#" },
+        { text: "Address:Plot # 9/1, Street # 2, Muslimabad Co-Operative Housing Society,Adj. Faizan-e-Sunnat Masjid, Near Dawood Engineering Collage, New M.A Jinnah Road Karachi, Pakistan ", href: "#" },
       ],
     },
     {
@@ -126,6 +126,7 @@ export default function FooterSection({
   className,
 }: FooterProps) {
   return (
+    
     <footer
       className={cn("border-t text-gray-500 hover:text-primary w-full px-4", className)}
     >

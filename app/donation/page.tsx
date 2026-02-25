@@ -74,7 +74,7 @@ Branch Code: ${bank.branch}`;
 </h1>
 
 <p className="text-white/90 mt-2 text-xs sm:text-sm md:text-lg drop-shadow-md max-w-xl">
-  Aap ki madad kisi ki zindagi badal sakti hai.
+ “A small donation can create a big change.”
 </p>
 
   </div>

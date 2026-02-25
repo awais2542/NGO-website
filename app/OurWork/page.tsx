@@ -27,84 +27,98 @@ const activities = [
     desc: "Providing monthly financial assistance to deserving families.",
     image: "/ourwork/imdad.jpg",
     href: "/financial-aid",
+    id : "financial-aid",
   },
   {
     title: "Legal & Community Support",
     desc: "Offering legal guidance and community support services.",
     image: "/ourwork/aid.jpg",
     href: "/legal-support",
+    id: "legal-support",
   },
   {
     title: "Housing & Assistance",
     desc: "Helping families with housing and shelter support.",
     image: "/ourwork/housing.jpg",
     href: "/housing-assistance",
+    id: "housing-assistance",
   },
   {
     title: "Youth & Sports Program",
     desc: "Engaging youth in sports and leadership activities.",
     image: "/ourwork/youth.jpg",
     href: "/youth-sports",
+    id:"youth-sports",
   },
   {
     title: "IT Training & Support",
     desc: "Providing IT education and technical support.",
     image: "/ourwork/it.jpg",
     href: "/it-training",
+    id:"it-training",
   },
   {
     title: "Healthcare Services",
     desc: "Medical aid and healthcare facilities for the needy.",
     image: "/ourwork/medical.jpg",
     href: "/healthcare",
+    id:"healthcare",
   },
   {
     title: "Education Scholarships",
     desc: "Scholarships and educational support for students.",
-    image: "/ourwork/it.jpg",
+    image: "/ourwork/education.jpg",
     href: "/education-scholarships",
+    id:"education-scholarships",
   },
   {
     title: "Women Empowerment",
     desc: "Programs to empower women socially and economically.",
-    image: "/gallery/6.jpg",
+    image: "/ourwork/women.jpg",
     href: "/women-empowerment",
+    id:"women-empowerment",
   },
   {
     title: "Food Distribution",
     desc: "Distributing food to families in need.",
-    image: "/gallery/2.jpg",
+    image: "/ourwork/food.jpg",
     href: "/food-distribution",
+    id:"food-distribution",
   },
   {
     title: "Disaster Relief",
     desc: "Emergency relief during natural disasters.",
     image: "/gallery/3.jpg",
     href: "/disaster-relief",
+    id:"disaster-relief",
   },
   {
     title: "Shadi Events",
     desc: "Organizing events for community bonding and growth.",
     image: "/ourwork/shadi.jpg",
     href: "/community-events",
+    id:"community-events",
   },
   {
     title: "Skill Development",
     desc: "Training programs to develop professional skills.",
-    image: "/gallery/2.jpg",
+    image: "/ourwork/skill.jpg",
     href: "/skill-development",
+    id:"skill-development",
   },
   {
     title: "Entrepreneurship Support",
     desc: "Helping entrepreneurs with resources and guidance.",
     image: "/ourwork/membership.jpg",
     href: "/entrepreneurship-support",
+    id:"entrepreneurship-support",
   },
   {
     title: "Graveyard Cleanup",
     desc: "Initiatives to protect and sustain the environment.",
     image: "/ourwork/graveyard.jpg",
     href: "/environmental-projects",
+    id:"environmental-projects",
   },
 ];
 
@@ -164,6 +178,7 @@ export default function OurWorkPage() {
           return (
             <div
               key={item.href}
+              id={item.id}
               onClick={() => setSelectedItem(item)}
               className="group cursor-pointer"
             >
