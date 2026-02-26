@@ -1,10 +1,11 @@
 "use client";
 
+import FooterSection from "@/components/Footer";
 import { useState } from "react";
 
 
 export default function Page() {
-    
+
 const [showToast, setShowToast] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -162,6 +163,7 @@ const [showToast, setShowToast] = useState(false);
           </div>
         </form>
       </div>
+      <FooterSection />
     </section>
   );
 }
