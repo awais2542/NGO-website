@@ -59,7 +59,7 @@ export default function FooterSection({
     {
       title: "Make A Difference",
       links: [
-        { text: "Volunteer", href: "#" },
+        { text: "Volunteer", href: "/Volunteer" },
         { text: "Carrier", href: "#" },
         { text: "Donate", href: "/donation" },
       ],

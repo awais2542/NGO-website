@@ -6,52 +6,57 @@ import FooterSection from '@/components/Footer'
 import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
 
-const officers = [
+const committee = [
     {
         id: 1,
-        name: "Mr. Shabbir Abdul Razzak Teli",
-        position: "Chairman",
-        image: "/officers/chairman.jpg",
+        name: "Mr. Muhammad Asif Ghaziani",
+        position: "Mc Member",
+        image: "/committee/mr-asif.jpg",
     },
     {
         id:2,
-        name: "Mr. Muhammad Shabbir Noorsumar",
-        position: "SR.Vice Chairman",
-        image: "/officers/sr.jfif",
+        name: "Mr Muhammad Shahid Salat",
+        position: "Mc Member",
+        image: "/committee/mr-shahid.jpg",
     },
     {
         id:3,
-        name: "Mr. Muhammad Mushtaq Ahmedani",
-        position: "Vice Chairman",
-        image: "/officers/vice1.jpg",
+        name: "Mr. Muhammad Asif Bakali",
+        position: "Mc Member",
+        image: "/committee/mr-asif-bakali.jpg",
     },
     {
         id:4,
-        name: "Mr.Abdul Aziz",
-        position: "Vice Chairman",
-        image: "/officers/vice2.jpg",
+        name: "Mr. Kamran Iqbal Dayala",
+        position: "Mc Member",
+        image: "/committee/mr-kamran.jpeg",
     },
     {
         id:5,
-        name: "Mr. Asif Abdul Ghaffar Davani",
-        position: "General Secretary",
-        image: "/officers/general.jpg",
+        name: "Mr. Ishtyaq Ahmed Makda",
+        position: "Mc Member",
+        image: "/committee/mr-ishtaq.jpg",
     },
     {
         id:6,
-        name: "Muhammad Raif Sheikha",
-        position: "JOINT  Secretary",
-        image: "/officers/joint.jpg",
+        name: "Mr. Ismail Patel",
+        position: "Mc Member",
+        image: "/committee/mr-ismail.jpg",
     },
     {
         id:7,
-        name: "Abdul Jabbar Ahmedani",
-        position: "TREASURER",
-        image: "/officers/treasurer.jpg",
+        name: "Mr. FAISAL PUNJANI",
+        position: "Mc Member",
+        image: "/committee/mr-faisal.jfif",
+    },{
+        id:8,
+        name: "Mr. Muhammad Ali Patel",
+        position: "Mc Member",
+        image: "/committee/mr-ali.jpg",
     }
 ]
 export default function page() {
-    const [selectedItem, setSelectedItem] = useState<typeof officers[number] | null>(null);
+    const [selectedItem, setSelectedItem] = useState<typeof committee[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>
           {/* Banner */}
@@ -62,7 +67,7 @@ export default function page() {
       <div className="max-w-5xl mx-auto px-4 grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4
         gap-3 sm:gap-5 md:gap-6 mb-3">
 
-        {officers.map((item,) => {
+        {committee.map((item,) => {
 
           const image = item.image;
           return (

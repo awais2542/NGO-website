@@ -5,21 +5,6 @@ import { useState } from "react";
 import FooterSection from '@/components/Footer'
 import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
-import {
-  HeartHandshake,
-  GraduationCap,
-  HandCoins,
-  Stethoscope,
-  Home,
-  Users,
-  Laptop,
-  Utensils,
-  AlertTriangle,
-  Calendar,
-  Wrench,
-  Briefcase,
-  Leaf,
-} from "lucide-react";
 
 const activities = [
   {

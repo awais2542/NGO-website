@@ -52,6 +52,14 @@ export function AboutMemonDropDown() {
           <DropdownMenuItem asChild>
             <Link href="/Essence">The Essence</Link>
           </DropdownMenuItem>
+
+          <DropdownMenuItem asChild>
+            <Link href="/Organizaitional">Organizaitional Philosophy</Link>
+          </DropdownMenuItem>
+
+          <DropdownMenuItem asChild>
+            <Link href="/Essence">Became a Volunteer</Link>
+          </DropdownMenuItem>
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator />
@@ -65,15 +73,15 @@ export function AboutMemonDropDown() {
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/managing-committee">Managing Committee</Link>
+                <Link href="/Committee">Managing Committee</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/youth-wing">Youth Wing</Link>
+                <Link href="/youth">Youth Wing</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/ladies-wing">Ladies Wing</Link>
+                <Link href="/Ladies-wing">Ladies Wing</Link>
               </DropdownMenuItem>
             </>
           ) : (
@@ -88,15 +96,15 @@ export function AboutMemonDropDown() {
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/managing-committee">Managing Committee</Link>
+                  <Link href="/Committee">Managing Committee</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/youth-wing">Youth Wing</Link>
+                  <Link href="/youth">Youth Wing</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/ladies-wing">Ladies Wing</Link>
+                  <Link href="/Ladies-wing">Ladies Wing</Link>
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuSub>

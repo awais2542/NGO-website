@@ -6,63 +6,58 @@ import FooterSection from '@/components/Footer'
 import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
 
-const officers = [
+const youth = [
     {
         id: 1,
-        name: "Mr. Shabbir Abdul Razzak Teli",
-        position: "Chairman",
-        image: "/officers/chairman.jpg",
+        name: "Mr. Abdul Qadir Noorani",
+        position: "Youth Chairman",
+        image: "/youth/mr-qadir.jpg",
     },
     {
         id:2,
-        name: "Mr. Muhammad Shabbir Noorsumar",
+        name: "Mr. KAMRAN TABAN",
         position: "SR.Vice Chairman",
-        image: "/officers/sr.jfif",
+        image: "/youth/mr-kamran.jpeg",
     },
     {
         id:3,
-        name: "Mr. Muhammad Mushtaq Ahmedani",
+        name: "Mr. Zain Fattani",
         position: "Vice Chairman",
-        image: "/officers/vice1.jpg",
+        image: "/youth/mr-zain.jpeg",
     },
     {
         id:4,
-        name: "Mr.Abdul Aziz",
-        position: "Vice Chairman",
-        image: "/officers/vice2.jpg",
+        name: "Mr. Zain Ghaziani",
+        position: "GENERAL SECRETARY ",
+        image: "/youth/mr-zain-ghaziani.jpg",
     },
     {
         id:5,
-        name: "Mr. Asif Abdul Ghaffar Davani",
-        position: "General Secretary",
-        image: "/officers/general.jpg",
+        name: "Mr. Umer Tabani",
+        position: "JOINT SECRETARY",
+        image: "/youth/mr-umer.jpg",
     },
     {
         id:6,
-        name: "Muhammad Raif Sheikha",
-        position: "JOINT  Secretary",
-        image: "/officers/joint.jpg",
-    },
-    {
-        id:7,
-        name: "Abdul Jabbar Ahmedani",
+        name: "Mr. Muhammad Rizwan Teli",
         position: "TREASURER",
-        image: "/officers/treasurer.jpg",
-    }
+        image: "/youth/mr-rizwan.jpeg",
+    },
+   
 ]
 export default function page() {
-    const [selectedItem, setSelectedItem] = useState<typeof officers[number] | null>(null);
+    const [selectedItem, setSelectedItem] = useState<typeof youth[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>
           {/* Banner */}
       <div className="w-full text-primary py-6 sm:py- text-center">
-        <h1 className="text-4xl  font-bold underline">Managing Committee</h1>
+        <h1 className="text-4xl  font-bold underline">youth Member</h1>
       </div>
       {/* Cards */}
       <div className="max-w-5xl mx-auto px-4 grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4
         gap-3 sm:gap-5 md:gap-6 mb-3">
 
-        {officers.map((item,) => {
+        {youth.map((item,) => {
 
           const image = item.image;
           return (
@@ -127,7 +122,7 @@ export default function page() {
                       src={selectedItem.image}
                       alt={selectedItem.name}
                       fill
-                      className="object-full w-full h-60 sm:h-72 md:h-96"
+                      className="object-fill w-full h-60 sm:h-72 md:h-96"
                     />
                   </div>
       
