@@ -102,8 +102,8 @@ const activities = [
     title: "Graveyard Cleanup",
     desc: "Initiatives to protect and sustain the environment.",
     image: "/ourwork/graveyard.jpg",
-    href: "/environmental-projects",
-    id:"environmental-projects",
+    href: "/graveyard-cleanup",
+    id:"graveyard-cleanup",
   },
 ];
 

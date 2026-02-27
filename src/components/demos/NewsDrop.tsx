@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/button";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -40,9 +41,9 @@ export function NewsDropDown() {
       <DropdownMenuContent className="w-60 p-2" align="start">
         {/* Top level */}
         <DropdownMenuGroup className="space-y-1">
-          <DropdownMenuItem>Stories</DropdownMenuItem>
-          <DropdownMenuItem>Documentaries</DropdownMenuItem>
-          <DropdownMenuItem>In The News</DropdownMenuItem>
+          <DropdownMenuItem><Link href="/stories">Stories</Link></DropdownMenuItem>
+          <DropdownMenuItem><Link href="/documentaries">Documentaries</Link></DropdownMenuItem>
+          <DropdownMenuItem><Link href="/news">In The News</Link></DropdownMenuItem>
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator />
