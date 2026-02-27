@@ -5,6 +5,7 @@ import Image from "next/image";
 import GalleryModal from "./demos/GalleryModal";
 import Link from "next/link";
 import { Button } from "./button";
+import { SectionHeading } from "./section-heading";
 
 const images = [
   {
@@ -48,10 +49,11 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-4 pb-16 sm:pb-24 pt-12 sm:pt-20">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Our Gallery</h2>
-          <p className="text-muted-foreground mt-2">
-            A glimpse of our ongoing welfare activities
-          </p>
+          <SectionHeading
+            title="Our Gallery"
+            subtitle="A glimpse of our ongoing welfare activities"
+          />
+
         </div>
 
         {/* Marquee */}

@@ -6,64 +6,65 @@ import FooterSection from '@/components/Footer'
 import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
 import { Button } from "@/components/button";
+import { SectionHeading } from '@/components/section-heading';
 
 const committee = [
-    {
-        id: 1,
-        name: "Mr. Muhammad Asif Ghaziani",
-        position: "Mc Member",
-        image: "/committee/mr-asif.jpg",
-    },
-    {
-        id:2,
-        name: "Mr Muhammad Shahid Salat",
-        position: "Mc Member",
-        image: "/committee/mr-shahid.jpg",
-    },
-    {
-        id:3,
-        name: "Mr. Muhammad Asif Bakali",
-        position: "Mc Member",
-        image: "/committee/mr-asif-bakali.jpg",
-    },
-    {
-        id:4,
-        name: "Mr. Kamran Iqbal Dayala",
-        position: "Mc Member",
-        image: "/committee/mr-kamran.jpeg",
-    },
-    {
-        id:5,
-        name: "Mr. Ishtyaq Ahmed Makda",
-        position: "Mc Member",
-        image: "/committee/mr-ishtaq.jpg",
-    },
-    {
-        id:6,
-        name: "Mr. Ismail Patel",
-        position: "Mc Member",
-        image: "/committee/mr-ismail.jpg",
-    },
-    {
-        id:7,
-        name: "Mr. FAISAL PUNJANI",
-        position: "Mc Member",
-        image: "/committee/mr-faisal.jfif",
-    },{
-        id:8,
-        name: "Mr. Muhammad Ali Patel",
-        position: "Mc Member",
-        image: "/committee/mr-ali.jpg",
-    }
+  {
+    id: 1,
+    name: "Mr. Muhammad Asif Ghaziani",
+    position: "Mc Member",
+    image: "/committee/mr-asif.jpg",
+  },
+  {
+    id: 2,
+    name: "Mr Muhammad Shahid Salat",
+    position: "Mc Member",
+    image: "/committee/mr-shahid.jpg",
+  },
+  {
+    id: 3,
+    name: "Mr. Muhammad Asif Bakali",
+    position: "Mc Member",
+    image: "/committee/mr-asif-bakali.jpg",
+  },
+  {
+    id: 4,
+    name: "Mr. Kamran Iqbal Dayala",
+    position: "Mc Member",
+    image: "/committee/mr-kamran.jpeg",
+  },
+  {
+    id: 5,
+    name: "Mr. Ishtyaq Ahmed Makda",
+    position: "Mc Member",
+    image: "/committee/mr-ishtaq.jpg",
+  },
+  {
+    id: 6,
+    name: "Mr. Ismail Patel",
+    position: "Mc Member",
+    image: "/committee/mr-ismail.jpg",
+  },
+  {
+    id: 7,
+    name: "Mr. FAISAL PUNJANI",
+    position: "Mc Member",
+    image: "/committee/mr-faisal.jfif",
+  }, {
+    id: 8,
+    name: "Mr. Muhammad Ali Patel",
+    position: "Mc Member",
+    image: "/committee/mr-ali.jpg",
+  }
 ]
 export default function CommitteePage() {
-    const [selectedItem, setSelectedItem] = useState<typeof committee[number] | null>(null);
+  const [selectedItem, setSelectedItem] = useState<typeof committee[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>
-          {/* Banner */}
-      <div className="w-full text-primary py-6 sm:py- text-center">
-        <h1 className="text-4xl  font-bold underline">Managing Committee</h1>
-      </div>
+      <SectionHeading
+        title="Managing Committee"
+      />
+
       {/* Cards */}
       <div className="max-w-5xl mx-auto px-4 grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4
         gap-3 sm:gap-5 md:gap-6 mb-3">
@@ -108,49 +109,49 @@ export default function CommitteePage() {
 
           );
         })}
-        
+
 
       </div>
       {/* Modal for Selected Item */}
-            {selectedItem && (
-              <div
-                className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4"
-                onClick={() => setSelectedItem(null)}
-              >
-                <div
-                  className="relative bg-white w-full max-w-3xl rounded-xl overflow-hidden"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <Button
-                    onClick={() => setSelectedItem(null)}
-                    variant="ghost"
-                    size="icon"
-                    className="absolute top-4 right-4 z-50 bg-black/70 hover:bg-black text-white rounded-full w-9 h-9 flex items-center justify-center"
-                    aria-label="Close"
-                  >
-                    ✕
-                  </Button>
-      
-                  <div className="relative w-full h-60 sm:h-72 md:h-96">
-                    <Image
-                      src={selectedItem.image}
-                      alt={selectedItem.name}
-                      fill
-                      className="object-full w-full h-60 sm:h-72 md:h-96"
-                    />
-                  </div>
-      
-                  <div className="p-4 sm:p-6 text-center">
-                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
-                      {selectedItem.name}
-                    </h2>
-                    <p className="text-sm sm:text-base text-muted-foreground mt-3">
-                      {selectedItem.position}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
+      {selectedItem && (
+        <div
+          className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4"
+          onClick={() => setSelectedItem(null)}
+        >
+          <div
+            className="relative bg-white w-full max-w-3xl rounded-xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Button
+              onClick={() => setSelectedItem(null)}
+              variant="ghost"
+              size="icon"
+              className="absolute top-4 right-4 z-50 bg-black/70 hover:bg-black text-white rounded-full w-9 h-9 flex items-center justify-center"
+              aria-label="Close"
+            >
+              ✕
+            </Button>
+
+            <div className="relative w-full h-60 sm:h-72 md:h-96">
+              <Image
+                src={selectedItem.image}
+                alt={selectedItem.name}
+                fill
+                className="object-full w-full h-60 sm:h-72 md:h-96"
+              />
+            </div>
+
+            <div className="p-4 sm:p-6 text-center">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
+                {selectedItem.name}
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground mt-3">
+                {selectedItem.position}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <FooterSection />
     </div>

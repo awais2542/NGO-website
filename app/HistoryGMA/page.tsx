@@ -1,4 +1,5 @@
 import FooterSection from '@/components/Footer'
+import { SectionHeading } from '@/components/section-heading'
 import Image from 'next/image'
 import React from 'react'
 
@@ -11,12 +12,11 @@ export default function page() {
 
         {/* Heading */}
         <div className="text-center bg-primary text-white px-4 ">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl">
-            History Of GMA
-          </h1>
-          <p className="mt-2 text-sm sm:text-base">
-            Discover the journey and legacy
-          </p>
+          <SectionHeading
+            title="History Of GMA"
+            subtitle="Discover the journey and legacy"
+            className="mb-0 lg:mb-0"
+          />
         </div>
 
         {/* History Img 1 */}

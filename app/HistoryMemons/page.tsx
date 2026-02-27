@@ -2,6 +2,7 @@
 
 import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
+import { SectionHeading } from "@/components/section-heading";
 
 const SECTION_HEADINGS = [
   "ORIGIN",
@@ -50,10 +51,12 @@ export default function HistoryOfMemons() {
     <div className="min-h-screen mt-3">
       <div className="max-w-5xl mx-auto px-4 py-10 text-gray-800">
 
-        {/* Heading */}
-        <h1 className="text-3xl md:text-4xl bg-primary text-white  text-center">
-          History of Memons
-        </h1>
+        <SectionHeading
+          title="History Of GMA"
+          subtitle="Discover the journey and legacy"
+          className="mb-0 lg:mb-0 bg-primary text-white"
+        />
+
 
         {/* Text Content */}
         <div className="whitespace-pre-line text-sm md:text-base leading-relaxed p-5 bg-gray-50">

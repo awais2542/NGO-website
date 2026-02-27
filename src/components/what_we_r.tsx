@@ -20,6 +20,7 @@ import {
   Briefcase,
   Leaf,
 } from "lucide-react";
+import { SectionHeading } from "./section-heading";
 
 
 
@@ -118,13 +119,10 @@ export default function WhatWeAreDoing() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            What We Are Doing
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our initiatives focus on improving lives through welfare, education,
-            healthcare, and community support.
-          </p>
+          <SectionHeading
+            title="What We Are Doing"
+            subtitle="Our initiatives focus on improving lives through welfare, education, healthcare, and community support."
+          />
         </div>
 
         {/* Cards */}

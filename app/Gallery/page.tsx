@@ -3,8 +3,9 @@ import Image from "next/image";
 import FooterSection from "@/components/Footer";
 import { useState } from "react";
 import { Button } from "@/components/button";
+import { SectionHeading } from "@/components/section-heading";
 
-  const events = [
+const events = [
   {
     id: 1,
     title: "Eid Milan 2007",
@@ -25,7 +26,7 @@ import { Button } from "@/components/button";
       "/gallery/6.jpg",
     ],
   },
-    {
+  {
     id: 3,
     title: "Event 3",
     description: "Details about Event 2...",
@@ -79,12 +80,11 @@ export default function EventsPage() {
 
       {/* 🔹 Page Heading */}
       <div className="px-4 sm:px-6 pt-4 sm:pt-5 pb-4 sm:pb-5 bg-primary text-white text-center">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-          Events Gallery
-        </h1>
-        <p className="mt-1 sm:mt-2 max-w-2xl mx-auto text-xs sm:text-sm md:text-base">
-          Our recent activities and events captured with love and impact.
-        </p>
+        <SectionHeading
+          title="Events Gallery"
+          subtitle="Our recent activities and events captured with love and impact."
+          className="mb-0 lg:mb-0"
+        />
       </div>
 
       {/* 🔹 Gallery Grid */}
@@ -98,15 +98,15 @@ export default function EventsPage() {
               className="relative cursor-pointer group overflow-hidden rounded-2xl shadow-lg bg-black"
             >
               {/* Image */}
-             <Image
-                  src={event.images && event.images.length > 0 
-                        ? event.images[0] 
-                        : "/placeholder.jpg"}
-                  alt={event.title}
-                  width={600}
-                  height={400}
-                  className="w-full h-56 object-cover"
-                />
+              <Image
+                src={event.images && event.images.length > 0
+                  ? event.images[0]
+                  : "/placeholder.jpg"}
+                alt={event.title}
+                width={600}
+                height={400}
+                className="w-full h-56 object-cover"
+              />
 
               {/* Gradient Overlay */}
               <div
@@ -143,66 +143,66 @@ export default function EventsPage() {
         </div>
       </div>
 
-        {/* event modle */}
+      {/* event modle */}
       {selectedEvent && (
-  <div className="fixed inset-0 z-50 bg-black/80 overflow-y-auto p-6">
-    
-    {/* Close Event */}
-    <Button
-      onClick={() => setSelectedEvent(null)}
-      variant="ghost"
-      size="icon"
-      className="absolute top-5 right-5 text-white text-2xl"
-      aria-label="Close event"
-    >
-      ✕
-    </Button>
+        <div className="fixed inset-0 z-50 bg-black/80 overflow-y-auto p-6">
 
-    <h2 className="text-white text-2xl font-bold mb-6">
-      {selectedEvent.title}
-    </h2>
+          {/* Close Event */}
+          <Button
+            onClick={() => setSelectedEvent(null)}
+            variant="ghost"
+            size="icon"
+            className="absolute top-5 right-5 text-white text-2xl"
+            aria-label="Close event"
+          >
+            ✕
+          </Button>
 
-    {/* Event Images Grid */}
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-      {selectedEvent.images.map((img, index) => (
-        <div key={index} className="cursor-pointer">
+          <h2 className="text-white text-2xl font-bold mb-6">
+            {selectedEvent.title}
+          </h2>
+
+          {/* Event Images Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {selectedEvent.images.map((img, index) => (
+              <div key={index} className="cursor-pointer">
+                <Image
+                  src={img}
+                  alt="event image"
+                  width={400}
+                  height={300}
+                  className="w-full h-60 object-cover rounded-lg"
+                  onClick={() => setSelectedImage(img)}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      {/* Full img Modle */}
+      {selectedImage && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4">
+
+          {/* Close Image */}
+          <Button
+            onClick={() => setSelectedImage(null)}
+            variant="ghost"
+            size="icon"
+            className="absolute top-5 right-5 text-white text-3xl"
+            aria-label="Close image"
+          >
+            ✕
+          </Button>
+
           <Image
-            src={img}
-            alt="event image"
-            width={400}
-            height={300}
-            className="w-full h-60 object-cover rounded-lg"
-            onClick={() => setSelectedImage(img)}
+            src={selectedImage}
+            alt="Full Image"
+            width={1000}
+            height={700}
+            className="max-h-[90vh] w-auto object-contain rounded-xl"
           />
         </div>
-      ))}
-    </div>
-  </div>
-)}
-  {/* Full img Modle */}
-{selectedImage && (
-  <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4">
-    
-    {/* Close Image */}
-    <Button
-      onClick={() => setSelectedImage(null)}
-      variant="ghost"
-      size="icon"
-      className="absolute top-5 right-5 text-white text-3xl"
-      aria-label="Close image"
-    >
-      ✕
-    </Button>
-
-    <Image
-      src={selectedImage}
-      alt="Full Image"
-      width={1000}
-      height={700}
-      className="max-h-[90vh] w-auto object-contain rounded-xl"
-    />
-  </div>
-)}
+      )}
 
 
       {/* 🔹 Footer */}

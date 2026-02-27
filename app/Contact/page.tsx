@@ -5,6 +5,7 @@ import Image from "next/image";
 import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
+import { SectionHeading } from "@/components/section-heading";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -55,9 +56,10 @@ export default function ContactForm() {
             onSubmit={handleSubmit}
             className="w-full bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl p-6 sm:p-8 shadow-xl"
           >
-            <h2 className="text-2xl font-bold text-white mb-6 text-center md:text-left">
-              Contact Us
-            </h2>
+            <SectionHeading
+              title="Contact Us"
+              className="text-white text-left"
+            />
 
             <Input
               name="name"
@@ -110,9 +112,10 @@ export default function ContactForm() {
 
           {/* RIGHT: TEXT CONTENT */}
           <div className="text-white text-center md:text-left">
-            <h3 className="text-3xl md:text-4xl font-bold leading-tight">
-              Let’s Start a Conversation
-            </h3>
+            <SectionHeading
+              title="Let’s Start a Conversastion"
+              className="text-white text-left"
+            />
 
             <p className="mt-4 text-white/80 text-sm md:text-base max-w-md">
               Whether you want to support our mission, ask a question,

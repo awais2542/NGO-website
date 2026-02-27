@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Copy } from "lucide-react";
 import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
+import { SectionHeading } from "@/components/section-heading";
 
 interface BankDetails {
   name: string;
@@ -55,99 +56,98 @@ Branch Code: ${bank.branch}`;
   };
 
   return (
-<div className="min-h-screen bg-gray-50 mt-2 overflow-x-hidden">
+    <div className="min-h-screen bg-gray-50 mt-2 overflow-x-hidden">
 
-     {/* 🔹 Banner Image */}
-<div className="relative w-full h-[220px] sm:h-[300px] md:h-[60vh] lg:h-[75vh]">
+      {/* 🔹 Banner Image */}
+      <div className="relative w-full h-[220px] sm:h-[300px] md:h-[60vh] lg:h-[75vh]">
 
-  <Image
-    src="/donation/4.jpg"
-    alt="Donate Banner"
-    fill
-    className="object-cover brightness-75 contrast-90"
-    priority
-  />
+        <Image
+          src="/donation/4.jpg"
+          alt="Donate Banner"
+          fill
+          className="object-cover brightness-75 contrast-90"
+          priority
+        />
 
-  {/* Overlay Text */}
-  <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-    <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg">
-  Donate Now
-</h1>
+        {/* Overlay Text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
 
-<p className="text-white/90 mt-2 text-xs sm:text-sm md:text-lg drop-shadow-md max-w-xl">
- “A small donation can create a big change.”
-</p>
+          <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg">
+            Donate Now
+          </h1>
 
-  </div>
-</div>
+          <p className="text-white/90 mt-2 text-xs sm:text-sm md:text-lg drop-shadow-md max-w-xl">
+            “A small donation can create a big change.”
+          </p>
+
+        </div>
+      </div>
 
 
-            {/* 🔹 Donation Banner */}
-<div className="w-full bg-primary text-white py-2 sm:py-4 text-center">
-
-        <h1 className="text-2xl  sm:text-3xl md:text-4xl">
-          Donate Now
-        </h1>
-        <p className="text-sm sm:text-base md:text-lg mt-1 sm:mt-2">
-          Aap ki madad kisi ki zindagi badal sakti hai.
-        </p>
+      {/* 🔹 Donation Banner */}
+      <div className="w-full bg-primary text-white py-2 sm:py-4 text-center">
+        <SectionHeading
+          title="Donate Now"
+          subtitle="Aap ki madad kisi ki zindagi badal sakti hai."
+          className="mb-0 lg:mb-0"
+        />
       </div>
 
 
       {/* 🔹 Bank Cards */}
-<div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 sm:py-12 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6">
-  {banks.map((bank, index) => (
-    <div
-      key={index}
-      className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex flex-col gap-3 sm:gap-4
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 sm:py-12 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6">
+        {banks.map((bank, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl shadow-md p-4 sm:p-6 flex flex-col gap-3 sm:gap-4
        hover:transform hover:scale-105 transition duration-300 ease-in-out"
-    >
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">
-          {bank.name}
-        </h2>
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">
+                {bank.name}
+              </h2>
 
-        {/* Copy Icon */}
-        <Button
-          onClick={() => copyDetails(bank)}
-          variant="ghost"
-          size="icon"
-          className="p-2 rounded-lg hover:bg-gray-100 transition"
-          title="Copy bank details"
-          aria-label={`Copy bank details for ${bank.name}`}
-        >
-          <Copy size={18} className="text-gray-600" />
-        </Button>
+              {/* Copy Icon */}
+              <Button
+                onClick={() => copyDetails(bank)}
+                variant="ghost"
+                size="icon"
+                className="p-2 rounded-lg hover:bg-gray-100 transition"
+                title="Copy bank details"
+                aria-label={`Copy bank details for ${bank.name}`}
+              >
+                <Copy size={18} className="text-gray-600" />
+              </Button>
+            </div>
+
+            {/* Details */}
+            <div className="space-y-1 text-gray-700 text-xs sm:text-sm md:text-base">
+              <p>
+                <strong>Account Title:</strong> {bank.title}
+              </p>
+              <p>
+                <strong>Account Number:</strong> {bank.account}
+              </p>
+              <p>
+                <strong>IBAN:</strong> {bank.iban}
+              </p>
+              <p>
+                <strong>Branch Code:</strong> {bank.branch}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Details */}
-      <div className="space-y-1 text-gray-700 text-xs sm:text-sm md:text-base">
-        <p>
-          <strong>Account Title:</strong> {bank.title}
-        </p>
-        <p>
-          <strong>Account Number:</strong> {bank.account}
-        </p>
-        <p>
-          <strong>IBAN:</strong> {bank.iban}
-        </p>
-        <p>
-          <strong>Branch Code:</strong> {bank.branch}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
-
-          
 
 
-          {/* 🔹 Next Level Collage Divider */}
-          <div className="relative w-full overflow-hidden">
 
-            {/* Grid */}
-            <div className="
+      {/* 🔹 Next Level Collage Divider */}
+      <div className="relative w-full overflow-hidden">
+
+        {/* Grid */}
+        <div className="
               grid 
               grid-cols-2 
               sm:grid-cols-4 
@@ -157,69 +157,75 @@ Branch Code: ${bank.branch}`;
               gap-2
             ">
 
-              {/* Big Image */}
-       <div className="relative col-span-2 sm:col-span-2 row-span-1 sm:row-span-2 group">
-                <Image
-                  src="/donation/1.jpg"
-                  alt="Donation img"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/60 to-black/10" />
-              </div>
-
-              {/* Small Images */}
-              <div className="relative group">
-                <Image
-                  src="/donation/donation.jpg"
-                  alt=""
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/20" />
-              </div>
-
-              <div className="relative group">
-                <Image
-                  src="/donation/2.jpg"
-                  alt=""
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/20" />
-              </div>
-
-              <div className="relative col-span-2 group block">
-
-                <Image
-                  src="/donation/3.jpg"
-                  alt=""
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-l from-black/50 to-black/10" />
-              </div>
-            </div>
-
-            {/* Center Content */}
-            <div className="absolute inset-0 flex items-center justify-center text-center px-6 pointer-events-none">
-              <div className="bg-black/40 backdrop-blur-sm px-4 py-3 rounded-xl">
-                <h2 className=" text-white text-xs sm:text-lg md:text-3xl font-bold">
-                    Together We Can Make a Difference
-                  </h2>
-
-                  <p className="text-white text-[10px] sm:text-sm md:text-base">
-                    Your support brings hope, dignity, and a better tomorrow.
-                  </p>
-                </div>
-
-            </div>
-
+          {/* Big Image */}
+          <div className="relative col-span-2 sm:col-span-2 row-span-1 sm:row-span-2 group">
+            <Image
+              src="/donation/1.jpg"
+              alt="Donation img"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/60 to-black/10" />
           </div>
-        {/* footer section */}
-        <div>
-        <FooterSection />
+
+          {/* Small Images */}
+          <div className="relative group">
+            <Image
+              src="/donation/donation.jpg"
+              alt=""
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          <div className="relative group">
+            <Image
+              src="/donation/2.jpg"
+              alt=""
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          <div className="relative col-span-2 group block">
+
+            <Image
+              src="/donation/3.jpg"
+              alt=""
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-l from-black/50 to-black/10" />
+          </div>
         </div>
+
+        {/* Center Content */}
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6 pointer-events-none">
+          <div className="bg-black/40 backdrop-blur-sm px-4 py-3 rounded-xl text-white">
+            <SectionHeading
+              title="Together We Can Make a Difference"
+              subtitle="Your support brings hope, dignity, and a better tomorrow."
+              className="mb-0 lg:mb-0"
+            />
+
+            {/* <h2 className=" text-white text-xs sm:text-lg md:text-3xl font-bold">
+              Together We Can Make a Difference
+            </h2>
+
+            <p className="text-white text-[10px] sm:text-sm md:text-base">
+              Your support brings hope, dignity, and a better tomorrow.
+            </p> */}
+          </div>
+
+        </div>
+
+      </div>
+      {/* footer section */}
+      <div>
+        <FooterSection />
+      </div>
 
     </div>
   );

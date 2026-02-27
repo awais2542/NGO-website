@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "./card";
 import Image from "next/image";
+import { SectionHeading } from "./section-heading";
 
 export default function Presidentmsg() {
   return (
@@ -9,11 +10,15 @@ export default function Presidentmsg() {
       {/* <Card className="w-full max-w-6xl rounded-2xl shadow-lg overflow-hidden space-y-"> */}
       {/* <Card className="w-full max-w-6xl rounded-2xl overflow-hidden space-y- shadow-none"> */}
       {/* Header */}
-      <CardHeader className="text-center pb-2 lg:pb-8">
-        <CardTitle className="text-2xl sm:text-3xl font-semibold tracking-tight">
+      {/* <CardHeader className="text-center pb-2"> */}
+      {/* <CardTitle className="text-2xl sm:text-3xl font-semibold tracking-tight">
           President’s Message
-        </CardTitle>
-      </CardHeader>
+        </CardTitle> */}
+      <SectionHeading
+        title="President’s Message"
+      />
+
+      {/* </CardHeader> */}
 
       <CardContent className="space-y-8 sm:space-y-12">
 

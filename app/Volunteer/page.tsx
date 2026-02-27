@@ -4,6 +4,7 @@ import FooterSection from "@/components/Footer";
 import { useState } from "react";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
+import { SectionHeading } from "@/components/section-heading";
 
 export default function Page() {
   const [showToast, setShowToast] = useState(false);
@@ -53,14 +54,10 @@ export default function Page() {
 
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
-            Volunteer Registration Form
-          </h1>
-
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join Gondal Jamat Association and help us serve the community
-            through your valuable time and skills.
-          </p>
+          <SectionHeading
+            title="Volunteer Registration Form"
+            subtitle="Join Gondal Jamat Association and help us serve the community through your valuable time and skills."
+          />
         </div>
 
         {/* Toast */}
