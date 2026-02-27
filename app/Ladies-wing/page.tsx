@@ -28,7 +28,7 @@ const Ladies = [
     
    
 ]
-export default function page() {
+export default function LadiesWingPage() {
     const [selectedItem, setSelectedItem] = useState<typeof Ladies[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>

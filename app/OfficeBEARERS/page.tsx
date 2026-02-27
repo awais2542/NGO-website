@@ -50,7 +50,7 @@ const officers = [
         image: "/officers/treasurer.jpg",
     }
 ]
-export default function page() {
+export default function OfficeBearersPage() {
     const [selectedItem, setSelectedItem] = useState<typeof officers[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>

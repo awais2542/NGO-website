@@ -45,7 +45,7 @@ const youth = [
     },
    
 ]
-export default function page() {
+export default function YouthPage() {
     const [selectedItem, setSelectedItem] = useState<typeof youth[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>

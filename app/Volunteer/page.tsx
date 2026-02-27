@@ -169,7 +169,11 @@ const [showToast, setShowToast] = useState(false);
 }
 
 /* Reusable Input Component */
-function Input({ label, ...props }: any) {
+type InputProps = {
+  label: string;
+} & React.InputHTMLAttributes<HTMLInputElement>;
+
+function Input({ label, ...props }: InputProps) {
   return (
     <div>
       <label className="block text-sm font-medium mb-2">
@@ -184,7 +188,11 @@ function Input({ label, ...props }: any) {
 }
 
 /* Reusable Textarea Component */
-function Textarea({ label, ...props }: any) {
+type TextareaProps = {
+  label: string;
+} & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+
+function Textarea({ label, ...props }: TextareaProps) {
   return (
     <div>
       <label className="block text-sm font-medium mb-2">

@@ -55,7 +55,7 @@ const committee = [
         image: "/committee/mr-ali.jpg",
     }
 ]
-export default function page() {
+export default function CommitteePage() {
     const [selectedItem, setSelectedItem] = useState<typeof committee[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>
