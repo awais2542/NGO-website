@@ -1,6 +1,7 @@
 "use client";
 
 import FooterSection from "@/components/Footer";
+import { Button } from "@/components/button";
 
 const SECTION_HEADINGS = [
   "Organizaitional Philosophy",
@@ -81,12 +82,12 @@ export default function Organizaitional() {
 
         {/* Download Button */}
         <div className="text-center mt-6">
-          <button
+          <Button
             onClick={handleDownload}
-            className="bg-primary text-white px-5 py-2 rounded-lg hover:opacity-90 transition"
+            className="px-5 py-2 rounded-lg"
           >
             Download Document
-          </button>
+          </Button>
         </div>
 
       </div>

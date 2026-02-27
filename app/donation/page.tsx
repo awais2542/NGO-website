@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Copy } from "lucide-react";
 import FooterSection from "@/components/Footer";
+import { Button } from "@/components/button";
 
 interface BankDetails {
   name: string;
@@ -108,13 +109,16 @@ Branch Code: ${bank.branch}`;
         </h2>
 
         {/* Copy Icon */}
-        <button
+        <Button
           onClick={() => copyDetails(bank)}
+          variant="ghost"
+          size="icon"
           className="p-2 rounded-lg hover:bg-gray-100 transition"
           title="Copy bank details"
+          aria-label={`Copy bank details for ${bank.name}`}
         >
           <Copy size={18} className="text-gray-600" />
-        </button>
+        </Button>
       </div>
 
       {/* Details */}

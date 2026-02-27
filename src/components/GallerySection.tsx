@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import GalleryModal from "./demos/GalleryModal";
-import GalleryButton from "./GalleryButton";
 import Link from "next/link";
+import { Button } from "./button";
 
 const images = [
   {
@@ -45,9 +45,9 @@ export default function GallerySection() {
   return (
     // <section className="py-16 bg-input overflow-hidden">
     <section className="bg-input overflow-hidden">
-     <div className="max-w-7xl mx-auto px-4 pb-16 sm:pb-24 pt-12 sm:pt-20">
+      <div className="max-w-7xl mx-auto px-4 pb-16 sm:pb-24 pt-12 sm:pt-20">
         {/* Heading */}
-      <div className="text-center mb-8 sm:mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">Our Gallery</h2>
           <p className="text-muted-foreground mt-2">
             A glimpse of our ongoing welfare activities
@@ -96,9 +96,23 @@ export default function GallerySection() {
           />
         )}
         {/* Button */}
-    <div className="w-full flex mt-10 sm:mt-16 justify-start md:justify-center lg:justify-start">
-  <GalleryButton />
-</div>
+        <div className="w-full flex mt-10 sm:mt-16 justify-start md:justify-center lg:justify-start">
+          <Link href="/Gallery" className="block w-full">
+            <Button
+              size="lg"
+              className="
+            w-full lg:w-auto px-5
+            bg-secondary text-primary-foreground
+            transition-all duration-300 ease-in-out transform-gpu
+            hover:bg-secondary/90
+            hover:scale-105
+            active:scale-95
+          "
+            >
+              Donate Now
+            </Button>
+          </Link>
+        </div>
 
 
       </div>

@@ -3,6 +3,7 @@
 import FooterSection from "@/components/Footer";
 import { useState } from "react";
 import Image from "next/image";
+import { Button } from "@/components/button";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -102,12 +103,12 @@ export default function ContactForm() {
             className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
             />
 
-            <button
+            <Button
               type="submit"
-            className="w-full bg-black/90 text-white py-3 rounded-lg hover:bg-black transition"
+              className="w-full bg-black/90 text-white py-3 rounded-lg hover:bg-black transition"
             >
               Submit
-            </button>
+            </Button>
           </form>
 
           {/* RIGHT: TEXT CONTENT */}

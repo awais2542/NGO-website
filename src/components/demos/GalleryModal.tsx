@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/button";
 
 interface GalleryModalProps {
   images: string[];
@@ -23,14 +24,26 @@ export default function GalleryModal({
   return (
     <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
       {/* Close */}
-      <button onClick={onClose} className="absolute top-6 right-6 text-white">
+      <Button
+        onClick={onClose}
+        variant="ghost"
+        size="icon"
+        className="absolute top-6 right-6 text-white"
+        aria-label="Close gallery"
+      >
         <X size={32} />
-      </button>
+      </Button>
 
       {/* Prev */}
-      <button onClick={prev} className="absolute left-6 text-white">
+      <Button
+        onClick={prev}
+        variant="ghost"
+        size="icon"
+        className="absolute left-6 text-white"
+        aria-label="Previous image"
+      >
         <ChevronLeft size={40} />
-      </button>
+      </Button>
 
       {/* Image */}
       <div className="max-w-4xl w-full px-4">
@@ -44,9 +57,15 @@ export default function GalleryModal({
       </div>
 
       {/* Next */}
-      <button onClick={next} className="absolute right-6 text-white">
+      <Button
+        onClick={next}
+        variant="ghost"
+        size="icon"
+        className="absolute right-6 text-white"
+        aria-label="Next image"
+      >
         <ChevronRight size={40} />
-      </button>
+      </Button>
     </div>
   );
 }

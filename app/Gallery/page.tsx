@@ -2,6 +2,7 @@
 import Image from "next/image";
 import FooterSection from "@/components/Footer";
 import { useState } from "react";
+import { Button } from "@/components/button";
 
   const events = [
   {
@@ -147,12 +148,15 @@ export default function EventsPage() {
   <div className="fixed inset-0 z-50 bg-black/80 overflow-y-auto p-6">
     
     {/* Close Event */}
-    <button
+    <Button
       onClick={() => setSelectedEvent(null)}
+      variant="ghost"
+      size="icon"
       className="absolute top-5 right-5 text-white text-2xl"
+      aria-label="Close event"
     >
       ✕
-    </button>
+    </Button>
 
     <h2 className="text-white text-2xl font-bold mb-6">
       {selectedEvent.title}
@@ -180,12 +184,15 @@ export default function EventsPage() {
   <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4">
     
     {/* Close Image */}
-    <button
+    <Button
       onClick={() => setSelectedImage(null)}
+      variant="ghost"
+      size="icon"
       className="absolute top-5 right-5 text-white text-3xl"
+      aria-label="Close image"
     >
       ✕
-    </button>
+    </Button>
 
     <Image
       src={selectedImage}

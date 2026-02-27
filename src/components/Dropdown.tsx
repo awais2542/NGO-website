@@ -1,9 +1,10 @@
 import React from "react";
+import { Button } from "@/components/button";
 
 function Dropdown() {
   return (
     <div>
-      <button
+      <Button
         id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
         className="inline-flex items-center justify-center text-white bg-primary box-border border border-transparent hover:bg-primary/90 focus:ring-4 focus:ring-primary/20 shadow-xs font-medium leading-5 rounded-md text-sm px-4 py-2.5 focus:outline-none"
@@ -27,7 +28,7 @@ function Dropdown() {
             d="m19 9-7 7-7-7"
           />
         </svg>
-      </button>
+      </Button>
 
       {/* Dropdown menu */}
       <div

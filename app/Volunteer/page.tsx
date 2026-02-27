@@ -2,6 +2,7 @@
 
 import FooterSection from "@/components/Footer";
 import { useState } from "react";
+import { Button } from "@/components/button";
 
 
 export default function Page() {
@@ -154,12 +155,12 @@ const [showToast, setShowToast] = useState(false);
 
           {/* Submit Button */}
           <div className="text-center pt-4">
-            <button
+            <Button
               type="submit"
               className="px-8 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition"
             >
               Submit Application
-            </button>
+            </Button>
           </div>
         </form>
       </div>

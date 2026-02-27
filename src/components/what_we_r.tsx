@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { Card, CardContent } from "@/components/card";
+import { Button } from "@/components/button";
 import {
   HeartHandshake,
   GraduationCap,
@@ -159,12 +160,12 @@ export default function WhatWeAreDoing() {
         </div>
         {/* Show More Button - Mobile Only */}
         <div className="mt-6 flex justify-center sm:hidden">
-          <button
+          <Button
             onClick={() => setShowAll(!showAll)}
-            className="px-5 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90 transition"
+            className="px-5 py-2 rounded-lg text-sm font-medium"
           >
             {showAll ? "Show Less" : "View All"}
-          </button>
+          </Button>
         </div>
 
       </div>

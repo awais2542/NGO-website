@@ -5,6 +5,7 @@ import { useState } from "react";
 import FooterSection from '@/components/Footer'
 import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
+import { Button } from "@/components/button";
 
 const Ladies = [
     {
@@ -93,12 +94,15 @@ export default function LadiesWingPage() {
                   className="relative bg-white w-full max-w-3xl rounded-xl overflow-hidden"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <button
+                  <Button
                     onClick={() => setSelectedItem(null)}
+                    variant="ghost"
+                    size="icon"
                     className="absolute top-4 right-4 z-50 bg-black/70 hover:bg-black text-white rounded-full w-9 h-9 flex items-center justify-center"
+                    aria-label="Close"
                   >
                     ✕
-                  </button>
+                  </Button>
       
                   <div className="relative w-full h-60 sm:h-72 md:h-96">
                     <Image
