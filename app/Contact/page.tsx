@@ -1,9 +1,10 @@
 "use client";
 
-import FooterSection from "@/components/Footer";
 import { useState } from "react";
 import Image from "next/image";
+import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
+import { Input } from "@/components/input";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -16,103 +17,99 @@ export default function ContactForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Your query has been submitted successfully!");
-    setFormData({ name: "", email: "", contact: "", query: "" });
+    setFormData({
+      name: "",
+      email: "",
+      contact: "",
+      query: "",
+    });
   };
 
   return (
-    <div className="min-h-screen mt-2">
-      {/* Banner Img */}
-          <div className='relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[400px]'>
-            <Image
-              src="/partners/2.jpg"
-              alt="partner Banner"
-              fill
-              className="object-cover brightness-75 contrast-90"
-              priority
-            />
-          </div>
+    <div className="min-h-screen flex flex-col">
 
-      {/* HERO
-      <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-center bg-cover bg-no-repeat" 
-      style={{ backgroundImage: "url('/partners/2.jpg')" }}></div>  */}
-      
-      {/* FORM + TEXT SECTION */}
-      <div className="flex-1 px-4 py-10 bg-amber-200 mt-2">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          
+      {/* Banner Image */}
+      <div className="relative w-full h-[260px] sm:h-[360px] md:h-[420px]">
+        <Image
+          src="/partners/2.jpg"
+          alt="Partner Banner"
+          fill
+          priority
+          className="object-cover brightness-75"
+        />
+      </div>
+
+      {/* Form Section */}
+      <div className="flex-1 px-4 py-12 bg-amber-200">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
           {/* LEFT: FORM */}
           <form
             onSubmit={handleSubmit}
-            className="
-                  w-full
-                  bg-white/20
-                  backdrop-blur-lg
-                  border border-white/30
-                  rounded-xl
-                  p-6 sm:p-8
-                  shadow-xl   
-                "
+            className="w-full bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl p-6 sm:p-8 shadow-xl"
           >
-            <h2 className="text-2xl text-white font-bold mb-6 text-center md:text-left">
+            <h2 className="text-2xl font-bold text-white mb-6 text-center md:text-left">
               Contact Us
             </h2>
 
-            <input
-              type="text"
+            <Input
               name="name"
+              type="text"
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="mb-4"
             />
 
-            <input
-              type="email"
+            <Input
               name="email"
+              type="email"
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="mb-4"
             />
 
-            <input
-              type="tel"
+            <Input
               name="contact"
+              type="tel"
               placeholder="Contact Number"
               value={formData.contact}
               onChange={handleChange}
               required
-            className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="mb-4"
             />
 
-            <textarea
+            <Input
+              as="textarea"
               name="query"
               placeholder="Your Query"
+              rows={4}
               value={formData.query}
               onChange={handleChange}
-              rows={4}
               required
-            className="w-full mb-4 px-4 py-3 bg-white/80 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+              className="mb-6 resize-none"
             />
 
             <Button
               type="submit"
-              className="w-full bg-black/90 text-white py-3 rounded-lg hover:bg-black transition"
+              className="w-full"
             >
               Submit
             </Button>
           </form>
 
           {/* RIGHT: TEXT CONTENT */}
-          <div className="text-white text-center md:text-left px-2">
+          <div className="text-white text-center md:text-left">
             <h3 className="text-3xl md:text-4xl font-bold leading-tight">
               Let’s Start a Conversation
             </h3>
@@ -131,7 +128,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* FOOTER */}
+      {/* Footer */}
       <FooterSection />
     </div>
   );

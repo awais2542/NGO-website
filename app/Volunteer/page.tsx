@@ -3,11 +3,10 @@
 import FooterSection from "@/components/Footer";
 import { useState } from "react";
 import { Button } from "@/components/button";
-
+import { Input } from "@/components/input";
 
 export default function Page() {
-
-const [showToast, setShowToast] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -29,54 +28,59 @@ const [showToast, setShowToast] = useState(false);
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setShowToast(true);
 
-  setShowToast(true);
-
-  setTimeout(() => {
-    setShowToast(false);
-  }, 3000);
-};
-
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  };
 
   return (
     <section className="w-full min-h-screen py-6 bg-gray-50">
       <div className="max-w-5xl mx-auto px-4">
+
         {/* Header */}
-        <div className="text-center mb-5">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
-                Volunteer Registration Form
-            </h1>
+        <div className="text-center mb-8">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
+            Volunteer Registration Form
+          </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Join Gondal Jamat Association and help us serve the community
             through your valuable time and skills.
-        </p>
+          </p>
+        </div>
 
-        </div>
+        {/* Toast */}
         {showToast && (
-        <div className="fixed top-6 right-6 z-50 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg animate-slideIn">
+          <div className="fixed top-6 right-6 z-50 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg">
             ✅ Application Submitted Successfully!
-        </div>
+          </div>
         )}
 
-        {/* Form Card */}
+        {/* Form */}
         <form
           onSubmit={handleSubmit}
           className="bg-white shadow-xl rounded-2xl p-6 md:p-10 space-y-6"
         >
-          {/* Grid Layout */}
+          {/* Grid Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Full Name */}
+
             <Input
-              label="Full Name"
               name="fullName"
+              placeholder="Full Name"
               value={formData.fullName}
               onChange={handleChange}
             />
@@ -108,102 +112,126 @@ const [showToast, setShowToast] = useState(false);
               </div>
             </div>
 
-            <Input label="Date of Birth" type="date" name="dob" value={formData.dob} onChange={handleChange} />
-            <Input label="CNIC" name="cnic" value={formData.cnic} onChange={handleChange} />
+            <Input
+              type="date"
+              name="dob"
+              value={formData.dob}
+              onChange={handleChange}
+            />
 
-            <Input label="Country" name="country" value={formData.country} onChange={handleChange} />
-            <Input label="City" name="city" value={formData.city} onChange={handleChange} />
+            <Input
+              name="cnic"
+              placeholder="CNIC"
+              value={formData.cnic}
+              onChange={handleChange}
+            />
 
-            <Input label="Landline Number" name="landline" value={formData.landline} onChange={handleChange} />
-            <Input label="Cell Number" name="cell" value={formData.cell} onChange={handleChange} />
+            <Input
+              name="country"
+              placeholder="Country"
+              value={formData.country}
+              onChange={handleChange}
+            />
 
-            <Input label="Email Address" type="email" name="email" value={formData.email} onChange={handleChange} />
-            <Input label="Education" name="education" value={formData.education} onChange={handleChange} />
+            <Input
+              name="city"
+              placeholder="City"
+              value={formData.city}
+              onChange={handleChange}
+            />
 
-            <Input label="How many hours per day can you work?" name="hours" value={formData.hours} onChange={handleChange} />
-            <Input label="Volunteering Duration" name="duration" value={formData.duration} onChange={handleChange} />
+            <Input
+              name="landline"
+              placeholder="Landline Number"
+              value={formData.landline}
+              onChange={handleChange}
+            />
+
+            <Input
+              name="cell"
+              placeholder="Cell Number"
+              value={formData.cell}
+              onChange={handleChange}
+            />
+
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+            />
+
+            <Input
+              name="education"
+              placeholder="Education"
+              value={formData.education}
+              onChange={handleChange}
+            />
+
+            <Input
+              name="hours"
+              placeholder="How many hours per day can you work?"
+              value={formData.hours}
+              onChange={handleChange}
+            />
+
+            <Input
+              name="duration"
+              placeholder="Volunteering Duration"
+              value={formData.duration}
+              onChange={handleChange}
+            />
           </div>
 
-          {/* Full Width Fields */}
-          <Textarea
-            label="Address"
+          {/* Full Width Textareas */}
+
+          <Input
+            as="textarea"
             name="address"
+            placeholder="Address"
             value={formData.address}
             onChange={handleChange}
+            rows={4}
           />
 
-          <Textarea
-            label="Previous Experience in Social Sector"
+          <Input
+            as="textarea"
             name="experience"
+            placeholder="Previous Experience in Social Sector"
             value={formData.experience}
             onChange={handleChange}
+            rows={4}
           />
 
-          <Textarea
-            label="Skills Proficiency"
+          <Input
+            as="textarea"
             name="skills"
+            placeholder="Skills Proficiency"
             value={formData.skills}
             onChange={handleChange}
+            rows={4}
           />
 
-          <Textarea
-            label="Why are you interested in volunteering?"
+          <Input
+            as="textarea"
             name="reason"
+            placeholder="Why are you interested in volunteering?"
             value={formData.reason}
             onChange={handleChange}
+            rows={4}
           />
 
           {/* Submit Button */}
           <div className="text-center pt-4">
-            <Button
-              type="submit"
-              className="px-8 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition"
-            >
+            <Button type="submit" className="px-8 py-3">
               Submit Application
             </Button>
           </div>
         </form>
       </div>
+
       <FooterSection />
     </section>
-  );
-}
-
-/* Reusable Input Component */
-type InputProps = {
-  label: string;
-} & React.InputHTMLAttributes<HTMLInputElement>;
-
-function Input({ label, ...props }: InputProps) {
-  return (
-    <div>
-      <label className="block text-sm font-medium mb-2">
-        {label}
-      </label>
-      <input
-        {...props}
-        className="w-full border rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-primary focus:outline-none"
-      />
-    </div>
-  );
-}
-
-/* Reusable Textarea Component */
-type TextareaProps = {
-  label: string;
-} & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
-
-function Textarea({ label, ...props }: TextareaProps) {
-  return (
-    <div>
-      <label className="block text-sm font-medium mb-2">
-        {label}
-      </label>
-      <textarea
-        {...props}
-        rows={4}
-        className="w-full border rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-primary focus:outline-none"
-      />
-    </div>
   );
 }
