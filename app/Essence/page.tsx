@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Heart, Users, GraduationCap, HeartHandshake, HandCoins, Stethoscope, Brain, ShieldCheck, Sparkles, Scale } from "lucide-react";
 import ImageDivider from "@/components/ImageDivider";
 import { SectionHeading } from "@/components/section-heading";
-import { Banner } from "@/components/Banner";
+import { Banner } from "@/components/banner";
 
 
 export default function Page() {

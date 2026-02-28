@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
 import { Button } from "@/components/button";
 import { SectionHeading } from '@/components/section-heading';
-import { Banner } from '@/components/Banner';
+import { Banner } from '@/components/banner';
 import { MediaCard } from '@/components/mediaCard';
 
 const activities = [

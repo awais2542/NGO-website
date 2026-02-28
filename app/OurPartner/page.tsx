@@ -2,7 +2,7 @@ import React from 'react'
 import FooterSection from '@/components/Footer'
 import Image from 'next/image'
 import { SectionHeading } from '@/components/section-heading';
-import { Banner } from '@/components/Banner';
+import { Banner } from '@/components/banner';
 
 const partners = [
   { img: "/pride/1.jpg", link: "http://www.gulfminerals.com/" },

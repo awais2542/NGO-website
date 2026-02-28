@@ -6,7 +6,7 @@ import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 import { SectionHeading } from "@/components/section-heading";
-import { Banner } from "@/components/Banner";
+import { Banner } from "@/components/banner";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

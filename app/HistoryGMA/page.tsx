@@ -1,4 +1,4 @@
-import { Banner } from '@/components/Banner'
+import { Banner } from '@/components/banner'
 import FooterSection from '@/components/Footer'
 import { SectionHeading } from '@/components/section-heading'
 import Image from 'next/image'

@@ -1,6 +1,6 @@
 "use client";
 
-import { Banner } from "@/components/Banner";
+import { Banner } from "@/components/banner";
 import { Button } from "@/components/button";
 import FooterSection from "@/components/Footer";
 import { Input } from "@/components/input";

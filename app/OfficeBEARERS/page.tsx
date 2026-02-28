@@ -1,5 +1,5 @@
 "use client"
-import { Banner } from '@/components/Banner';
+import { Banner } from '@/components/banner';
 import FooterSection from '@/components/Footer';
 import { MediaCard } from '@/components/mediaCard';
 
