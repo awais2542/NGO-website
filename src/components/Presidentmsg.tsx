@@ -1,7 +1,7 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "./card";
 import Image from "next/image";
+import { CardContent } from "./card";
 import { SectionHeading } from "./section-heading";
 
 export default function Presidentmsg() {

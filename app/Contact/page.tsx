@@ -1,12 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import FooterSection from "@/components/Footer";
+import { Banner } from "@/components/banner";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 import { SectionHeading } from "@/components/section-heading";
-import { Banner } from "@/components/banner";
+import { useState } from "react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

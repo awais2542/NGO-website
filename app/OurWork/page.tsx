@@ -1,14 +1,10 @@
 "use client"
-import React from 'react'
-import Link from 'next/link';
-import { useState } from "react";
-import FooterSection from '@/components/Footer'
-import { Card, CardContent } from "@/components/card";
-import Image from 'next/image';
-import { Button } from "@/components/button";
-import { SectionHeading } from '@/components/section-heading';
+import FooterSection from '@/components/Footer';
 import { Banner } from '@/components/banner';
+import { Button } from "@/components/button";
 import { MediaCard } from '@/components/mediaCard';
+import Image from 'next/image';
+import { useState } from "react";
 
 const activities = [
   {

@@ -17,12 +17,6 @@ interface FooterGroup {
   links?: FooterLink[];
 }
 
-interface SocialLink {
-  label: string;
-  href: string;
-  icon: React.ReactNode;
-}
-
 interface FooterProps {
   companyName?: string;
   groups?: FooterGroup[];

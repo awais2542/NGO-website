@@ -1,12 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import GalleryModal from "./demos/GalleryModal";
 import Link from "next/link";
+import { useState } from "react";
 import { Button } from "./button";
-import { SectionHeading } from "./section-heading";
+import GalleryModal from "./demos/GalleryModal";
 import { OverlayCard } from "./OverlayCard";
+import { SectionHeading } from "./section-heading";
 
 const images = [
   {

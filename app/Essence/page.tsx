@@ -1,10 +1,8 @@
-import FooterSection from "@/components/Footer";
-import React from "react";
-import Image from "next/image";
-import { Heart, Users, GraduationCap, HeartHandshake, HandCoins, Stethoscope, Brain, ShieldCheck, Sparkles, Scale } from "lucide-react";
-import ImageDivider from "@/components/ImageDivider";
-import { SectionHeading } from "@/components/section-heading";
 import { Banner } from "@/components/banner";
+import FooterSection from "@/components/Footer";
+import { SectionHeading } from "@/components/section-heading";
+import { GraduationCap, HandCoins, Heart, HeartHandshake, ShieldCheck, Sparkles, Users } from "lucide-react";
+import Image from "next/image";
 
 
 export default function Page() {

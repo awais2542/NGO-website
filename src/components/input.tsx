@@ -1,6 +1,6 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react"
 
 const inputVariants = cva(
     "w-full px-4 py-3 rounded-lg border text-sm transition-all outline-none disabled:opacity-50 disabled:cursor-not-allowed",
@@ -21,30 +21,36 @@ const inputVariants = cva(
     }
 )
 
-type InputProps =
-    | (React.InputHTMLAttributes<HTMLInputElement> &
-        VariantProps<typeof inputVariants> & {
-            as?: "input"
-        })
-    | (React.TextareaHTMLAttributes<HTMLTextAreaElement> &
-        VariantProps<typeof inputVariants> & {
-            as: "textarea"
-        })
+type BaseProps = VariantProps<typeof inputVariants> & {
+    className?: string
+}
+
+type InputFieldProps = BaseProps &
+    React.InputHTMLAttributes<HTMLInputElement> & {
+        as?: "input"
+    }
+
+type TextAreaFieldProps = BaseProps &
+    React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+        as: "textarea"
+    }
+
+type InputProps = InputFieldProps | TextAreaFieldProps
 
 const Input = React.forwardRef<
     HTMLInputElement | HTMLTextAreaElement,
     InputProps
 >((props, ref) => {
-    const { variant, className, as = "input", ...rest } = props as any
+    const { variant, className } = props
 
     const classes = cn(inputVariants({ variant }), className)
 
-    if (as === "textarea") {
+    if (props.as === "textarea") {
         return (
             <textarea
                 ref={ref as React.Ref<HTMLTextAreaElement>}
                 className={classes}
-                {...rest}
+                {...props}
             />
         )
     }
@@ -53,7 +59,7 @@ const Input = React.forwardRef<
         <input
             ref={ref as React.Ref<HTMLInputElement>}
             className={classes}
-            {...rest}
+            {...props}
         />
     )
 })

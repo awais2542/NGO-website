@@ -1,9 +1,8 @@
 "use client";
 
 import { Banner } from "@/components/banner";
-import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
-import { SectionHeading } from "@/components/section-heading";
+import FooterSection from "@/components/Footer";
 
 const SECTION_HEADINGS = [
   "ORIGIN",
