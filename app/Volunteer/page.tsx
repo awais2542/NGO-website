@@ -1,10 +1,10 @@
 "use client";
 
-import FooterSection from "@/components/Footer";
-import { useState } from "react";
+import { Banner } from "@/components/Banner";
 import { Button } from "@/components/button";
+import FooterSection from "@/components/Footer";
 import { Input } from "@/components/input";
-import { SectionHeading } from "@/components/section-heading";
+import { useState } from "react";
 
 export default function Page() {
   const [showToast, setShowToast] = useState(false);
@@ -50,15 +50,13 @@ export default function Page() {
 
   return (
     <section className="w-full min-h-screen py-6 bg-gray-50">
+      <Banner
+        image="/essence/1.jpg"
+        title="Volunteer Registration Form"
+        subtitle="Join Gondal Jamat Association and help us serve the community through your valuable time and skills."
+      />
       <div className="max-w-5xl mx-auto px-4">
 
-        {/* Header */}
-        <div className="text-center mb-8">
-          <SectionHeading
-            title="Volunteer Registration Form"
-            subtitle="Join Gondal Jamat Association and help us serve the community through your valuable time and skills."
-          />
-        </div>
 
         {/* Toast */}
         {showToast && (

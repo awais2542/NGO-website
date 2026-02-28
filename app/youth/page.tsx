@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
 import { Button } from "@/components/button";
 import { SectionHeading } from '@/components/section-heading';
+import { Banner } from '@/components/Banner';
 
 const youth = [
   {
@@ -51,9 +52,12 @@ export default function YouthPage() {
   const [selectedItem, setSelectedItem] = useState<typeof youth[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>
-      <SectionHeading
+      <Banner
+        image="/essence/1.jpg"
         title="Youth Members"
+        subtitle="A small donation can create a big change."
       />
+
       {/* Cards */}
       <div className="max-w-5xl mx-auto px-4 grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4
         gap-3 sm:gap-5 md:gap-6 mb-3">

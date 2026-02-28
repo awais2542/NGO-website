@@ -6,6 +6,7 @@ import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 import { SectionHeading } from "@/components/section-heading";
+import { Banner } from "@/components/Banner";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -37,15 +38,12 @@ export default function ContactForm() {
     <div className="min-h-screen flex flex-col">
 
       {/* Banner Image */}
-      <div className="relative w-full h-[260px] sm:h-[360px] md:h-[420px]">
-        <Image
-          src="/partners/2.jpg"
-          alt="Partner Banner"
-          fill
-          priority
-          className="object-cover brightness-75"
-        />
-      </div>
+      <Banner
+        image="/partners/2.jpg"
+        title="Contact Us"
+        subtitle="A small donation can create a big change."
+      />
+
 
       {/* Form Section */}
       <div className="flex-1 px-4 py-12 bg-amber-200">

@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
 import { Button } from "@/components/button";
 import { SectionHeading } from '@/components/section-heading';
+import { Banner } from '@/components/Banner';
 
 const officers = [
   {
@@ -56,10 +57,12 @@ export default function OfficeBearersPage() {
   const [selectedItem, setSelectedItem] = useState<typeof officers[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>
-
-      <SectionHeading
-        title="Managing Committee"
+      <Banner
+        image="/essence/1.jpg"
+        title="Office Bearers"
+        subtitle="A small donation can create a big change."
       />
+
 
       {/* Cards */}
       <div className="max-w-5xl mx-auto px-4 grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4

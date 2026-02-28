@@ -1,5 +1,6 @@
 "use client";
 
+import { Banner } from "@/components/Banner";
 import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
@@ -49,13 +50,13 @@ export default function HistoryOfMemons() {
 
   return (
     <div className="min-h-screen mt-3">
+      <Banner
+        image="/partners/1.jpg"
+        title="History Of Memons"
+        subtitle="Discover the journey and legacy"
+      />
       <div className="max-w-5xl mx-auto px-4 py-10 text-gray-800">
 
-        <SectionHeading
-          title="History Of GMA"
-          subtitle="Discover the journey and legacy"
-          className="mb-0 lg:mb-0 bg-primary text-white"
-        />
 
 
         {/* Text Content */}

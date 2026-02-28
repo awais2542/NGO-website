@@ -2,6 +2,7 @@ import React from 'react'
 import FooterSection from '@/components/Footer'
 import Image from 'next/image'
 import { SectionHeading } from '@/components/section-heading';
+import { Banner } from '@/components/Banner';
 
 const partners = [
   { img: "/pride/1.jpg", link: "http://www.gulfminerals.com/" },
@@ -16,24 +17,16 @@ const partners = [
 export default function page() {
   return (
     <div className='min-h-screen bg-gray-50 mt-2'>
-      {/* Banner Imag */}
-      <div className='relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[400px]'>
-        <Image
-          src="/partners/3.jpg"
-          alt="partner Banner"
-          fill
-          className="object-cover brightness-75 contrast-90"
-          priority
-        />
-      </div>
 
-      {/* Banner Our Partners */}
-      <div className="w-full bg-primary text-white py-6 sm:py- text-center">
-        <SectionHeading
-          title="Our Partners"
-          className='mb-0 lg:mb-0'
-        />
-      </div>
+      {/* Banner Imag */}
+      <Banner
+        image="/partners/3.jpg"
+        title="Our Partners"
+        subtitle="A small donation can create a big change."
+      />
+
+
+
       {/* Text */}
       <div className="w-full py-10 sm:py-14 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-3xl mx-auto text-center">

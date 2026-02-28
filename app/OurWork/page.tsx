@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
 import { Button } from "@/components/button";
 import { SectionHeading } from '@/components/section-heading';
+import { Banner } from '@/components/Banner';
 
 const activities = [
   {
@@ -116,24 +117,12 @@ export default function OurWorkPage() {
 
   return (
     <div className='min-h-screen bg-gray-50 mt-2'>
-      {/* Banner Img */}
-      <div className='relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[400px]'>
-        <Image
-          src="/partners/1.jpg"
-          alt="partner Banner"
-          fill
-          className="object-cover brightness-75 contrast-90"
-          priority
-        />
-      </div>
-      {/* Banner Our Work */}
-      <div className="w-full bg-primary text-white py-6 sm:py- text-center">
-        <SectionHeading
-          title="Our Work"
-          className='mb-0 lg:mb-0'
-        />
+      <Banner
+        image="/partners/1.jpg"
+        title="Our Work"
+        subtitle="A small donation can create a big change."
+      />
 
-      </div>
       {/* text */}
       <div className="w-full py-10 sm:py-14 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-3xl mx-auto text-center">
@@ -207,50 +196,52 @@ export default function OurWorkPage() {
 
       </div>
       {/* Modal for Selected Item */}
-      {selectedItem && (
-        <div
-          className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4"
-          onClick={() => setSelectedItem(null)}
-        >
+      {
+        selectedItem && (
           <div
-            className="relative bg-white w-full max-w-3xl rounded-xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4"
+            onClick={() => setSelectedItem(null)}
           >
-            <Button
-              onClick={() => setSelectedItem(null)}
-              variant="ghost"
-              size="icon"
-              className="absolute top-4 right-4 z-50 bg-black/70 hover:bg-black text-white rounded-full w-9 h-9 flex items-center justify-center"
-              aria-label="Close"
+            <div
+              className="relative bg-white w-full max-w-3xl rounded-xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
             >
-              ✕
-            </Button>
+              <Button
+                onClick={() => setSelectedItem(null)}
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 z-50 bg-black/70 hover:bg-black text-white rounded-full w-9 h-9 flex items-center justify-center"
+                aria-label="Close"
+              >
+                ✕
+              </Button>
 
-            <div className="relative w-full h-60 sm:h-72 md:h-96">
-              <Image
-                src={selectedItem.image}
-                alt={selectedItem.title}
-                fill
-                className="object-cover"
-              />
-            </div>
+              <div className="relative w-full h-60 sm:h-72 md:h-96">
+                <Image
+                  src={selectedItem.image}
+                  alt={selectedItem.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-            <div className="p-4 sm:p-6 text-center">
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
-                {selectedItem.title}
-              </h2>
-              <p className="text-sm sm:text-base text-muted-foreground mt-3">
-                {selectedItem.desc}
-              </p>
+              <div className="p-4 sm:p-6 text-center">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
+                  {selectedItem.title}
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground mt-3">
+                  {selectedItem.desc}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )
+      }
 
 
 
       <FooterSection />
 
-    </div>
+    </div >
   )
 }

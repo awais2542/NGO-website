@@ -4,6 +4,7 @@ import FooterSection from "@/components/Footer";
 import { useState } from "react";
 import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
+import { Banner } from "@/components/Banner";
 
 const events = [
   {
@@ -78,14 +79,11 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen mt-2 bg-gray-100 flex flex-col overflow-hidden">
 
-      {/* 🔹 Page Heading */}
-      <div className="px-4 sm:px-6 pt-4 sm:pt-5 pb-4 sm:pb-5 bg-primary text-white text-center">
-        <SectionHeading
-          title="Events Gallery"
-          subtitle="Our recent activities and events captured with love and impact."
-          className="mb-0 lg:mb-0"
-        />
-      </div>
+      <Banner
+        image="/partners/1.jpg"
+        title="Events Gallery"
+        subtitle="Our recent activities and events captured with love and impact."
+      />
 
       {/* 🔹 Gallery Grid */}
       <div className="flex-1 px-3 sm:px-6 pb-10 sm:pb-14 mt-3">

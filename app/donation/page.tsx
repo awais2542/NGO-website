@@ -5,6 +5,7 @@ import { Copy } from "lucide-react";
 import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
+import { Banner } from "@/components/Banner";
 
 interface BankDetails {
   name: string;
@@ -59,39 +60,11 @@ Branch Code: ${bank.branch}`;
     <div className="min-h-screen bg-gray-50 mt-2 overflow-x-hidden">
 
       {/* 🔹 Banner Image */}
-      <div className="relative w-full h-[220px] sm:h-[300px] md:h-[60vh] lg:h-[75vh]">
-
-        <Image
-          src="/donation/4.jpg"
-          alt="Donate Banner"
-          fill
-          className="object-cover brightness-75 contrast-90"
-          priority
-        />
-
-        {/* Overlay Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-
-          <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg">
-            Donate Now
-          </h1>
-
-          <p className="text-white/90 mt-2 text-xs sm:text-sm md:text-lg drop-shadow-md max-w-xl">
-            “A small donation can create a big change.”
-          </p>
-
-        </div>
-      </div>
-
-
-      {/* 🔹 Donation Banner */}
-      <div className="w-full bg-primary text-white py-2 sm:py-4 text-center">
-        <SectionHeading
-          title="Donate Now"
-          subtitle="Aap ki madad kisi ki zindagi badal sakti hai."
-          className="mb-0 lg:mb-0"
-        />
-      </div>
+      <Banner
+        image="/donation/4.jpg"
+        title="Donate Now"
+        subtitle="Aap ki madad kisi ki zindagi badal sakti hai."
+      />
 
 
       {/* 🔹 Bank Cards */}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Heart, Users, GraduationCap, HeartHandshake, HandCoins, Stethoscope, Brain, ShieldCheck, Sparkles, Scale } from "lucide-react";
 import ImageDivider from "@/components/ImageDivider";
 import { SectionHeading } from "@/components/section-heading";
+import { Banner } from "@/components/Banner";
 
 
 export default function Page() {
@@ -11,15 +12,11 @@ export default function Page() {
     <div className="min-h-screen bg-white mt-2">
 
       {/* Banner Image */}
-      <div className="relative w-full h-[220px] sm:h-[320px] md:h-[420px] lg:h-[450px]">
-        <Image
-          src="/essence/1.jpg"
-          alt="Vision Banner"
-          fill
-          className="object-cover brightness-75"
-          priority
-        />
-      </div>
+      <Banner
+        image="/essence/1.jpg"
+        title="Our Vision"
+        subtitle="A small donation can create a big change."
+      />
 
       {/* OUR VISION */}
       <div className="text-center py-8 px-4">

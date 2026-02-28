@@ -1,5 +1,6 @@
 "use client";
 
+import { Banner } from "@/components/Banner";
 import FooterSection from "@/components/Footer";
 import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
@@ -63,21 +64,12 @@ export default function Organizaitional() {
 
   return (
     <div className="min-h-screen mt-3">
+      <Banner
+        image="/partners/1.jpg"
+        title="Organizaitional Philosophy"
+        subtitle="A small donation can create a big change."
+      />
       <div className="max-w-5xl mx-auto px-4 py-3 text-gray-800">
-
-        {/* Heading */}
-        {/* <h1 className="text-3xl md:text-4xl bg-primary text-white  text-center">
-          History of Memons
-        </h1> */}
-
-
-        <SectionHeading
-          title="Organizaitional Philosophy"
-          subtitle="Discover the journey and legacy"
-          className="mb-0 lg:mb-0 bg-primary text-white"
-        />
-
-
         {/* Text Content */}
         <div className="whitespace-pre-line text-sm md:text-base leading-relaxed p-5 bg-gray-50">
           {memonText.split("\n").map((line, i, arr) =>

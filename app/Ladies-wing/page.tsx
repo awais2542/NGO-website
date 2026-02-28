@@ -1,12 +1,10 @@
 "use client"
-import React from 'react'
-import Link from 'next/link';
-import { useState } from "react";
-import FooterSection from '@/components/Footer'
+import { Banner } from '@/components/Banner';
+import FooterSection from '@/components/Footer';
+import { Button } from "@/components/button";
 import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
-import { Button } from "@/components/button";
-import { SectionHeading } from '@/components/section-heading';
+import { useState } from "react";
 
 const Ladies = [
   {
@@ -34,10 +32,11 @@ export default function LadiesWingPage() {
   const [selectedItem, setSelectedItem] = useState<typeof Ladies[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>
-      <SectionHeading
+      <Banner
+        image="/essence/1.jpg"
         title="Ladies Member"
+        subtitle="A small donation can create a big change."
       />
-
       {/* Cards */}
       <div className="max-w-5xl mx-auto px-4 grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4
         gap-3 sm:gap-5 md:gap-6 mb-3">

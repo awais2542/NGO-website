@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/card";
 import Image from 'next/image';
 import { Button } from "@/components/button";
 import { SectionHeading } from '@/components/section-heading';
+import { Banner } from '@/components/Banner';
 
 const committee = [
   {
@@ -61,8 +62,10 @@ export default function CommitteePage() {
   const [selectedItem, setSelectedItem] = useState<typeof committee[number] | null>(null);
   return (
     <div className='min-h-screen mt-2'>
-      <SectionHeading
+      <Banner
+        image="/essence/1.jpg"
         title="Managing Committee"
+        subtitle="A small donation can create a big change."
       />
 
       {/* Cards */}
