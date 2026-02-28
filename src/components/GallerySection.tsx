@@ -6,6 +6,7 @@ import GalleryModal from "./demos/GalleryModal";
 import Link from "next/link";
 import { Button } from "./button";
 import { SectionHeading } from "./section-heading";
+import { OverlayCard } from "./OverlayCard";
 
 const images = [
   {
@@ -57,34 +58,17 @@ export default function GallerySection() {
         </div>
 
         {/* Marquee */}
+
         <div className="relative overflow-hidden">
           <div className="marquee flex w-max">
             {[...images, ...images].map((item, index) => (
-              <div
+              <OverlayCard
                 key={index}
-                className="relative w-[220px] sm:w-[260px] md:w-[360px] mx-2 sm:mx-3 cursor-pointer group"
+                src={item.src}
+                title={item.title}
+                desc={item.desc}
                 onClick={() => setSelectedImage(index % images.length)}
-              >
-                {/* Image */}
-                <div className="overflow-hidden rounded-xl">
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    width={400}
-                    height={300}
-                    className="h-40 sm:h-52 md:h-60 w-full object-cover
-                    transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col justify-end p-4">
-                  <h3 className="text-white text-lg font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/80 text-sm">{item.desc}</p>
-                </div>
-              </div>
+              />
             ))}
           </div>
         </div>
@@ -97,6 +81,7 @@ export default function GallerySection() {
             onClose={() => setSelectedImage(null)}
           />
         )}
+
         {/* Button */}
         <div className="w-full flex mt-10 sm:mt-16 justify-start md:justify-center lg:justify-start">
           <Link href="/Gallery" className="block w-full">

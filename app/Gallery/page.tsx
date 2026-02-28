@@ -1,10 +1,10 @@
 "use client";
-import Image from "next/image";
-import FooterSection from "@/components/Footer";
-import { useState } from "react";
+import { Banner } from "@/components/banner";
 import { Button } from "@/components/button";
-import { SectionHeading } from "@/components/section-heading";
-import { Banner } from "@/components/Banner";
+import FooterSection from "@/components/Footer";
+import { OverlayCard } from "@/components/OverlayCard";
+import Image from "next/image";
+import { useState } from "react";
 
 const events = [
   {
@@ -88,55 +88,14 @@ export default function EventsPage() {
       {/* 🔹 Gallery Grid */}
       <div className="flex-1 px-3 sm:px-6 pb-10 sm:pb-14 mt-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {events.map((item, index) => (
+            <OverlayCard
+              key={index}
+              src={item.images[0]}
+              title={item.title}
+              desc={item.description}
 
-          {events.map((event) => (
-            <div
-              key={event.id}
-              onClick={() => setSelectedEvent(event)}
-              className="relative cursor-pointer group overflow-hidden rounded-2xl shadow-lg bg-black"
-            >
-              {/* Image */}
-              <Image
-                src={event.images && event.images.length > 0
-                  ? event.images[0]
-                  : "/placeholder.jpg"}
-                alt={event.title}
-                width={600}
-                height={400}
-                className="w-full h-56 object-cover"
-              />
-
-              {/* Gradient Overlay */}
-              <div
-                className="
-                  absolute inset-0
-                  bg-gradient-to-t from-black/70 via-black/30 to-transparent
-                  opacity-100 md:opacity-0
-                  md:group-hover:opacity-100
-                  transition-opacity duration-500
-                "
-              />
-
-              {/* Text Content */}
-              <div className="absolute inset-0 flex items-end p-3 sm:p-5">
-                <div
-                  className="
-                    transform translate-y-0 opacity-100
-                    md:translate-y-10 md:opacity-0
-                    md:group-hover:translate-y-0 md:group-hover:opacity-100
-                    transition-all duration-500
-                  "
-                >
-                  <h3 className="text-white text-sm sm:text-lg md:text-xl font-bold">
-                    {event.title}
-                  </h3>
-                  <p className="text-white/90 text-xs sm:text-sm mt-1">
-                    {event.description}
-                  </p>
-                </div>
-              </div>
-
-            </div>
+            />
           ))}
         </div>
       </div>

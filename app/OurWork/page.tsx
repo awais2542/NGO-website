@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { Button } from "@/components/button";
 import { SectionHeading } from '@/components/section-heading';
 import { Banner } from '@/components/Banner';
+import { MediaCard } from '@/components/mediaCard';
 
 const activities = [
   {
@@ -151,49 +152,15 @@ export default function OurWorkPage() {
       {/* Cards */}
       <div className="max-w-5xl mx-auto px-4 grid w-full mt-2 p-3.5 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4
         gap-3 sm:gap-5 md:gap-6">
-
-        {activities.map((item, index) => {
-
-          const image = item.image;
-          return (
-            <div
-              key={item.href}
-              id={item.id}
-              onClick={() => setSelectedItem(item)}
-              className="group cursor-pointer"
-            >
-
-              <Card className="py-0 h-full w-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <CardContent className="p-0 text-center">
-
-                  {/* IMAGE */}
-                  <div className="relative w-full h-32 sm:h-40 md:h-44 lg:h-48">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover absolute inset-0 bg-black/10 transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-
-                  {/* TEXT AREA */}
-                  <div className="p-3 sm:p-4">
-                    <h3 className="text-xs sm:text-sm md:text-base font-semibold">
-                      {item.title}
-                    </h3>
-                    <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground mt-1">
-                      {item.desc}
-                    </p>
-                  </div>
-
-                </CardContent>
-              </Card>
-
-            </div>
-
-          );
-        })}
-
+        {activities.map((item) => (
+          <MediaCard
+            key={item.id}
+            title={item.title}
+            description={item.desc}
+            image={item.image}
+            onClick={() => setSelectedItem(item)}
+          />
+        ))}
       </div>
       {/* Modal for Selected Item */}
       {
