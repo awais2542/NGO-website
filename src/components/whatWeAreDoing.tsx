@@ -20,7 +20,7 @@ import {
   Briefcase,
   Leaf,
 } from "lucide-react";
-import { SectionHeading } from "./section-heading";
+import { SectionHeading } from "./sectionHeading";
 
 
 

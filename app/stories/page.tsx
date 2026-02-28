@@ -1,6 +1,6 @@
 "use client";
 
-import FooterSection from "@/components/Footer";
+import FooterSection from "@/components/footer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -42,13 +42,13 @@ export default function StoriesPage() {
     <section className="w-full bg-gray-50 min-h-screen mt-3">
       {/* Banner Image */}
       <div className="relative w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[400px]">
-        <Image  
+        <Image
           src="/stories/storie.jpg"
           alt="stories Banner"
-          fill 
+          fill
           className="object-fill"
           priority
-        />  
+        />
       </div>
       {/* Hero Section */}
       <div className="bg-primary text-white py-5 px-4 text-center">
@@ -63,7 +63,7 @@ export default function StoriesPage() {
       {/* Stories Grid */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          
+
           {stories.map((story, index) => (
             <div
               key={index}

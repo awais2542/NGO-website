@@ -1,8 +1,8 @@
 "use client";
 import { Banner } from "@/components/banner";
 import { Button } from "@/components/button";
-import FooterSection from "@/components/Footer";
-import { OverlayCard } from "@/components/OverlayCard";
+import FooterSection from "@/components/footer";
+import { OverlayCard } from "@/components/overlayCard";
 import Image from "next/image";
 import { useState } from "react";
 

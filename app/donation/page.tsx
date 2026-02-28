@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { Copy } from "lucide-react";
-import FooterSection from "@/components/Footer";
+import FooterSection from "@/components/footer";
 import { Button } from "@/components/button";
-import { SectionHeading } from "@/components/section-heading";
+import { SectionHeading } from "@/components/sectionHeading";
 import { Banner } from "@/components/banner";
 
 interface BankDetails {

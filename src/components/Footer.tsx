@@ -1,9 +1,9 @@
 "use client";
 
-import Logo from "@/components/Logo"; // Make sure path correct ho
+import Logo from "@/components/logo"; // Make sure path correct ho
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { SocialButtons } from "./SocialMediaButtons";
+import { SocialButtons } from "./socialMediaButtons";
 
 
 

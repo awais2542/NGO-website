@@ -1,5 +1,5 @@
 import { Banner } from '@/components/banner'
-import FooterSection from '@/components/Footer'
+import FooterSection from '@/components/footer'
 import Image from 'next/image'
 
 export default function page() {

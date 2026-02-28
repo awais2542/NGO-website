@@ -1,6 +1,6 @@
 import { Banner } from "@/components/banner";
-import FooterSection from "@/components/Footer";
-import { SectionHeading } from "@/components/section-heading";
+import FooterSection from "@/components/footer";
+import { SectionHeading } from "@/components/sectionHeading";
 import { GraduationCap, HandCoins, Heart, HeartHandshake, ShieldCheck, Sparkles, Users } from "lucide-react";
 import Image from "next/image";
 

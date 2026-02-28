@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { SectionHeading } from "@/components/section-heading"
+import { SectionHeading } from "@/components/sectionHeading"
 
 type BannerProps = {
     image: string

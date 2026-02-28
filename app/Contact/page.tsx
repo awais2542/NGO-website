@@ -1,10 +1,10 @@
 "use client";
 
-import FooterSection from "@/components/Footer";
+import FooterSection from "@/components/footer";
 import { Banner } from "@/components/banner";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
-import { SectionHeading } from "@/components/section-heading";
+import { SectionHeading } from "@/components/sectionHeading";
 import { useState } from "react";
 
 export default function ContactForm() {

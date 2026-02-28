@@ -1,6 +1,6 @@
 "use client"
 import { Banner } from '@/components/banner';
-import FooterSection from '@/components/Footer';
+import FooterSection from '@/components/footer';
 import { MediaCard } from '@/components/mediaCard';
 
 const officers = [

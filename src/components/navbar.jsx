@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import Logo from "@/components/logo";
 import { Button } from "@/components/button";
 import { AboutMemonDropDown } from "@/components/demos/AboutMemonDrop";
 import { Menu, X } from "lucide-react";

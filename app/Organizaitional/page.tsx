@@ -2,7 +2,7 @@
 
 import { Banner } from "@/components/banner";
 import { Button } from "@/components/button";
-import FooterSection from "@/components/Footer";
+import FooterSection from "@/components/footer";
 
 const SECTION_HEADINGS = [
   "Organizaitional Philosophy",

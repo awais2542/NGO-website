@@ -2,23 +2,14 @@
 
 import Image from "next/image";
 import { CardContent } from "./card";
-import { SectionHeading } from "./section-heading";
+import { SectionHeading } from "./sectionHeading";
 
 export default function Presidentmsg() {
   return (
     <div className="w-full max-w-7xl flex flex-col m-x-auto mx-auto py-8">
-      {/* <Card className="w-full max-w-6xl rounded-2xl shadow-lg overflow-hidden space-y-"> */}
-      {/* <Card className="w-full max-w-6xl rounded-2xl overflow-hidden space-y- shadow-none"> */}
-      {/* Header */}
-      {/* <CardHeader className="text-center pb-2"> */}
-      {/* <CardTitle className="text-2xl sm:text-3xl font-semibold tracking-tight">
-          President’s Message
-        </CardTitle> */}
       <SectionHeading
         title="President’s Message"
       />
-
-      {/* </CardHeader> */}
 
       <CardContent className="space-y-8 sm:space-y-12">
 

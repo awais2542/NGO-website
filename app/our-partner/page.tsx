@@ -1,7 +1,7 @@
 import React from 'react'
-import FooterSection from '@/components/Footer'
+import FooterSection from '@/components/footer'
 import Image from 'next/image'
-import { SectionHeading } from '@/components/section-heading';
+import { SectionHeading } from '@/components/sectionHeading';
 import { Banner } from '@/components/banner';
 
 const partners = [

@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./button";
 import GalleryModal from "./demos/GalleryModal";
-import { OverlayCard } from "./OverlayCard";
-import { SectionHeading } from "./section-heading";
+import { OverlayCard } from "./overlayCard";
+import { SectionHeading } from "./sectionHeading";
 
 const images = [
   {

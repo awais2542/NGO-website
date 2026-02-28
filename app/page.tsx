@@ -1,10 +1,10 @@
 import { CarouselDemo } from "@/components/demos/CarouselDemo";
-import ImageDivider from "@/components/ImageDivider";
-import Presidentmsg from "@/components/Presidentmsg";
-import WhatWeAreDoing from "@/components/what_we_r";
-import GallerySection from "@/components/GallerySection";
-import FooterSection from "@/components/Footer";
-import VideoDivider from "@/components/VideoDivider";
+import ImageDivider from "@/components/imageDivider";
+import Presidentmsg from "@/components/presidentMessage";
+import WhatWeAreDoing from "@/components/whatWeAreDoing";
+import GallerySection from "@/components/gallerySection";
+import FooterSection from "@/components/footer";
+import VideoDivider from "@/components/videoDivider";
 
 
 export default function Home() {
