@@ -12,10 +12,10 @@ import { NewsDropDown } from "@/components/demos/NewsDrop";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Our Partners", href: "/OurPartner" },
-  { name: "Our Work", href: "/OurWork" },
-  { name: "Gallery", href: "/Gallery" },
-  { name: "Contact Us", href: "/Contact" },
+  { name: "Our Partners", href: "/our-partner" },
+  { name: "Our Work", href: "/our-work" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact Us", href: "/contact" },
   { name: <AboutMemonDropDown />, },
   { name: <NewsDropDown />, },
   {

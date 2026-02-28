@@ -42,23 +42,23 @@ export function AboutMemonDropDown() {
         {/* First Group */}
         <DropdownMenuGroup className="space-y-1">
           <DropdownMenuItem asChild>
-            <Link href="/HistoryGMA">History Of GMA</Link>
+            <Link href="/history-gma">History Of GMA</Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/HistoryMemons">History Of Memons</Link>
+            <Link href="/history-memons">History Of Memons</Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/Essence">The Essence</Link>
+            <Link href="/essence">The Essence</Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/Organizaitional">Organizaitional Philosophy</Link>
+            <Link href="/organizaitional">Organizaitional Philosophy</Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/Essence">Became a Volunteer</Link>
+            <Link href="/volunteer">Became a Volunteer</Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
 
@@ -69,19 +69,19 @@ export function AboutMemonDropDown() {
           {isMobile ? (
             <>
               <DropdownMenuItem asChild>
-                <Link href="/OfficeBEARERS">Office Bearers</Link>
+                <Link href="/office-bearers">Office Bearers</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/Committee">Managing Committee</Link>
+                <Link href="/committee">Managing Committee</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/youth">Youth Wing</Link>
+                <Link href="/youth-wing">Youth Wing</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/Ladies-wing">Ladies Wing</Link>
+                <Link href="/ladies-wing">Ladies Wing</Link>
               </DropdownMenuItem>
             </>
           ) : (
@@ -92,19 +92,19 @@ export function AboutMemonDropDown() {
 
               <DropdownMenuSubContent className="w-56 p-2">
                 <DropdownMenuItem asChild>
-                  <Link href="/OfficeBEARERS">Office Bearers</Link>
+                  <Link href="/office-bearers">Office Bearers</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/Committee">Managing Committee</Link>
+                  <Link href="/committee">Managing Committee</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/youth">Youth Wing</Link>
+                  <Link href="/youth-wing">Youth Wing</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/Ladies-wing">Ladies Wing</Link>
+                  <Link href="/ladies-wing">Ladies Wing</Link>
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuSub>

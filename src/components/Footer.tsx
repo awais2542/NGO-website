@@ -32,26 +32,26 @@ export default function FooterSection({
     {
       title: "About Us",
       links: [
-        { text: "Our History", href: "/HistoryGMA" },
-        { text: "History of Memons ", href: "/HistoryMemons" },
-        { text: "The Essence", href: "/Essence" },
+        { text: "Our History", href: "/history-gma" },
+        { text: "History of Memons ", href: "/history-memons" },
+        { text: "The Essence", href: "/essence" },
         { text: "Who We Are", href: "" },
       ],
     },
     {
       title: "Our Work",
       links: [
-        { text: "Financial & Monthly Aid", href: "/OurWork#financial-aid" },
-        { text: "Legal & Community Support", href: "OurWork#legal-support" },
-        { text: "Housing & Assistance", href: "OurWork#housing-assistance" },
-        { text: "Youth & Sports Program", href: "OurWork#youth-sports" },
-        { text: "Information Technology(IT) Training & Support", href: "OurWork#it-training" },
+        { text: "Financial & Monthly Aid", href: "/our-work#financial-aid" },
+        { text: "Legal & Community Support", href: "our-work#legal-support" },
+        { text: "Housing & Assistance", href: "our-work#housing-assistance" },
+        { text: "Youth & Sports Program", href: "our-work#youth-sports" },
+        { text: "Information Technology(IT) Training & Support", href: "our-work#it-training" },
       ],
     },
     {
       title: "Make A Difference",
       links: [
-        { text: "Volunteer", href: "/Volunteer" },
+        { text: "Volunteer", href: "/volunteer" },
         { text: "Carrier", href: "#" },
         { text: "Donate", href: "/donation" },
       ],
