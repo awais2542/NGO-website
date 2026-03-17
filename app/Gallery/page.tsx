@@ -88,16 +88,16 @@ export default function EventsPage() {
       {/* 🔹 Gallery Grid */}
       <div className="flex-1 px-3 sm:px-6 pb-10 sm:pb-14 mt-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {events.map((item, index) => (
-            <OverlayCard
-              key={index}
-              src={item.images[0]}
-              title={item.title}
-              desc={item.description}
-
-            />
-          ))}
-        </div>
+              {events.map((item, index) => (
+                <OverlayCard
+                  key={index}
+                  src={item.images[0]}
+                  title={item.title}
+                  desc={item.description}
+                  onClick={() => setSelectedEvent(item)}
+                />
+              ))}
+            </div>
       </div>
 
       {/* event modle */}

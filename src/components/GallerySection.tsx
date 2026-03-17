@@ -80,25 +80,26 @@ export default function GallerySection() {
             onClose={() => setSelectedImage(null)}
           />
         )}
+       {/* Button  */}
+        <div className="w-full flex items-center justify-center mt-10 sm:mt-16">
+              <Link href="/Gallery">
+                <Button
+                  size="lg"
+                  className="
+                  px-5
+                  bg-secondary text-primary-foreground
+                  transition-all duration-300 ease-in-out transform-gpu
+                  hover:bg-secondary/90
+                  hover:scale-105
+                  active:scale-95
+                "
+                >
+                  View All
+                </Button>
+              </Link>
+            </div>
 
-        {/* Button */}
-        <div className="w-full flex mt-10 sm:mt-16 justify-start md:justify-center lg:justify-start">
-          <Link href="/Gallery" className="block w-full">
-            <Button
-              size="lg"
-              className="
-            w-full lg:w-auto px-5
-            bg-secondary text-primary-foreground
-            transition-all duration-300 ease-in-out transform-gpu
-            hover:bg-secondary/90
-            hover:scale-105
-            active:scale-95
-          "
-            >
-              Donate Now
-            </Button>
-          </Link>
-        </div>
+            
 
 
       </div>

@@ -81,7 +81,7 @@ export default function Page() {
 
       <div className="py-12 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="flex sm:grid sm:grid-cols-3 gap-5 text-center overflow-x-auto sm:overflow-visible">
+          <div className="flex sm:grid sm:grid-cols-3 justify-center gap-5 text-center overflow-x-auto sm:overflow-visible">
 
 
             {/* Icon 1 */}
@@ -138,7 +138,7 @@ export default function Page() {
       {/* icons  four */}
       <div className="py-12 px-4 bg-white mb-2">
         <div className="max-w-5xl mx-auto">
-          <div className="flex sm:grid sm:grid-cols-4 gap-3 text-center  sm:gap-0">
+          <div className="flex sm:grid sm:grid-cols-4 justify-center gap-5 text-center overflow-x-auto sm:gap-0">
 
 
 

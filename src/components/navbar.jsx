@@ -14,8 +14,8 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "Our Partners", href: "/our-partner" },
   { name: "Our Work", href: "/our-work" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Gallery", href: "/Gallery" },
+  { name: "Contact Us", href: "/Contact" },
   { name: <AboutMemonDropDown />, },
   { name: <NewsDropDown />, },
   {

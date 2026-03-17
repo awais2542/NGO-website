@@ -50,15 +50,15 @@ export function AboutMemonDropDown() {
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/essence">The Essence</Link>
+            <Link href="/Essence">The Essence</Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/organizaitional">Organizaitional Philosophy</Link>
+            <Link href="/Organizaitional">Organizaitional Philosophy</Link>
           </DropdownMenuItem>
 
           <DropdownMenuItem asChild>
-            <Link href="/volunteer">Became a Volunteer</Link>
+            <Link href="/Volunteer">Became a Volunteer</Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
 
@@ -69,19 +69,19 @@ export function AboutMemonDropDown() {
           {isMobile ? (
             <>
               <DropdownMenuItem asChild>
-                <Link href="/office-bearers">Office Bearers</Link>
+                <Link href="/Office-bearers">Office Bearers</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/committee">Managing Committee</Link>
+                <Link href="/Committee">Managing Committee</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/youth-wing">Youth Wing</Link>
+                <Link href="/Youth-wing">Youth Wing</Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem asChild>
-                <Link href="/ladies-wing">Ladies Wing</Link>
+                <Link href="/Ladies-wing">Ladies Wing</Link>
               </DropdownMenuItem>
             </>
           ) : (
@@ -92,19 +92,19 @@ export function AboutMemonDropDown() {
 
               <DropdownMenuSubContent className="w-56 p-2">
                 <DropdownMenuItem asChild>
-                  <Link href="/office-bearers">Office Bearers</Link>
+                  <Link href="/Office-bearers">Office Bearers</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/committee">Managing Committee</Link>
+                  <Link href="/Committee">Managing Committee</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/youth-wing">Youth Wing</Link>
+                  <Link href="/Youth-wing">Youth Wing</Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href="/ladies-wing">Ladies Wing</Link>
+                  <Link href="/Ladies-wing">Ladies Wing</Link>
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuSub>

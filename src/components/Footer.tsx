@@ -3,7 +3,7 @@
 import Logo from "@/components/logo"; // Make sure path correct ho
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { SocialButtons } from "./socialMediaButtons";
+import { SocialButtons } from "./SocialMediaButtons";
 
 
 
